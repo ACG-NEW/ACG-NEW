@@ -1,4 +1,4 @@
-name: ACG-NEW
+name: sonar cloud scan
 
 on:
   workflow_dispatch:
@@ -19,5 +19,5 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.organization=ACG-NEW
+            -Dsonar.organization=acg-new
             -Dsonar.projectKey=ACG-NEW
