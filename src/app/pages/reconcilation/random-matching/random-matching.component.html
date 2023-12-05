@@ -1,0 +1,152 @@
+<section class="container-fluid">
+  <div class="col-sm-6 pagename">
+    <h4 class="adj">Random Matching</h4>
+  </div>
+  <div>
+    <mat-card>
+      <div class="container-fluid">
+        <table mat-table #table [dataSource]="dataSource">
+          <tr *matHeaderRowDef="displayedColumns; sticky: 'true'" mat-header-row></tr>
+          <tr *matRowDef="let row; columns: displayedColumns;let i = index;" mat-row></tr>
+          <!-- <ng-container matColumnDef="clear">
+            <th mat-header-cell *matHeaderCellDef style="text-align: right; padding-left: 5px;" class="theader">Clear
+            </th>
+            <td mat-cell *matCellDef="let row; let i =index">
+              <input type="checkbox"  (click)="clearRow(row,i)" [(ngModel)]="row.clear"
+                [ngModelOptions]="{standalone: true}">
+            </td>
+          </ng-container> -->
+          <ng-container matColumnDef="slash">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>#</th>
+            <td mat-cell *matCellDef="let row;let i = index;">
+              <mat-form-field style=" width: 5vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.slash" [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="condition">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Condition</th>
+            <td mat-cell *matCellDef="let row;let i = index;">
+              <mat-form-field style="width:6vw; padding-left: 0px;" appearance="outline">
+                <mat-select [(ngModel)]="row.condition" matInput [ngModelOptions]="{standalone: true}">
+                  <mat-option *ngFor="let x of conditions" [value]="x.value">{{x.label}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+          </ng-container>
+          <ng-container matColumnDef="columnName">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Column Name</th>
+            <td mat-cell *matCellDef="let row;let i = index;">
+              <mat-form-field style="width:10vw; padding-left: 0px;" appearance="outline">
+                <mat-select [(ngModel)]="row.columnName" matInput [ngModelOptions]="{standalone: true}"
+                  (selectionChange)="onColumnChange(row,i)">
+                  <mat-option *ngFor="let x of columnNameLsit" [value]="x">{{x.label}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+          </ng-container>
+          <ng-container matColumnDef="dataType">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Data Type</th>
+            <td mat-cell *matCellDef="let row;let i = index;">
+              <mat-form-field style=" width: 8vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.dataType" disabled [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="operand">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Operand</th>
+            <td mat-cell *matCellDef="let row;let i = index;">
+              <mat-form-field style="width:8vw; padding-left: 0px;" appearance="outline"
+                *ngIf="row.dataType==='VARCHAR2'">
+                <mat-select [(ngModel)]="row.operand" matInput [ngModelOptions]="{standalone: true}"
+                  (ngModelChange)="operand(row,i)">
+                  <mat-option *ngFor="let x of stringOperands" [value]="x.value">{{x.label}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field style="width:8vw; padding-left: 0px;" appearance="outline"
+                *ngIf="row.dataType==='NUMBER'">
+                <mat-select [(ngModel)]="row.operand" matInput [ngModelOptions]="{standalone: true}"
+                  (ngModelChange)="operand(row,i)">
+                  <mat-option *ngFor="let x of numberOperands" [value]="x.value">{{x.label}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field style="width:8vw; padding-left: 0px;" appearance="outline" *ngIf="row.dataType==='DATE'"
+                (ngModelChange)="operand(row,i)">
+                <mat-select [(ngModel)]="row.operand" matInput [ngModelOptions]="{standalone: true}">
+                  <mat-option *ngFor="let x of dateOperands" [value]="x.value">{{x.label}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field style="width:8vw; padding-left: 0px;" appearance="outline" *ngIf="row.dataType===''">
+                <mat-select [(ngModel)]="row.operand" matInput [ngModelOptions]="{standalone: true}">
+                  <mat-option [value]="">--Select--</mat-option>
+                </mat-select>
+              </mat-form-field>
+          </ng-container>
+          <ng-container matColumnDef="add">
+            <th mat-header-cell *matHeaderCellDef class="theader">Add</th>
+            <td mat-cell *matCellDef="let row;let i = index;">
+              <button mat-stroked-button color="primary" class="primary" class="btn" (click)="addResult(row,i)"
+                type="button">Add</button>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="clear">
+            <th mat-header-cell *matHeaderCellDef class="theader">Clear</th>
+            <td mat-cell *matCellDef="let row;let i = index;">
+              <button mat-stroked-button color="primary" class="primary" class="btn " type="button"
+                (click)="clearData(row,i)">Clear</button>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="value">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Value</th>
+            <td mat-cell *matCellDef="let row;let i = index;">
+              <mat-form-field style=" width: 6vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.value" [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="result">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Result</th>
+            <td mat-cell *matCellDef="let row;let i = index;">
+              <mat-form-field style=" width: 14vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.result" [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+            </td>
+          </ng-container>
+        </table>
+        <div class="addRow">
+          <button mat-raised-button matTooltipPosition="below" type="button" class="btn" mat-button color="accent"
+            (click)="addRow()">
+            Add Row
+          </button>
+        </div>
+        <div class="input-row" style="text-align: center;margin-top: 0.5em;" fxLayout="row" fxLayout.lt-md="column"
+          fxLayoutGap="10px" fxLayoutGap.lt-md="0px">
+          <!-- <button mat-stroked-button color="warn" class="btn" type="button" (click)="Query()">
+            Query
+          </button>
+          <button mat-stroked-button color="primary" class="btn" type="cancel" (click)="cancel()">
+            <mat-icon>cancel</mat-icon>Cancel
+          </button>
+         <button mat-stroked-button color="primary" class="primary" class="btn" type="Export" (click)="AllPsp()">
+            All PSP
+          </button> -->
+          <button mat-stroked-button color="warn" class="btn" type="button" (click)="Query()" [disabled]="areButtonsDisabled">
+            Query
+          </button>
+          <button mat-stroked-button color="primary" class="btn" type="cancel" (click)="cancel()" >
+           Cancel
+          </button>
+          <button mat-stroked-button color="primary" class="primary" class="btn" type="Export" (click)="AllPsp()" [disabled]="areButtonsDisabled">
+            All PSP
+          </button>
+
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</section>

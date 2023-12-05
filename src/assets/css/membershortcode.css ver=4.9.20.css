@@ -1,0 +1,3325 @@
+.kf_shortcode_outer_wrap{
+	float:left;
+	width:100%;
+	position:relative;
+	padding-bottom:35px;
+	margin-bottom:35px;
+	border-bottom:1px solid #e1e1e1;	
+}
+/*
+	  ==============================================================
+		   ShortCode Heading Css Start
+	  ==============================================================
+*/
+.kode_shortcode_hdg{
+	float:left;
+	width:100%;
+	position:relative;
+	margin:0px 0px 25px;	
+}
+.kode_shortcode_hdg h4{
+	font-weight:600;
+	text-transform:uppercase;
+	display:inline-block;
+	border-bottom:1px solid #e1e1e1;
+	padding-bottom:15px;
+}
+/*
+	  ==============================================================
+		   Accordian ShortCode Css Start
+	  ==============================================================
+*/
+.kf_property_accord{
+	float:left;
+	width:100%;
+	position:relative;	
+}
+.kode_goal_wrap{
+	margin-bottom:10px;
+	float:left;
+	width:100%;	
+}
+.kode_goal_wrap .accordion{
+	padding:15px 30px;
+	box-shadow: 1px 2px 4px 0px rgba(0,0,0,0.27);
+	cursor:pointer;
+	font-weight:bold;
+}
+.kode_goal_wrap .accordion{
+	background-color:#f5f5f5;	
+}
+.kode_goal_wrap  h6{
+	color:#222222;
+	text-transform:capitalize;	
+}
+.kode_goal_wrap .accordion-close h6:after{
+	content:"\f105";
+	font-family:fontawesome;
+	float:right;
+	font-size:20px;
+}
+.goal_heading span{
+	float:right;
+}
+.goal_des,
+.goal_des ul{
+	float:left;
+	width:100%;	
+	list-style:none;
+}
+.goal_des ul{
+	padding:15px 20px 5px;	
+}
+.goal_des ul li{
+	line-height:25px;	
+}
+.goal_des ul li:before{
+	content:"\f10c";
+	font-family:fontawesome;
+	font-size:10px;
+	margin-right:10px;
+	vertical-align:middle;	
+}
+.kode_goal_wrap .accordion-open h6{
+	color:#fff;	
+}
+.kode_goal_wrap .accordion-open h6:after{
+	content:"\f107";
+	font-family:fontawesome;
+	float:right;
+	font-size:20px;	
+}
+.kf_property_accord .kode_goal_wrap:last-child{
+	margin-bottom:0px;	
+}
+.goal_heading.accordion.accordion-open{
+	color:#fff;	
+}
+/*
+	  ==============================================================
+		   Tab ShortCode Css Start
+	  ==============================================================
+*/
+.kf_shortcode_tab{
+	float:left;
+	width:100%;
+	position:relative;
+	margin-top:4px;	
+}
+/*
+	  ==============================================================
+		   Heading ShortCode Css Start
+	  ==============================================================
+*/
+.kf_shortcode_hdg_list{
+	float:left;
+	width:100%;
+	position:relative;	
+}
+.kf_shortcode_hdg_list h2,
+.kf_shortcode_hdg_list h3,
+.kf_shortcode_hdg_list h4,
+.kf_shortcode_hdg_list h5,
+.kf_shortcode_hdg_list h6{
+	text-transform:uppercase;	
+}
+/*
+	  ==============================================================
+		   Social Icon ShortCode Css Start
+	  ==============================================================
+*/
+.kf_shortcode_social ul{
+	border:0px;
+	text-align:left;
+	padding:0px;
+	margin:0px 0px 20px;	
+}
+.kf_shortcode_social .kf_foo_social_icon .list-item-div{
+	text-align:center;	
+}
+.kf_shortcode_social2{
+	float:left;
+	width:100%;	
+}
+.kf_shortcode_social2 .list-item-div{
+	display:inline-block;
+	position:relative;	
+}
+.kf_shortcode_social2 .list-item-div a{
+	display:block;
+	width:40px;
+	height:40px;
+	border-radius:100%;
+	border:2px solid #828282;
+	color:#828282;
+	font-size:16px;
+	line-height:40px;
+	text-align:center;
+	margin-right:3px;	
+}
+ul.kf_shortcode_social2 .list-item-div:hover a{
+	color:#fff;	
+}
+.kf_shortcode_social .kf_top_social_icon{
+	float:left;	
+}
+.kf_shortcode_social .kf_top_social_icon .list-item-div a{
+	color:#828282;	
+}
+/*
+	  ==============================================================
+		   Button ShortCode Css Start
+	  ==============================================================
+*/
+.kf_button_wrap,
+.kf_shortcode_link{
+	float:left;
+	width:100%;
+	position:relative;	
+}
+.kf_button_wrap{
+	margin:0px 0px 10px;	
+}
+.kode_link_3{
+	display:inline-block;
+	position:relative;
+	color:#828282;
+	font-size:16px;
+	text-transform:uppercase;
+	border:1px solid rgba(77,77,77,0.64);
+	background:none;
+	font-weight:600;	
+}
+.kode_link_3:hover{
+	color:#fff;
+}
+.kode-size-small{
+	padding:7px 15px;	
+}
+.kode-size-medium{
+	padding:9px 15px;
+}
+.kode-size-large{
+	padding:12px 15px;	
+}
+.kode_link_1{
+	display:inline-block;
+	position:relative;
+	color:#929292;
+	font-size:16px;
+	text-transform:uppercase;
+	border:1px solid rgba(77,77,77,0.64);
+	font-weight:600;
+	border-radius:3px;	
+}
+.kode_link_2{
+	display:inline-block;
+	position:relative;
+	color:#929292;
+	font-size:14px;
+	text-transform:uppercase;
+	font-weight:600;
+	border-bottom:1px solid #dbdbdb;
+	padding-bottom:3px;	
+}
+.kode_link_1:hover{
+	color:#fff;	
+}
+/*
+	  ==============================================================
+		   Icon Box Type 02 ShortCode Css Start
+	  ==============================================================
+*/
+.kf_shortcode_outer_wrap.kf_icon_type_2{
+	padding-bottom:5px;	
+}
+.kf-action7 {
+    float: left;
+    margin-bottom: 70px;
+    padding: 100px 0 73px;
+    width: 100%;
+}
+.kf-action7_hdg {
+    float: left;
+    margin-bottom: 50px;
+    width: 100%;
+}
+.kf-action7_hdg h2 {
+    color: #111111;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+.kf-action7_detail {
+    float: left;
+    width: 100%;
+	margin-bottom:40px;
+}
+.kf-action7_detail:last-child {
+    margin-bottom: 0;
+}
+.kf-action7_content {
+    float: left;
+    text-align: center;
+    width: 100%;
+	margin-bottom:30px;
+}
+.kf-action7_content a {
+    border: 1px solid #e8e8e8;
+    border-radius: 100%;
+    display: inline-block;
+	color:#999999;
+    font-size: 40px;
+    height: 87px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 87px;
+	position:relative;
+	line-height: 94px;
+}
+.kf-action7_content h6 {
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+.kf-action7_content:hover a{
+	color:#fff;	
+}
+/*
+	  ==============================================================
+		   Icon Box Type 03 ShortCode Css Start
+	  ==============================================================
+*/
+.pet_love{
+	float:left;
+	width:100%;
+}
+.pet_love_hdg{
+	float:left;
+	width:100%;
+	text-align:center;
+}
+.pet_love_hdg h3{
+	font-size:30px;
+	font-weight:bold;
+	margin:0px;
+	color:#323232;
+	margin-bottom:7px;
+}
+.pet_love_hdg span{
+	font-size:20px;
+	color:#000000;
+}
+.pet_love_content{
+	float:left;
+	width:100%;
+}
+.col-md-4.pet_kode {
+    padding: 0;
+}
+.pet_love_content ul{
+	padding:0px;
+	margin:0px;
+	float:left;
+	width:100%;
+}
+.pet_love_content{
+	list-style:none;
+	position:relative;
+	margin-bottom:35px;
+}
+.pet_love_content:hover span{
+	color:#fff;	
+}
+.pet_love_content_list{
+	float:none;
+	width:100%;
+	text-align:right;
+	padding-right: 119px;
+}
+.pet_love_content_list h6 > a{
+	display:block;	
+}
+.pet_love_content_list h6{
+	margin:0px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+.pet_love_content_list p{
+	text-align:right;
+	word-break:break-all;
+}
+.pet_love_content_list.pet_1 p{
+	text-align:left;	
+}
+.pet_love_content span {
+    float: right;
+	width:87px;
+	height:87px;
+	text-align:center;
+	border:1px solid #e4e4e4;
+	border-radius:100%;
+	position:absolute;
+	top:0px;
+	right:0px;
+	font-size:40px;
+	color:#666666;
+}
+.pet_love_content.kode-icon-left span{
+	float:right;
+	left:0px;
+}
+.kf-action7_content a::before,
+.pet_love_content span::before{
+	border: 1px solid #e4e4e4;
+    border-radius: 100%;
+    bottom: 0;
+    color: #666666;
+    content: "";
+    font-size: 40px;
+    height: 75px;
+    left: 5px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 5px;
+    width: 75px;
+    z-index: -1;
+	transform:scale(0);
+	-webkit-transform:scale(0);
+	-moz-transform:scale(0);
+	-ms-transform:scale(0);
+	-o-transform:scale(0);
+}
+.kf-action7_content:hover a::before,
+.pet_love_content ul li:hover span::before{
+	opacity:1;
+	color:#fff;
+}
+.pet_love_content ul li:hover span{
+	color:#fff;
+}
+.pet_love_content span i{
+	line-height:80px;
+}
+.pet_love_content_list.pet_1 {
+    margin: auto;
+    padding: 0 0 0 100px;
+    text-align: left;
+}
+.pet_love_content.pet_2 span { 
+    left: 0;
+}
+/*
+	  ==============================================================
+		   Price Table ShortCode Css Start
+	  ==============================================================
+*/
+.kf_price_table{
+	float:left;
+	width:100%;
+	position:relative;
+	text-align:center;
+	border:1px solid #e1e3e2;
+}
+.kf_price_table h3{
+	font-weight:600;
+	text-transform:uppercase;
+	padding:35px;
+}
+.kf_table_price{
+	float:left;
+	width:100%;
+	position:relative;
+	padding:35px 20px;
+}
+.kf_table_price::before{
+	content:"";
+	position:absolute;
+	bottom:-8px;
+	left:0px;
+	right:0px;
+	margin:auto;
+	width:18px;
+	height:18px;
+	transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+}
+.kf_table_price h2{
+	font-size:40px;
+	color:#fff;
+	font-weight:bold;
+	margin:0px 0px 5px;
+}
+.kf_table_price span{
+	font-size:16px;
+	color:#fff;
+	text-transform:capitalize;
+}
+.kf_prdct_featured_wrap{
+	float:left;
+	width:100%;
+	position:relative;
+	padding:20px;
+}
+ul.kf_product_featured_list{
+	float:left;
+	width:100%;
+	margin:0px 0px 30px;
+	padding:0px;
+}
+ul.kf_product_featured_list li{
+	position:relative;
+	display:inline-block;
+	width:100%;
+}
+ul.kf_product_featured_list li a{
+	display:block;
+	font-size:15px;
+	padding:8px 0px;
+	color:#666666;
+}
+.kf_prdct_featured_wrap a.kf_link_1{
+	border-radius:0px;
+	border:1px solid #e1e3e2;
+}
+.custom-btn i{
+	margin-left:10px;
+}
+
+
+
+/*
+	  ============================================================
+		   Submitting Add Wrap Start
+	  ============================================================
+*/
+.kf_submit_add_outer_wrap,
+.kf_step_outer_wrap,
+.kf_submit_add_hdg,
+.kf_step_1_des,
+.kf_submit_field,
+.kf_submit_field_btn{
+	float:left;
+	width:100%;
+	position:relative;
+	text-align:left;	
+}
+.kf_submit_add_hdg{
+	padding:20px;
+	background-color:#edf2f5;	
+}
+.kf_submit_add_hdg h5,
+.kf_submit_add_hdg h6{
+	display:inline-block;
+	color:#666666;
+	font-weight:bold;	
+	font-size:14px;
+}
+.kf_submit_add_hdg h5{
+	float:left;
+	font-size:16px;
+}
+.kf_submit_add_hdg h6{
+	float:right;	
+}
+.kf_author_icon_detail h6{
+	font-size:14px;
+}
+/*
+	  ============================================================
+		   Submitting Add Wrap End
+	  ============================================================
+*/
+/*
+	  ============================================================
+		   Submitting Step 1 Wrap Start
+	  ============================================================
+*/
+/*Step 1 CSS*/
+.submit_margin_bottom{
+	margin:0px 0px 25px;	
+}
+.kf_step_1_des{
+	padding:25px 25px 0px 25px;
+	border:1px solid #edf2f5;	
+}
+.kf_submit_field h6{
+	margin:0px 0px 10px;
+	font-weight:bold;
+	font-size:15px;
+}
+.kf_submit_field input[type="text"]{
+	width:100%;
+	height:43px;
+	border:1px solid #edf2f5;
+	margin:0px 0px 25px;
+	padding:8px 15px 8px 30px;	
+}
+.kf_submit_field .kf_step2_field input[type="text"]{
+	margin:0px 0px 0px;
+}
+.kf_submit_field textarea{
+	margin-bottom:25px;
+	height:150px;
+}
+/*Editor CSS*/
+.kf_submit_field #statusbar{
+	display:none;	
+}
+.kf_submit_field .Editor-editor{
+	height:180px;	
+}
+.kf_submit_field #menuBarDiv, #statusbar{
+	background-image:none;
+	background-color:#edf2f5;
+	border-radius:0px;
+	border:0px;	
+}
+.kf_submit_field .btn-default{
+	background:none;
+	border:0px;	
+}
+.kf_submit_field .btn-group span.caret{
+	display:none;	
+}
+.kf_submit_field .row-fluid.Editor-container{
+	margin:0px 0px 25px;	
+}
+/*File Upload CSS*/
+.kf_submit_field .uploadFile{
+	background-color:#edf2f5;	
+}
+.add-image-wrapper,
+.kf-add-more-btn,
+.kf_submit_field > span{
+	display:inline-block;
+	height:43px;
+	padding:10px 25px;
+	color:#fff;
+	font-weight:bold;
+	text-transform:capitalize;
+	position: absolute;
+    top: 38px;
+    right: 0;	
+	cursor:pointer;
+}
+.add-image-wrapper,
+.kf-add-more-btn{
+	position:relative;
+	top:0px;
+	margin-bottom:30px;
+	float:left;
+	background:#3283BA;
+}
+.add-image-wrapper span{
+	padding:0px;
+	color:#fff;
+	margin:0px;
+	border:none;
+	float:left;
+}
+.add-more-images {
+    float: left;
+    margin-right: 10px;
+}
+.kf_submit_field input[type="file"]{
+	position: absolute;
+    top: 26px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+	width:147px;
+	height:43px;
+}
+#submit-listing  .kf_step_outer_wrap input[type="text"]{
+	padding-left:35px;
+}
+.kf_submit_field span:hover{
+	background-color:#000;
+}
+/*Btn CSS*/
+.kf_submit_field_btn{
+	text-align:center;	
+	display:inline-block;
+}
+.kf_submit_field_btn .previous,
+.kf_submit_field_btn .next,
+.kf_submit_field_btn .submit{
+	display:inline-block;
+	color:#fff;
+	font-weight:bold;
+	text-transform:uppercase;
+	border-bottom:2px solid #13b1bc;
+	padding:10px 0px;
+	border:0px;
+	min-width:195px;	
+	width:auto;
+}
+.kf_submit_field_btn .previous:hover,
+.kf_submit_field_btn .next:hover,
+.kf_submit_field_btn .submit:hover{
+	background-color:#000;
+}
+/*
+	  ============================================================
+		   Submitting Step 1 Wrap End
+	  ============================================================
+*/
+
+/*
+	  ============================================================
+		   Submitting Step 2 Wrap Start
+	  ============================================================
+*/
+.kf_step2_field{
+	float:left;
+	width:100%;
+	position:relative;
+	margin:0px 0px 25px;	
+}
+.kf_step2_field label{
+	position:absolute;
+	top:17px;
+	left:10px;
+	color:#666666;
+	z-index:10;	
+}
+.kf_step2_field .chosen-container-single .chosen-single{
+	width:100%;
+	border:1px solid #edf2f5;
+	background:none;
+	height:43px;
+	box-shadow:none;
+	padding:8px 50px 8px 40px;
+	color:#666666;
+	font-size:15px;
+	border-radius:0px;
+}
+.kf_step2_field .chosen-container-single .chosen-single div{
+	background:none;	
+}
+
+/*.kf_step2_field .chosen-container-single .chosen-single div b::before{
+	content:"\f0d7";
+	top:10px;	
+}
+/*Active CSS*/
+
+.kf_step2_field .chosen-with-drop{
+	background-color:#edf2f5;	
+}
+.kf_step2_field .chosen-with-drop .chosen-single div{
+	background-color:#e7eef2;	
+}
+/*
+	  ============================================================
+		   Submitting Step 2 Wrap End
+	  ============================================================
+*/
+
+/*
+	  ============================================================
+		   Submitting Step 3 Wrap Start
+	  ============================================================
+*/
+.kf_step_3_des,
+.kf_step_3_des ul{
+	float:left;
+	width:100%;
+	position:relative;	
+	padding:0px;
+	list-style:none;
+}
+.kf_step_3_des ul li{
+	width:100%;
+	position:relative;
+	float:left;	
+}
+.kf_step_3_des ul li label{
+	color:#666666;
+	font-weight:bold;	
+}
+.kf_step_3_des ul li input[type=checkbox] { 
+	display:none; 
+}
+.kf_step_3_des ul li input[type=checkbox] + label:before {
+	display: inline-block;
+	margin:0px 12px 0px 0px;
+}
+.kf_step_3_des ul li input[type=checkbox] + label:before { 
+	content: ""; 
+	font-family:fontawesome; 
+	border:2px solid #d7dfe7;
+	width:15px;
+	height:15px;
+} 
+.kf_step_3_des ul li input[type=checkbox]:checked + label:before { 
+	content: ""; 
+	font-family:fontawesome; 
+	background-image:url(../images/checkbox.png);
+	width:15px;
+	height:15px;
+	border:0px;
+}
+/*
+	  ============================================================
+		   Submitting Step 3 Wrap End
+	  ============================================================
+*/
+
+/*
+	  ============================================================
+		   Submitting Step 4 Wrap Start
+	  ============================================================
+*/
+.kf_submit_field label{
+	position:absolute;
+	top:15px;
+	left:10px;	
+}
+.kf_submit_field.kf_step_4 input[type="text"]{
+	padding:8px 25px;	
+}
+/*
+	  ============================================================
+		   Submitting Step 4 Wrap End
+	  ============================================================
+*/
+
+/*
+	  ============================================================
+		   Submitting Step 5 Wrap Start
+	  ============================================================
+*/
+.kf_submitting_map{
+	float:left;
+	width:100%;
+	position:relative;	
+}
+.kf_submitting_map .map-canvas{
+	min-height:300px;
+	margin:0px 0px 25px;	
+}
+/*
+	  ============================================================
+		   Submitting Step 5 Wrap End
+	  ============================================================
+*/
+
+/*
+	  ============================================================
+		   Submitting Step 7 Wrap Start
+	  ============================================================
+*/
+.kf_term_condition h5,
+.kf_term_condition h6{
+	color:#666666;
+	font-weight:bold;
+	margin:0px 0px 10px;	
+}
+/*
+	  ============================================================
+		   Submitting Step 7 Wrap End
+	  ============================================================
+*/
+
+/*
+	  ============================================================
+		   Submitting Step 8 Wrap Start
+	  ============================================================
+*/
+.kf_term_condition h5,
+.kf_term_condition h6{
+	color:#666666;
+	font-weight:bold;
+	margin:0px 0px 10px;	
+}
+.kf_term_condition h6{
+	margin-bottom:20px;
+}
+.kf_term_condition h5{
+	margin-bottom:20px;
+}
+.kf_term_condition p{
+	margin:0px 0px 10px;
+}
+.kf_term_checkbox{
+	float:left;
+	width:100%;
+	position:relative;
+	margin:0px 0px 20px;
+}
+/*
+	  ============================================================
+		   Submitting Step 8 Wrap End
+	  ============================================================
+*/
+
+	  ============================================================
+		   Steps Jquery Wrap Start
+	  ============================================================
+*/
+/*form styles*/
+#msform {
+	text-align: center;
+}
+#msform fieldset {
+	box-sizing: border-box;
+	padding:0px;
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none ;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+	padding:0px;
+	text-align:center;
+}
+#progressbar li {
+	color: #666;
+	text-transform: capitalize;
+	width: 20%;
+	display:inline-block;
+	position: relative;
+	text-align:center;
+	font-size:17px;
+}
+.mce-menubtn.mce-fixed-width span{
+	background:transparent !important;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 50px;
+	line-height: 50px;
+	display: block;
+	font-size: 16px;
+	color: #fff;
+	background: #666;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	left: -50%;
+	top: 27px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*
+	  ============================================================
+		   Steps Jquery Wrap End
+	  ============================================================
+*/
+.chosen-container{
+	width:100% !important;
+}
+.kf_sign_in_field{
+	margin-top:15px;
+}
+.kf_sign_in_field > input {
+    float: left;
+    height: auto;
+    margin-right: 10px;
+    width: auto;
+}
+
+
+.medium-btn,
+.large-btn,
+.small-btn,
+.btn-3{
+    display: inline-block;
+    background-color:#fff;
+    color: #333333; 
+   padding: 13px 30px;
+   font-weight: bold;
+   line-height: 14px;
+   font-size: 14px;
+   text-transform: uppercase;
+}
+.small-btn{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    color:#fff;
+}
+.medium-btn{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    color:#fff;
+}
+.large-btn{
+     color:#fff;
+}
+.btn-3{
+    border:1px solid #e3e3e3;
+}
+.medium-btn:hover,
+.large-btn:hover,
+.small-btn:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.rw-sentence span{
+    font-size: 48px;
+    font-weight: normal;
+}
+.rw-words{
+    display: inline;
+    text-indent: 10px;
+}
+.rw-words-1 span{
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    color: #6b969d;
+    -webkit-animation: rotateWord 18s linear infinite 0s;
+    -ms-animation: rotateWord 18s linear infinite 0s;
+    animation: rotateWord 18s linear infinite 0s;
+    left: 0;
+    right: 0;
+    margin:auto; 
+}
+.rw-words-1 span:nth-child(2) { 
+    -webkit-animation-delay: 3s; 
+    -ms-animation-delay: 3s; 
+    animation-delay: 3s; 
+    color: #6b889d;
+}
+.rw-words-1 span:nth-child(3) { 
+    -webkit-animation-delay: 6s; 
+    -ms-animation-delay: 6s; 
+    animation-delay: 6s; 
+    color: #6b739d; 
+}
+.rw-words-1 span:nth-child(4) { 
+    -webkit-animation-delay: 9s; 
+    -ms-animation-delay: 9s; 
+    animation-delay: 9s; 
+    color: #7a6b9d;
+}
+.rw-words-1 span:nth-child(5) { 
+    -webkit-animation-delay: 12s; 
+    -ms-animation-delay: 12s; 
+    animation-delay: 12s; 
+    color: #8d6b9d;
+}
+.rw-words-1 span:nth-child(6) { 
+    -webkit-animation-delay: 15s; 
+    -ms-animation-delay: 15s; 
+    animation-delay: 15s; 
+    color: #9b6b9d;
+}
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+    20% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -ms-transform: translateY(-30px); }
+    5% { opacity: 1; -ms-transform: translateY(0px);}
+    17% { opacity: 1; -ms-transform: translateY(0px); }
+    20% { opacity: 0; -ms-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+    20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@media screen and (max-width: 768px){
+    .rw-sentence { font-size: 18px; }
+}
+@media screen and (max-width: 320px){
+    .rw-sentence { font-size: 9px; }
+}
+
+
+
+
+.kode-background-map {
+	padding: 0px;
+	position: relative;
+}
+.footertransparent-bg {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: #333;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	opacity:0.2;
+}
+.kode-background-map .kodehotel_shortcode-map {
+	height: 100%;
+	position: absolute !important;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+}
+.kode-background-map .container-fluid,
+.kode-background-map .container {
+	position: relative;
+	z-index: 110;
+}
+.kode-background-map .col-md-5 {
+	background-color: #3f3f3f;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.kode-background-map .kodehotel_shortcode-map{
+	height:100% !important;
+}
+/*.kode-background-map {
+	height: 535px;
+}*/
+
+/*
+	  ============================================================
+		   AUTHOR DASHBOARD WRAP CSS START
+	  ============================================================
+*/
+.kf_submit_auther_detail{
+	float:left;
+	width:100%;
+	position:relative;
+	background-color:#edf2f5;	
+}
+.kf_author_wrap{
+	padding:15px;
+	border-bottom:3px solid #0699a3;	
+	background:#333;
+}
+.kf_author_pic{
+	float:left;
+	width:82px;	
+}
+.kf_author_pic figure{
+	border:3px solid #fff;
+	float:left;
+	width:100%;	
+	position:relative;
+	overflow:hidden;
+	border-radius:100%;
+}
+.kf_author_detail_wrap{
+	background-color:#edf2f5;
+	border-bottom:2px solid;
+	margin:0px 0px 25px;	
+}
+.kf_author_detail_wrap,
+.kf_author_wrap{
+	float:left;
+	width:100%;
+	position:relative;	
+}
+.kf_author_pic figure img{
+	width:83px;
+	height:82px;
+}
+.kf_author_pic_des{
+	float:none;
+	padding:10px 0px 0px 95px;
+	width:auto;	
+}
+.kf_author_pic_des span{
+	display:block;
+	color:#fff;
+	margin:0px 0px 5px;	
+}
+.kf_author_pic_des h6 > a{
+	color:#fff;
+	display:block;
+	margin:0px 0px 5px;	
+}
+.kf_author_pic_des ul.kf_rating_star li a{
+	color:#fff;	
+}
+/*Des CSS*/
+.kf_author_des{
+	float:left;
+	width:100%;
+	position:relative;
+	padding:0px 15px;
+	text-align:center;	
+}
+.kf_author_des > ul{
+	float:left;
+	width:100%;
+	margin:20px 0px;	
+}
+.kf_author_des > ul > li{
+	width:100%;
+	position:relative;
+	float:left;
+	border-bottom:1px solid #e0e0e0;
+	padding:12px 0px;	
+}
+.kf_author_des h6{
+	width:50%;
+	float:left;
+	font-weight:500;
+	text-transform:capitalize;
+	text-align:left;	
+}
+.kf_author_des span{
+	width:50%;
+	text-align:right;
+	float:left;
+	color:#636464;
+	text-transform:capitalize;	
+}
+.kf_author_des ul ul.kf_rating_star{
+	width:50%;
+	text-align:right;	
+}
+.kf_author_des ul ul.kf_rating_star li a{
+	color:#f1c40f;	
+}
+.kf_author_des > a{
+	border:0px;
+	color:#fff;	
+}
+/* Hover CSS */
+.kf_author_des > a:hover{
+	background-color:#000;
+}
+.cupp_wpmu_button,
+.kode-remove-image,
+.kode-edit-image{
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;	
+	margin:auto;
+	width:20px;
+	height:20px;
+}
+.button-primary{
+	top:20px;
+}
+.kode-edit-image{
+	top:40px;
+}
+.kode-remove-image{
+	top:60px;
+}
+.kf_author_wrap:hover .kf_author_pic figure img{
+	opacity:0.4;	
+}
+.cupp_wpmu_button, .kode-remove-image, .kode-edit-image{
+	opacity:0;
+}
+.kf_author_wrap:hover .cupp_wpmu_button, .kode-remove-image, .kode-edit-image{
+	opacity:1;	
+}
+.kode-edit-image,
+.kode-remove-image{
+	opacity:0;	
+}
+.kf_author_wrap:hover .kode-edit-image,
+.kf_author_wrap:hover .kode-remove-image{
+	opacity:1;	
+}
+.cupp_wpmu_button.button-primary{
+	top:10px;
+	left:-10px;	
+}
+.kode-edit-image{
+	top:36px !important;
+	left:-30px !important;	
+}
+.kode-remove-image{
+	left:-40px !important;	
+}
+.kf_author_wrap:hover .cupp_wpmu_button.button-primary{
+	left:0px;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;	
+}
+.kf_author_wrap:hover .kode-edit-image{
+	left:0px !important;
+	transition: all 0.6s ease-in-out;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;	
+}
+.kf_author_wrap:hover .kode-remove-image{
+	left:0px !important;
+	transition: all 0.9s ease-in-out;
+	-webkit-transition: all 0.9s ease-in-out;
+	-moz-transition: all 0.9s ease-in-out;	
+}
+.kf_author_ui_element_wrap,
+.kf_author_ui_element_wrap ul{
+	float:left;
+	width:100%;
+	padding:0px;
+	list-style:none;
+	position:relative;	
+}
+.kf_author_ui_element_wrap ul li{
+	position:relative;
+	float:left;
+	border-bottom:1px solid #e9e9e9;
+	width:100%;	
+}
+.kf_author_ui_element_wrap ul li i{
+	float:left;
+	width:40px;
+	text-align:center;
+	border-right:1px solid #e9e9e9;
+	padding:19px 0 15px;	
+}
+.kf_author_icon_detail{
+	float:none;
+	padding:12px 20px 12px 50px;
+	width:auto;	
+}
+.kf_author_icon_detail h6{
+	display:inline-block;	
+	margin:0px;
+}
+.kf_author_icon_detail h6 > a{
+	color:#666666;
+	text-transform:uppercase;
+	font-weight:600;
+	display:inline-block;	
+}
+.kf_author_icon_detail span{
+	float:right;
+	color:#666666;
+	font-weight:600;
+}
+/*Hover CSS*/
+.kf_author_ui_element_wrap ul li:hover .kf_author_icon_detail{
+	padding-left:60px;	
+}
+fieldset {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 0 0 24px;
+	padding: 11px 12px 0;
+}
+.blog-search{
+	margin-bottom:50px;
+}
+/*
+	  ============================================================
+		   Submit Add Author Detail Wrap Start
+	  ============================================================
+*/
+.media-modal-icon .screen-reader-text{
+	display:none;
+}
+.wp-core-ui .quicktags-toolbar input.button.button-small{
+	width:auto !important;
+}
+.kf_hdr2_navigation .kf_menu_scl_icon{
+	padding: 12px 0;
+}
+.kf_hdr2_social_icon ul li{
+	line-height:normal;
+}
+.wpcf7-response-output{
+	float:left;
+	width:100%;
+	margin-top:5px;
+}
+.kf_with_us_social ul{
+	list-style:none;
+	padding:0px;
+}
+.margin-top-50-minus{
+	float:left;
+	width:100%;
+	margin-top:-50px;
+}
+.kode-sidebar  > [class*="col-md-"]{
+	width:100%;
+	float:left;
+	margin-bottom:30px;
+	padding:0px;
+}
+.kode-team-network-kick,
+.kf_tag_list{
+	padding:0px;
+	list-style:none;
+}
+.kf_tag_list i{
+	display:none;
+}
+.comment-respond #reply-title{
+    color: #333333;
+    font-weight: 500;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+	font-size:20px;
+	float:left;
+	margin:0px;
+	width:100%;
+}
+ul.pagination {
+    background: #f9f9f9 none repeat scroll 0 0;
+    float: left;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+}
+.pagination .pull-right{
+	text-align:right;
+}
+.kf_comment_date span{
+	color:#888;
+}
+.kf_comment_des p{
+	float:left;
+	width:100%;
+}
+.property_pager_item > li > figure{
+	line-height:10px;
+}
+.property_pager_item li figure iframe{
+	margin-bottom:0px;
+}
+.kf-nav ul ul ul{
+	top:0px;
+	right:100%;
+	left:auto;
+}
+.navigation-3 ul li.last ul,
+.kf-nav ul li.last ul{
+	left:auto;
+	right:0px;
+}
+.kf-nav ul li.last ul ul{
+	left:auto;
+	right:100%;
+}
+.button-link.delete-attachment,
+.attachment-info .edit-attachment,
+.button-link.check .screen-reader-text,
+.attachments-browser .media-toolbar,
+#cupp_meta{
+	display:none;
+}
+.kode-notice,
+.kodehotel-form-loading{
+	display:none;
+}
+
+.kode-profile-submit-form{
+	margin-bottom:30px;
+}
+
+.kode-user-head {
+    background: #f0f0f0 none repeat scroll 0 0;
+    display: table-row;
+    list-style: outside none none;
+    padding: 15px;
+    vertical-align: middle;
+    width: 100%;
+}
+.kode-user-head li{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 19%;
+	padding:15px 0;
+}
+.kode-user-get li:first-child,
+.kode-user-head li:first-child{
+	padding-left:15px; 
+}
+.kode-user-get li:last-child,
+.kode-user-head li:last-child{
+	padding-right:15px; 
+}
+.kode-user-get {
+    display: table-row;
+    list-style: outside none none;
+    padding: 15px;
+    vertical-align: middle;
+    width: 100%;
+	border-bottom: 1px solid #e9e9e9;
+}
+.kode-user-get:last-child{
+	border: none;
+}
+.kode-user-get li{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 19%;
+	font-size: 14px;
+	padding:15px 0;
+}
+.kode-user-head li:first-child,
+.kode-user-get li:first-child {
+    width: 5%;
+}
+.kode-user-get:nth-child(odd) {
+    background:#f9f9f9 ;
+}
+.checkbox .icheckbox_futurico,.checkbox .iradio_futurico {
+    height: 20px;
+    width: 20px;
+    float: left;
+    background-size: 10px auto;
+    margin: 4px 10px 0px 0px;
+    border-radius: 0;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #d7dfe7;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    vertical-align: -0.5em;
+}
+.checkbox .iradio_futurico:before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: transparent;
+	content: "";
+	font-family: FontAwesome;
+	line-height: 16px;
+	text-align: center;
+	font-size: 11px;
+	color: #26eafc;
+}
+.checkbox .iradio_futurico.checked:before {
+	content: "\f00c";
+}
+.kode-rating-rev,
+.margin-bottom-30{
+	margin-bottom:30px;
+	float:left;
+}
+.kode-rating-rev{
+	width:100%;
+	position: relative;
+}
+
+.kode-rating-rev:before{
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	left: auto;
+	color: #666;
+	content:"\f107 ";
+	font-size: 16px;
+	font-family: FontAwesome;
+	margin-top: -12px;
+}
+.kode-rating-rev label{
+	font-weight:normal;
+}
+/*
+.kode-rating-rev select{
+	float:left;
+	width:100%;
+	padding:18px 20px;
+	font-size:16px;
+	font-style:italic;
+	line-height:16px;
+	height:60px;
+	font-weight:bold;
+	color:#999;
+}
+*/
+#kode-review-submit{
+	margin-bottom: 30px;
+}
+.resrvation-form .kode-paypal-form .amount-list input[type="text"]::-moz-placeholder,
+.resrvation-form .kode-paypal-form .date-picker-des input[type="text"]::-moz-placeholder{
+	color: #999;
+}
+.room-item.amount-list > input{
+	height:47px;
+}
+.amount-list a.kode-minus{
+	color:#333;
+}
+.kf_author_pic_des h6{
+	color:#fff;
+}
+
+
+
+
+/*
+	  ==============================================================
+		   kode_property_invoico_wraper start
+	  ==============================================================
+*/
+.kode_property_invoico_wraper{
+	padding:70px 0px 70px 0px;
+}
+.kode_property_account_list,
+.kode_property_invoico_wraper,
+.kode_property_account{
+	float:left;
+	width:100%;
+}
+.kode_property_account{
+	border:1px solid #e2e2e2;
+}
+.kode_property_account h6{
+	padding:11px 25px 11px 15px;
+	background-color:#f5f5f5;
+	text-transform:uppercase;
+	font-size:16px;
+	border-bottom:1px solid #e2e2e2;
+	font-weight:bold;
+}
+.kode_property_account h6 img{
+	border-radius:100%;
+	border:3px solid #dcdcdc;
+	margin-right:12px;
+}
+.kode_property_feature ul li,
+.kode_property_account_list li{
+	border-bottom:1px solid #e2e2e2;
+}
+.kode_property_feature ul li:last-child,
+.kode_property_account_list li:last-child{
+	border-bottom:none;
+}
+.kode_property_feature ul li a,
+.kode_property_account_list li a{
+	display:block;
+	padding:14px 0px 17px 21px;
+	font-size:15px;
+	color:#666;
+	position:relative;
+}
+.kode_property_account_list li a:hover{
+	color:#fff;
+}
+.kode_property_account_list li a:hover:before{
+	background-color:#f5f5f5;
+	color:#a7a7a7;
+}
+.kode_property_account_list li a:before{
+	position:absolute;
+	font-family: FontAwesome;
+	content: "\f105";
+	top:14px;
+	right:17px;
+	bottom:0px;
+	height:22px;
+	width:22px;
+	text-align:center;
+	line-height:22px;
+	border-radius:100%;
+	color:#a7a7a7;
+	background-color:#f5f5f5;
+	display:inline-block;
+}
+/*kode_property_feature start*/
+.kode_property_feature{
+	border:1px solid #e2e2e2;
+	border-top:none;
+}
+.kode_property_feature h6{
+	padding:22px 0px 24px 20px;
+	text-transform:uppercase;
+	font-weight:bold;
+	background-color:#f5f5f5;
+	border-bottom:1px solid #e2e2e2;
+}
+.kode_property_feature,
+.kode_property_feature ul{
+	float:left;
+	width:100%;
+}
+
+/*
+	  ============================================================
+		   Font Color
+	  ============================================================
+*/
+.kode_property_feature ul li a:hover
+/*Footer CSS */
+{
+	color:#0070bb;	
+}
+
+/*
+	  ============================================================
+		   Transaction Effect
+	  ============================================================
+*/
+.kode_property_feature ul li a,
+.kode_property_account_list li a:before,
+.kode_property_account_list li a
+{
+	transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;	
+}
+.flexslider .slides li{
+	position:relative;
+}
+.flexslider .slides li::before{
+	content:"";
+	position:absolute;
+	left:0px;
+	top:0px;
+	background-color:rgba(0,0,0,0.5);
+	height:100%;
+	width:100%;
+	z-index:100;
+}
+
+.kode-banner .bx-pager{
+	display:none;
+}
+.kode-banner .bx-wrapper .bx-controls-direction a{
+	height: 60px;
+	width: 30px;
+	margin-top: -30px;
+}
+.kode-banner .bx-wrapper .bx-controls-direction a:before{
+	content: "\f104";
+	font-family: FontAwesome;
+	font-size: 80px;
+	color: #fff;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	text-align: center;
+	line-height: 60px;
+}
+.kode-banner .bx-wrapper .bx-controls-direction a.bx-next:before{
+	content: "\f105";
+}
+
+.kode-banner .kode-caption{
+	position:absolute;
+	left:0px;
+	width:100%;
+	top:40%;
+	text-align:center;
+	z-index:200;
+}
+.kode-banner .kode-caption h2{
+	font-size:90px;
+	text-transform:uppercase;
+	color:#fff;
+}
+.kode-banner .kode-caption h5{
+	font-size:30px;
+	color:#fff;
+	text-transform:uppercase;
+	padding:0px 15px;
+	position:relative;
+	display:inline-block;
+}
+.kode-banner .kode-caption h5:before, .kode-banner .kode-caption h5:after{
+	content:"";
+	height:5px;
+	border-top:solid 1px #fff;
+	border-bottom:solid 1px #fff;
+	width:100px;
+	left:100%;
+	top:17px;
+	position:absolute;
+}
+.kode-caption{
+	position:absolute;
+	width:50%;
+	left:50%;
+	margin-left:-41%;
+	top:25%;
+	z-index:100;
+}
+.kode-caption{
+	top:35%;
+}
+.kode-caption h5, .kode-caption .kode-caption-title{
+	color:#fff;
+	font-weight:normal;
+	font-size:34px;
+	text-transform:uppercase;
+}
+.kode-caption .kode-caption-title{
+	font-size:70px;
+	line-height:70px;
+	font-weight:bold;
+	margin-bottom:15px;
+}
+.kode-caption .kode-caption-text{
+	color:#fff;
+	font-size:36px;
+	margin-bottom:10px;
+}
+.kode-caption .caption-btns{
+	float:left;
+	margin-top:21px;
+}
+.kode-caption .caption-btns a{
+	display:inline-block;
+	padding:10px 30px;
+	border: solid 2px #fff;
+	border-radius:5px;
+	color:#fff;
+	font-size:16px;
+	text-transform:uppercase;
+	text-decoration:none;
+	margin-right:10px;
+}
+.kode_btn_store_1{
+	background:#32b5f3;
+	display:inline-block;
+	float:left;
+	margin:20px 0px 0px;
+	padding:10px 20px;
+	font-size:16px;
+	text-transform:uppercase;
+	font-weight:bold;
+	text-decoration:none;
+	color:#fff;
+}
+.kode_btn_store_1:hover{
+	color: #000;
+}
+.kode_btn_store_1:first-child{
+	background-color:#444444;
+}
+.kode_btn_store_1 i{
+	display:none;
+}
+
+/*============================================*/
+/*
+	============================================
+			kode_top_bar_3 start
+	============================================
+*/
+.header_3 .kode_top_bar_3{
+	float:left;
+	width:100%;
+	padding:14px 0px 13px 0px;
+	border-bottom:1px solid #ededed;
+	border-top:3px solid #0070bb;
+}
+.header_3 .kode_top_login_3{
+	float:right;
+}
+.header_3 .kode_top_register_3,
+.header_3 .kode_top_drop_3{
+	float:left;
+}
+.header_3 .kode_top_register_3{
+	padding:5px 0px 0px 0px;
+}
+.header_3 .kode_top_drop_3{
+	margin-right:37px;
+	padding:10px 0px;
+}
+.header_3 .kode_top_register_3 li{
+	float:left;
+	position:relative;
+}
+.header_3 .kode_top_drop_3 li{
+	float:left;
+}
+.header_3 .kode_top_drop_3 li{
+	margin-right:18px;
+}
+.header_3 .kode_top_drop_3 li:last-child{
+	margin:0px;
+}
+.header_3 .kode_top_login_3 li i{
+	margin-left:11px;
+}
+.header_3 .kode_top_login_3 .btn.btn-default.btn-lg.dropdown-toggle > img {
+    margin-right: 20px;
+    margin-top: -4px;
+}
+.header_3 .kode_top_login_3 .btn-lg, .btn-group-lg > .btn {
+    border-radius: 0;
+    line-height: 1.33333;
+    padding:0px 0px;
+	font-size:15px;
+}
+.header_3 .kode_top_login_3 .btn:active, .btn.active,
+.header_3 .kode_top_login_3 .btn-group.open .dropdown-toggle,
+.header_3 .kode_top_login_3 .btn:active, .kode_top_login_3 .btn.active{
+	box-shadow: 0 0px 0px;
+}
+.header_3 .kode_top_login_3 .btn-default:focus, .btn-default.focus,
+.header_3 .kode_top_login_3 .btn-default:hover,
+.header_3 .kode_top_login_3 .btn-default,
+.header_3 .kode_top_login_3 .btn-default:active, 
+.header_3 .kode_top_login_3 .btn-default.active, .open > .dropdown-toggle.btn-default,
+.header_3 .kode_top_login_3 .btn-default:active:hover, 
+.header_3 .kode_top_login_3 .btn-default.active:hover, 
+.header_3 .kode_top_login_3 .open > .dropdown-toggle.btn-default:hover, 
+.header_3 .kode_top_login_3 .btn-default:active:focus, .btn-default.active:focus, 
+.header_3 .kode_top_login_3 .open > .dropdown-toggle.btn-default:focus, 
+.header_3 .kode_top_login_3 .btn-default.focus:active, 
+.header_3 .kode_top_login_3 .btn-default.active.focus, 
+.header_3 .kode_top_login_3 .open > .dropdown-toggle.btn-default.focus{
+	background-color:transparent;
+	border-color:transparent;
+}
+.header_3 .kode_top_login_3 .dropdown-menu{
+	padding:0px;
+}
+.header_3 .kode_top_login_3  .dropdown-menu li {
+    float: left;
+    margin: 0;
+    width: 100%;
+}
+.header_3 .kode_top_login_3  .dropdown-menu li a{
+	display:block;
+	padding:7px 10px;
+}
+.header_3 .kode_top_login_3  .dropdown-menu li a:hover{
+	color:#fff;
+}
+.header_3 .kode_top_login_3 .dropdown-menu li img{
+	margin-right:10px;
+}
+.header_3 .kode_top_register_3 li .kode_property_right_3, 
+.header_3 .kode_top_register_3 li .kode_property_left_3{
+	display:inline-block;
+	padding:7px 0px 7px 0px;
+	background-color:#f7921e;
+	color:#fff;
+	width:99px;
+	text-transform:uppercase;
+	border-top-left-radius:20px;
+	border-bottom-left-radius:20px;
+	text-align:center;
+	margin-right:3px;
+}
+.header_3 .kode_top_register_3 li .kode_property_right_3{
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+	background-color:#0070bb;
+	margin:0px;
+}
+.header_3 .kode_top_register_3 li span{
+	background-color: #fff;
+    border-radius: 100%;
+    bottom: 0;
+    height: 28px;
+    line-height: 26px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: 3px;
+    width: 28px;
+    z-index: 999;
+	color:#888888;
+}
+/*
+	============================================
+			kode_top_bar_3 end
+	============================================
+*/
+/*
+	============================================
+			kode_top_nav_wrap_3 start
+	============================================
+*/
+.header_3 .kode_top_nav_cols_3,
+.header_3 .kode_property_navigation_3,
+.header_3 .kode_top_nav_wrap_3{
+	float:left;
+	width:100%;
+}
+.header_3 .kode_top_property_navi_3{
+	float:left;
+}
+.kode_top_property_navi_3.kf_main_navigation{
+	width:auto;
+}
+.header_3 .kode_top_property_navi_3 ul li{
+	float:left;
+}
+.header_3 .kode_top_property_navi_3 ul li a{
+	display:inline-block;
+	padding:17px 19px 14px 21px;
+	text-transform:uppercase;
+}
+.header_3 .kode_top_property_navi_3 ul li ul li a{
+	width:100%;
+	float:left;
+}
+.header_3 .kode_top_property_navi_3 ul li a:hover{
+	color:#fff;
+}
+.header_3 .kode_top_property_navi_3 ul li a.active{
+	font-weight:bold;
+	color:#fff;
+}
+.header_3 .kode_top_nav_search_row_3 {
+    float: right;
+	padding:14px 0 10px;
+}
+/*pop-up*/
+.header_3 .kode_top_nav_search_row_3 .btn-lg, .btn-group-lg > .btn {
+    border-radius:0px;
+    font-size:15px;
+    line-height: 1.33333;
+    padding: 0px 0px;
+	background-color:none;
+}
+.header_3 .kode_top_nav_search_row_3 .btn-primary {
+    background-color:transparent;
+    border-color:transparent;
+    color: #888;
+}
+.header_3 .kode_top_nav_search_row_3 li {
+    border-right: 1px solid #ddd;
+    float: left;
+    padding: 0 19px;
+}
+.header_3 .kode_top_nav_search_row_3 li:last-child {
+    border-right: medium none;
+    margin-left: 10px;
+    padding: 0;
+}
+.header_3 .kode_top_nav_search_row_3 .btn:active, .btn.active{
+	box-shadow:0px 0px 0px 0px;
+}
+.header_3 .kode_top_nav_search_row_3 li .kode_property_search_bar_3{
+	display:inline-block;
+	height:32px;
+	width:32px;
+	text-align:center;
+	line-height:29px;
+	border:1px solid #e0e0e0;
+	border-radius:100%;
+	margin:0px;
+	font-size:12px;
+	color:#888888;
+	margin:-4px 0 0 9px;
+}
+.header_3 .kode_top_nav_search_row_3 li .kode_property_search_bar_3:hover{
+	color:#fff;
+}
+.header_3 .kode_top_nav_search_row_3  span {
+    margin-left: 9px;
+}
+.header_3 .kode_top_nav_search_row_3 .modal-header {
+    border-bottom:none;
+    padding: 0px;
+}
+.header_3 .kode_top_nav_search_row_3 .fa.fa-plus-circle{
+	margin-right:10px;
+}
+.header_3 .kode_top_nav_search_row_3 .modal-body{
+	padding:0px;
+}
+.header_3 .kode_top_nav_search_row_3  .modal-dialog{
+	margin:100px auto auto;
+}
+.header_3 .kode_top_nav_search_row_3 .modal-content {
+    float: left;
+}
+.header_3 .kode_top_nav_search_row_3 .close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 9999;
+	color:#fff;
+}
+/*
+	  ==============================================================
+		  kf_login_rigister start
+	  ==============================================================
+*/
+.header_3 .modal-dialog {
+    margin: 54px auto;
+    width: 600px;
+}
+.header_3 .kf_login_rigister{
+	float:left;
+	width:100%;
+}
+.header_3 .kf_login_colum_3{
+	float:left;
+	width:100%;
+	padding-bottom:28px;
+	border-bottom:1px solid #0070bb;
+}
+.header_3 .kf_login_colum_3:last-child {
+    padding-bottom: 0;
+}
+.header_3 .kf_login_1_3{
+	float:left;
+	width:100%;
+	padding: 29px 0;
+	text-align:center;
+	position:relative;
+	margin-bottom:40px;
+}
+.header_3 .kf_login_1_3:before{
+	position:absolute;
+	content:"";
+	left:0px;
+	right:0px;
+	bottom:-12px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 12px 0;
+	border-color: #0070bb transparent transparent transparent;
+	margin:auto;
+}
+.header_3 .kf_login_1_3 span{
+	height:40px;
+	width:40px;
+	text-align:center;
+	display:inline-block;
+	border:3px solid #ffffff;
+	border-radius:100%;
+	font-size:18px;
+	color:#fff;
+	margin-right: 15px;
+}
+.header_3 .kf_login_1_3 span i{
+	line-height:38px;
+}
+.header_3 .kf_login_1_3 h2{
+	display:inline-block;
+	font-size:30px;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#ffffff;
+}
+.header_3 .kf_login_filed_3{
+	float:left;
+	width:100%;
+	text-align:center;
+	position:relative;
+	padding:0px 6px;
+}
+.header_3 .kf_loging_input_3{
+	float:left;
+	width:100%;
+	margin-bottom:20px;
+	position: relative;
+}
+.header_3 .kf_loging_input_3 input[type="text"]{
+	width:350px;
+	height:44px;
+	border:none;
+	border:1px solid #d3d3d3;
+	font-size:16px;
+	color:#666666;
+	display:inline-block;
+	padding-left: 64px;
+}
+.header_3 .kf_loging_input_3 input:focus{
+	border:1px solid #0070bb;
+}
+.header_3 .kf_loging_input_3 input:last-child{
+		margin-bottom:0px;
+}
+.header_3 .kf_loging_input_3 label{
+	position: absolute;
+	top:0px;
+	left:119px;
+	color:#fff;
+	font-size:16px;
+	height:44px;
+	width:44px;
+	text-align:center;
+	display:inline-block;
+	line-height:42px;
+}
+.header_3 .kf_login_password_3{
+	float:left;
+	width:100%;
+	padding:0px 125px;
+}
+.header_3 .kf_login_password_3 ul{
+	float:left;
+	width:100%;
+	margin-bottom:30px;
+}
+.header_3 .kf_login_password_3 ul li{
+	float:left;
+	margin-right: 10px;
+}
+.header_3 .kf_login_password_3.kf_left li a{
+	color:#0070bb;
+}
+.header_3 .kf_login_password_3 ul li  a{
+	color:#999;
+	text-transform: capitalize;
+}
+.header_3 .kf_login_singin_3{
+	border-bottom: 1px solid #dbdbdb;
+    float: left;
+    text-align: center;
+    width: 100%;
+	margin-bottom:25px;
+}
+.header_3 .kf_login_singin_3 button{
+	font-size:18px;
+	text-transform:uppercase;
+	color:#ffffff;
+	display:block;
+	padding:11px 0px;
+	font-weight:bold;
+	width:100%;
+}
+.header_3 .kf_login_singin_3 button:hover{
+	background-color: #000;
+}
+.header_3 .kf_login_singin_3.kf_padding {
+    border-bottom: medium none;
+    margin-bottom: 0;
+}
+.header_3 .kf_login_social_icon_3{
+	float:left;
+	width:100%;
+	text-align:center;
+}
+.header_3 .kf_login_social_icon_3 p{
+	font-size:16px;
+	color:#999999;
+	margin-bottom:0px;
+	padding-bottom:25px;
+}
+.header_3 .kf_login_social_icon_3 ul{
+	float:left;
+	width:100%;
+	margin-bottom:30px;
+	padding:0px 160px;
+}
+.header_3 .kf_login_social_icon_3 ul li{
+	display:inline-block;
+	margin-right:28px;
+	padding:0px;
+}
+.header_3 .kf_login_social_icon_3 li:last-child {
+    margin: 0;
+}
+.header_3 .kf_login_social_icon_3 ul li a{
+	display:inline-block;
+	height:64px;
+	width:64px;
+	text-align:center;
+	font-size:25px;
+	color:#fff;
+}
+.header_3 .kf_login_social_icon_3 ul li a:hover{
+	background-color:#333;
+	color:#fff;
+}
+.header_3 .kf_login_social_icon_3 ul li a i{
+	line-height:64px;
+}
+.header_3 .kf_login_social_icon_3 h5{
+	color: #999999;
+    float: left;
+    font-size: 14px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+.header_3 .kf_login_social_icon_3 h5 > a{
+	display: inline-block;
+}
+.header_3 .kf_login_forgrt{
+	float:left;
+	width:100%;
+	padding:0px 6px;
+}
+.header_3 .kf_login_forgrt a{
+	font-size:16px;
+	color:#666666;
+	display:block;
+	padding:12px 0px;
+}
+.header_3 .kf_login_forgrt p{
+	color:#666666;
+	font-size:14px;
+	margin:0px;
+	margin-bottom:27px;
+}
+/*
+	  ==============================================================
+		  kf_login_rigister end
+	  ==============================================================
+*/
+
+
+
+
+
+/*
+	  ====================================================================================================
+					header-2 start
+	  ====================================================================================================
+*/
+/*
+	  ==============================================================
+		  kode_property_top_nav_4 start
+	  ==============================================================
+*/
+.header_4{
+	position:relative;
+}
+.header_4 .kode_property_top_nav_4{
+	padding:18px 65px 16px 65px;
+	background-color:#0066b1;
+}
+.header_4 .kode_property_logo_4,
+.header_4 .kode_property_top_nav_4{
+	float:left;
+	width:100%;
+}
+.header_4 .kode_top_logo_fig_4{
+	float:left;
+}
+.header_4 .kode_property_location_4{
+	float:right;
+	padding:5px 0px;
+}
+.header_4 .kode_property_location_search_4{
+	float:left;
+}
+.header_4 .kode_property_location_search_4 .kode_location_property_price_4 > input[type="text"]{
+	height:45px;
+	font-size:14px;
+	background-color:transparent;
+	border:2px solid #fff;	
+	padding:0px 15px;
+	float:left;
+	color:#fff;
+}
+.header_4 .kode_location_search_feature_4 input[type="checkbox"]{
+	display:none;
+}
+.kode_location_search_feature_4 label span{
+	position:relative;
+	float:left;
+	margin:0px 10px 0 0;
+	display:inline-block;
+}
+.kode_location_search_feature_4 label{
+	margin:0px;
+	font-size:12px;
+	color:#fff;
+	padding:0px 0px 0px 20px;
+}
+.kode_location_search_feature_4 label span:before{
+	border: 1px solid #fff;
+    bottom: 0;
+    color: #fff;
+    content: "";
+    font-family: fontawesome;
+    font-size: 14px;
+    font-weight: normal;
+    height: 12px;
+    left: -20px;
+    line-height: 8px;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 12px;
+}
+.kode_location_search_feature_4 input[type="checkbox"]:checked  + label span:before{
+	content:"\f00c";
+}
+.header_4 .kode_property_location_search_4 .chosen-container-single .chosen-single{
+	background:none;
+	border:2px solid #fff;
+	height:45px;	
+	padding:0px;
+}
+.header_4 .kode_property_location_search_4 .chosen-container-single .chosen-single span{
+	color:#fff;
+}
+.header_4 .kf_main_navigation ul li.active:before,.header_4  .kf_main_navigation ul li:hover:before{
+	content:'';
+}
+.header_4 .kode_property_location_search_4 input[type="text"]:-ms-input-placeholder,
+.header_4 .kode_property_location_search_4 input[type="text"]::-webkit-input-placeholder,
+.header_4 .kode_property_location_search_4 input[type="text"]::-moz-placeholder{
+	color:#fff;
+}
+.header_4 .kode_property_location_search_4 input:focus {
+    box-shadow: 0 0 22px -7px rgba(255, 255, 255, 0.6);
+}
+.header_4 .kode_property_select_4 {
+    float: left;
+	margin-left:18px;
+}
+
+.header_4 .kode_property_select_4 .chosen-container-single .chosen-single{
+	background:transparent;
+	box-shadow:0px 0px 0px 0px;
+	width:249px;
+	font-size:14px;
+	color:#fff;
+	text-transform:uppercase;
+	height:45px;
+	border:2px solid #fff;
+	padding:0px;
+}
+.header_4 .chosen-container-single .chosen-single{
+	border-radius:0px !important;
+}
+.header_4 .kode_property_advance_search_4 {
+    float: left;
+    margin-left: 28px;
+}
+.header_4 .kode_advance_search{float:left;}
+.header_4 .kode_advance_search a span{
+	font-size:16px;
+	font-weight:bold;
+	text-transform:uppercase;
+	display:inline-block;
+	color:#fff;
+	margin-left:12px;
+}
+.header_4 .kode_advance_search a{
+	display:inline-block;
+	color:#fff;
+	margin-left:20px;
+	margin-top:10px;
+}
+.header_4 .kode_advance_search a:focus{
+	outline:none;
+}
+.header_4  .kode_property_location_4 .chosen-container-single .chosen-single span{margin-top:9px;margin-left:20px;}
+.header_4  .kode_property_location_4 .chosen-container .chosen-results{float:left;width:100%;}
+.header_4 .kode_advance_search a:hover span,
+.header_4 .kode_advance_search a:hover {
+	color:#fff;
+}
+
+.header_4 .kode_property_advance_search_4 > button:focus {
+    box-shadow: 0 0 20px -5px #fff;
+}
+/*
+	  ==============================================================
+		  kode_property_top_nav_4 end
+	  ==============================================================
+*/
+/*
+	  ==============================================================
+		  kode_property_top_navi_1 start
+	  ==============================================================
+*/
+
+.header_4 .kode_property_top_nav_4 {
+    box-shadow: 0 5px 6px -6px #333;
+    position: relative;
+    z-index: 999;
+}
+.header_4 .kode_property_top_navi_row_4{
+	padding:17px 65px 16px 65px;
+}
+.header_4 .kode_property_top_navi_row_4,
+.header_4 .kode_property_top_nav_row_4{
+	float:left;
+	width:100%;
+}
+.header_4 .kode_property_navibar_4{
+	float:left;
+	padding-top:5px;
+}
+.kode_property_top_nav_row_4 ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+.kode_property_navibar_4.kf_main_navigation{
+	width:auto;
+}
+.header_4 .kode_property_navibar_4 .navigation ul > li{
+	float:left;
+	margin-right:28px;
+}
+.header_4 .kode_property_navibar_4 .navigation ul > li:last-child{
+	margin:0px;
+}
+.header_4 .kode_property_navibar_4 .navigation ul > li a{
+	display:inline-block;
+	font-size:16px;
+	text-transform:uppercase;
+	padding:0px;
+}
+.kode_property_location_4 .chosen-container-single .chosen-single div b::before{
+	color:#fff;
+}
+.header_4 .kode_property_navibar_4.kf_main_navigation ul li ul li a{
+	padding:19px 14px;
+	float:left;
+	width:100%;
+}
+.header_4 .kode_property_navibar_4 .navigation ul > a:hover{
+	color:#000;
+}
+.header_4 .kode_property_navibar_4 .navigation ul li a.active{
+	font-weight:bold;
+}
+.header_4 .kode_property_social_icon_4{
+	float:right;
+}
+.kode_property_social_icon_4 ul.dark.kode_property_icon_search_4{
+	padding:0px;
+}
+.header_4 .kode_property_logo_2_4{
+	float:left;
+	padding:4px 0px 0px 0px;
+	margin:0px;
+}
+.header_4 .kode_property_icon_search_4{
+	float:left;
+	margin-left:35px;
+}
+.header_4 .kode_property_icon_search_4 li{
+	float:left;
+	margin-left:10px;
+}
+.header_4 .kode_property_icon_search_4 li:first-child{
+	margin:0px;
+}
+.header_4 .kode_property_icon_search_4 li a{
+	display:inline-block;
+	height:34px;
+	width:34px;
+	text-align:center;
+	line-height:34px;
+	border-radius:100%;
+	color:#fff;
+	font-size:16px;
+	background-color:#0066b1;
+}
+.header_4 .kode_property_icon_search_4 li a:hover{
+	background-color:#333;
+}
+.header_4 .kode_property_logo_2_4 li{
+	float:left;
+	margin-right:32px;
+}
+.header_4 .kode_property_logo_2_4 li:last-child{
+	margin:0px;
+}
+.header_4 .kode_property_logo_2_4 > li > a{
+	display:inline-block;
+	font-weight:bold;
+	color:#fff;
+	font-size:18px;
+	text-transform:uppercase;
+}
+.header_4 .kode_property_logo_2_4 li a i{
+	display:none;
+}
+.header_4 .kode_property_logo_2_4 a{
+	padding:0px;
+	background-color:transparent
+}
+.header_4 .kode_property_logo_2_4 .btn:active, .btn.active{
+	box-shadow:0px 0px 0px 0px;
+}
+.header_4 .kode_property_logo_2_4 .btn-primary:hover,
+.header_4 .kode_property_logo_2_4 .btn-primary,
+.header_4.kode_property_logo_2_4 .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background-color:transparent;
+    border-color: transparent;
+    color: #fff;
+}
+/*
+	  ==============================================================
+		  kf_login_rigister start
+	  ==============================================================
+*/
+.header_4 .modal-dialog {
+    margin: 54px auto;
+    width: 600px;
+}
+.header_4 .kf_login_rigister{
+	float:left;
+	width:100%;
+}
+.header_4 .kf_login_colum_4{
+	float:left;
+	width:100%;
+	padding-bottom:28px;
+	border-bottom:1px solid #0070bb;
+}
+.header_4 .kf_login_colum_4:last-child {
+    padding-bottom: 0;
+}
+.header_4.kf_login_1_4{
+	float:left;
+	width:100%;
+	padding: 29px 0;
+	text-align:center;
+	position:relative;
+	margin-bottom:40px;
+}
+.header_4 .kf_login_1_4:before{
+	position:absolute;
+	content:"";
+	left:0px;
+	right:0px;
+	bottom:-12px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 12px 0;
+	border-color: #0070bb transparent transparent transparent;
+	margin:auto;
+}
+.header_4 .kf_login_1_4 span{
+	height:40px;
+	width:40px;
+	text-align:center;
+	display:inline-block;
+	border:3px solid #ffffff;
+	border-radius:100%;
+	font-size:18px;
+	color:#fff;
+	margin-right: 15px;
+}
+.header_4.kf_login_1_4 span i{
+	line-height:38px;
+}
+.header_4 .kf_login_1_4 h2{
+	display:inline-block;
+	font-size:30px;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#ffffff;
+}
+.header_4 .kf_login_filed_4{
+	float:left;
+	width:100%;
+	text-align:center;
+	position:relative;
+	padding:0px 6px;
+}
+.header_4 .kf_loging_input_4{
+	float:left;
+	width:100%;
+	margin-bottom:20px;
+	position: relative;
+}
+.header_4 .kf_loging_input_4 input[type="text"]{
+	width:350px;
+	height:44px;
+	border:none;
+	border:1px solid #d3d3d3;
+	font-size:16px;
+	color:#666666;
+	display:inline-block;
+	padding-left: 64px;
+}
+.header_4.kf_loging_input_4 input:focus{
+	border:1px solid #0070bb;
+}
+.header_4 .kf_loging_input_4 input:last-child{
+		margin-bottom:0px;
+}
+.header_4 .kf_loging_input_4 label{
+	position: absolute;
+	top:0px;
+	left:119px;
+	color:#fff;
+	font-size:16px;
+	height:44px;
+	width:44px;
+	text-align:center;
+	display:inline-block;
+	line-height:42px;
+}
+.header_4 .kf_login_password_4{
+	float:left;
+	width:100%;
+	padding:0px 125px;
+}
+.header_4 .kf_login_password_4 ul{
+	float:left;
+	width:100%;
+	margin-bottom:30px;
+}
+.header_4 .kf_login_password_4 ul li{
+	float:left;
+	margin-right: 10px;
+}
+.header_4 .kf_login_password_4.kf_left li a{
+	color:#0070bb;
+}
+.header_4 .kf_login_password_4 ul li  a{
+	color:#999;
+	text-transform: capitalize;
+}
+.header_4 .kf_login_singin_4{
+	border-bottom: 1px solid #dbdbdb;
+    float: left;
+    text-align: center;
+    width: 100%;
+	margin-bottom:25px;
+}
+.header_4 .kf_login_singin_4 button{
+	font-size:18px;
+	text-transform:uppercase;
+	color:#ffffff;
+	display:block;
+	padding:11px 0px;
+	font-weight:bold;
+	width:100%;
+}
+.header_4 .kf_login_singin_4 button:hover{
+	background-color: #000;
+}
+.header_4 .kf_login_singin_4.kf_padding {
+    border-bottom: medium none;
+    margin-bottom: 0;
+}
+.header_4 .kf_login_social_icon_4{
+	float:left;
+	width:100%;
+	text-align:center;
+}
+.header_4 .kf_login_social_icon_4 p{
+	font-size:16px;
+	color:#999999;
+	margin-bottom:0px;
+	padding-bottom:25px;
+}
+.header_4 .kf_login_social_icon_4 ul{
+	float:left;
+	width:100%;
+	margin-bottom:30px;
+	padding:0px 160px;
+}
+.header_4 .kf_login_social_icon_4 ul li{
+	display:inline-block;
+	margin-right:28px;
+	padding:0px;
+}
+.header_4 .kf_login_social_icon_4 li:last-child {
+    margin: 0;
+}
+.header_4 .kf_login_social_icon_4 ul li a{
+	display:inline-block;
+	height:64px;
+	width:64px;
+	text-align:center;
+	font-size:25px;
+	color:#fff;
+}
+.header_4 .kf_login_social_icon_4 ul li a:hover{
+	background-color:#333;
+	color:#fff;
+}
+.header_4 .kf_login_social_icon_4 ul li a i{
+	line-height:64px;
+}
+.header_4 .kf_login_social_icon_4 h5{
+	color: #999999;
+    float: left;
+    font-size: 14px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+.header_4 .kf_login_social_icon_4 h5 > a{
+	display: inline-block;
+}
+.header_4 .kf_login_forgrt{
+	float:left;
+	width:100%;
+	padding:0px 6px;
+}
+.header_4 .kf_login_forgrt a{
+	font-size:16px;
+	color:#666666;
+	display:block;
+	padding:12px 0px;
+}
+.header_4 .kf_login_forgrt p{
+	color:#666666;
+	font-size:14px;
+	margin:0px;
+	margin-bottom:27px;
+}
+/*
+	  ==============================================================
+		  kf_login_rigister end
+	  ==============================================================
+*/
+
+/*
+	  ==============================================================
+		  kode_property_top_navi_1 end
+	  ==============================================================
+*/
+/*
+	  ==============================================================
+		  kode_location_property_4 start
+	  ==============================================================
+*/
+.kode_location_property_4{
+	padding:25px 0px 17px 0px;
+	background-color:#0066b1;
+	border-bottom:1px solid #1a76b9;
+}
+
+.kode_location_property_4,
+.kode_location_property_price_4{
+	float:left;
+	width:100%;
+}
+.kode_location_property_price_4{
+	margin-bottom:15px;
+}
+.kode_location_property_price_4 label{
+	margin-bottom:13px;
+	cursor:pointer;
+	font-size:12px;
+	color:#fff;
+}
+.kode_location_property_price_4 .chosen-container-single .chosen-single{
+	border:none;
+	color:#999999;
+	height:40px;
+	width:100%;	
+	background:none;
+	box-shadow:0px 0px 0px 0px;
+	background-color:#fff;
+	font-weight:600;
+}
+.kode_location_property_price_4 .chosen-container-single .chosen-single span{
+	font-size:14px;
+	color:#999999;
+	padding:8px 14px;
+	display:inline-block;
+}
+.kode_location_property_price_4 .chosen-container-single .chosen-single div{
+	background:none;
+}
+.kode_location_property_price_4 .chosen-container-single .chosen-single div b::before {
+    color: #999999;
+    content: "";
+    font-family: fontawesome;
+    font-weight: 300;
+    height: 100%;
+    left: -5px;
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    width: 100%;
+	font-size:20px;
+	color:#999999;
+}
+.kode_location_property_price_4 input[type="text"]{
+	height:40px;
+}
+.kode_location_search_feature_4{
+	float:left;
+	width:100%;
+	margin-top:10px;
+}
+.kode_location_search_feature_4 input {
+    margin-right: 16px;
+	height:0px;
+	width:0px;
+	color:#fff;
+}
+.kode_location_search_feature_4 a{
+	float:left;
+	color:#fff;
+	font-size:14px;
+	line-height:16px;
+	text-transform:capitalize;
+}
+.kode_location_search_feature_4 a:focus{
+	outline:none;
+}
+/*
+	  ==============================================================
+		  kode_location_property_4 end
+	  ==============================================================
+*/
+/*
+	  ==============================================================
+		  kode_location_button_feature_4 start
+	  ==============================================================
+*/
+
+
+.kode_location_button_feature_4{
+	padding:31px 0px 29px 0px;
+	text-align:center;
+	background-color:#0066b1;
+}
+.kode_location_button_feature_4,
+.kode_location_search_button_4{
+	text-align:center;
+	float:left;
+	width:100%;
+}
+.header_4 .kode_property_advance_search_4 button,
+.kode_location_search_button_4 button {
+    color: #fff;
+    font-size: 18px;
+    height: auto;
+    line-height: normal;
+    padding: 11px 50px 12px;
+    text-align: center;
+    text-transform: uppercase;    
+}
+ .kode_location_search_button_4 > button:focus {
+    box-shadow: 0 0 20px -5px #fff;
+}
+.kode_top_login_3 ul,
+.kode_property_navigation_3 ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+.kode_search_conainter_header_4{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0px;
+	width:100%;
+	z-index:1001;
+}
+.kf_login_1 span{
+	display:none;
+}
+
+
+.user-profile .modal-content,
+.kode_top_register_3 .modal-content{
+	background:transparent;
+	border-radius:none;
+	border:none;
+	box-shadow:none;
+}
+
+.kode_top_register_3 .modal-body button{
+	color:#fff;
+	opacity:1;
+	font-size:28px;
+}
+
+
+
+/*new css*/
+.kode-calculator-wrap{
+	float: left;
+	width: 100%;
+	padding: 19px 15px 15px;
+	margin-bottom: 30px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+}
+.kode-calculator-wrap h5{
+	float: left;
+	width: 100%;
+	font-size: 22px;
+	color: #333;
+	line-height: 18px;
+	text-transform: capitalize;
+	margin-bottom: 17px;
+}
+.kode-calculator-wrap form{
+	float: left;
+	width: 100%;
+}
+.kode-calculator-input{
+	float: left;
+	width: 100%;
+	position: relative;
+	padding-top: 14px;
+	margin-bottom: 20px;
+}
+.kode-info{
+	position: absolute;
+	right: 0;
+	top:-4px;
+	width: auto;
+	font-size: 12px;
+	border-radius: 100%;
+	border: 1px solid #333;
+	height: 16px;
+	width: 16px;
+	line-height: 13px;
+	display: block;
+	text-align: center;
+	transtion:all 0.3s ease-in-out;
+	-moz-transtion:all 0.3s ease-in-out;
+	-webkit-transtion:all 0.3s ease-in-out;
+	-ms-transtion:all 0.3s ease-in-out;
+	-o-transtion:all 0.3s ease-in-out;
+}
+.kode-info:hover{
+	background-color: #000;
+	color: #fff;
+}
+.kode-calculator-input input[type="text"]{
+	float: left;
+	width: 100%;
+	background-color: transparent;
+	border-color: #c7c7c7;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	height: 32px;
+	font-size: 14px;
+	padding: 0;
+}
+.kode-calculator-input input[type="text"]-moz-placeholder{
+	color: rgba(0, 0, 0, 0.87);
+}
+input[type="text"].input-price{
+	padding-left: 15px;
+}
+.kode-calculator-input input[type="text"]:focus{
+	border-color:  #f6911e;
+}
+.kode-calculator-input b{
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 6px;
+	font-size: 16px;
+	color: #333;
+	left: 0;
+}
+.kode-calculator-input label{
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #333;
+	font-size: 12px;
+	text-transform: capitalize;
+	line-height: 13px;
+	font-family: "Source Sans Pro",sans-serif;
+}
+.kode-calculator-input input[type="text"]:focus ~ label{
+	color: #f6911e;
+}
+.kode-calculator-button{
+	float: left;
+	width: 100%;
+	padding: 13px 0 5px;
+}
+.kode-calculator-button input[type="button"]{
+    background-color: #fff;
+    background-image: none;
+    border: medium none;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+    padding: 10px 26px 11px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out 0s;
+    vertical-align: middle;
+    margin-right: 6px;
+    line-height: 14px;
+    font-family: "Source Sans Pro",sans-serif;
+}
+.kode-calculator-button input[type="button"]:last-child{
+	margin: 0;
+}
+.kode-calculator-button input[type="button"]{
+	float:left;
+	width:auto;
+}
+.kode-calculator-button input[type="button"].calculator-button{
+    background-color: #f6911e;
+    background-image: none;
+    color: #ffffff;
+	
+}
+.kode-calculator-button input[type="button"]:hover, .kode-calculator-button input[type="button"]:focus {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*
+=================================================
+		CHECKBOX AND RADIO BUTTON CSS
+=================================================
+*/
+.kode-calculator-checkbox{
+	float: left;
+	width: auto;
+	margin-right: 20px;
+}
+
+.kode-calculator-input  input[type="checkbox"] + label ,
+.kode-calculator-input  input[type="radio"] + label {
+    -moz-user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 35px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.kode-calculator-input  input[type="checkbox"] + label::before ,
+.kode-calculator-input  input[type="radio"] + label::before {
+    border: 2px solid #5a5a5a;
+    border-radius: 1px;
+    content: "";
+    height: 18px;
+    left: 0;
+    margin-top: 2px;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease 0s;
+    width: 18px;
+    z-index: 0;
+}
+
+.kode-calculator-input  [type="checkbox"]:checked + label::before,
+.kode-calculator-input  [type="radio"]:checked + label::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #f6911e #f6911e -moz-use-text-color;
+    border-image: none;
+    border-style: none solid solid none;
+    border-width: medium 2px 2px medium;
+}
+
+.kode-calculator-input  input[type="checkbox"]:checked + label::before ,
+.kode-calculator-input  input[type="radio"]:checked + label::before {
+    border-left: 2px solid transparent;
+    border-top: 2px solid transparent;
+    height: 22px;
+    left: -3px;
+    top: -4px;
+    transform: rotate(40deg);
+    transform-origin: 100% 100% 0;
+    width: 12px;
+}
+
+.kode-calculator-input input[type="checkbox"]:not(:checked), .kode-calculator-input [type="checkbox"]:checked,
+.kode-calculator-input input[type="radio"]:not(:checked), .kode-calculator-input [type="radio"]:checked {
+    left: -9999px;
+    position: absolute;
+}
+
+
+.err-msg{
+	float:left;
+	width:100%;
+	padding:10px;
+	display:none;
+}
+.kode-custom-mortgage-form.success .err-msg{
+	display:none;
+}
+.kode-custom-mortgage-form.success{
+	position:relative;
+}
+.kode-custom-mortgage-form.success:before{
+	content:'';
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	float:left;
+	position:absolute;
+	background:#fff;
+	z-index:999;
+	opacity:0.7;
+}
+/*
+================================================
+			PROPERTY CATEGORIES SECTION
+================================================
+*/
+
+.property-sale-rent{
+	float:left;
+	padding:40px 0px;
+	width:100%;
+	margin-top:-30px;
+}
+.property-category{
+	float:left;
+	width:100%;
+}
+.property-category ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	float:left;
+	width:100%;
+}
+.property-category ul li{
+	float:left;
+	width:100%;
+	padding:5px 0px 5px 20px;
+	border-bottom:solid 1px rgba(255,255,255,0.2);
+	position:relative;
+}
+.property-category ul li:hover{
+	padding:5px 0px 5px 25px;
+}
+.property-category ul li:first-child{
+	border-top:solid 1px rgba(255,255,255,0.2);
+}
+.property-category ul li:before{
+	content:"\f105";
+	font-family:FontAwesome;
+	color:#fff;
+	font-size:18px;
+	position:absolute;
+	left:0px;
+	top:7px;
+}
+.property-category ul li:hover:before{
+	left:10px;
+}
+.property-category ul li a{
+	color:#fff;
+	display:block;
+	padding:2px 0px;
+	text-decoration:none;
+	
+}
+.property-category ul li a span{
+	float:right;
+	padding:2px 5px;
+	display:inline-block;
+	border-radius:3px;
+	font-size:12px;
+	text-align:center;
+}
+.property-category ul li:hover a span{
+	background-color:#fff;
+	color:#000;
+}
+
+
+.category-header{
+	float:left;
+	width:100%;
+	margin:0px 0px 20px 0px;
+}
+.category-header i{
+	height:36px;
+	width:36px;
+	text-align:center;
+	padding:7px 0px;
+	float:left;
+	border:solid 1px #75b8d4;
+	font-size:18px;
+	color:#fff;
+	margin:0px 10px 0px 0px;
+}
+.category-header h4{
+	font-size:16px;
+	font-weight:bold;
+	color:#fff;
+	margin:9px 0px;
+	display:inline-block;
+	line-height:16px;
+}
+.category-header a{
+	float:right;
+	color:#fff;
+	font-size:12px;
+	margin:9px 0px;
+}
+.category-header a:hover{
+	color:#fff;
+}
+.kode-property.kode-property-classic .kf_property_listing_wrap .kodeproperty-price-amount.amount{
+	background:#fff;	
+}
+.col-md-4.columns .row .kode-widget{
+	width:100%;
+	padding:0px;
+}

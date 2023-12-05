@@ -1,0 +1,125 @@
+<button mat-icon-button class="close-button" [mat-dialog-close]="true">
+  <mat-icon class="close-icon" color="warn">close</mat-icon>
+</button>
+<div class="pull-left">
+  <h3><b>{{headerText}}</b></h3>
+</div>
+
+<!-- Angular Material Tab Group -->
+<mat-tab-group [(selectedIndex)]="tabIndex">
+  <!-- User Details Tab -->
+  <!-- <mat-card-header>{{headerText}}</mat-card-header> -->
+  <mat-tab label="User Details">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" style="margin-top: 30px;">
+      <div class="form-row">
+        <!-- Login Name -->
+        <mat-form-field class="form-group col-md-3" appearance="outline">
+          <mat-label>Login Name</mat-label>
+          <input matInput formControlName="loginName" placeholder="Login Name">
+          <mat-error *ngIf="submitted && f.loginName.errors && f.loginName.errors.required">Login Name is
+            required</mat-error>
+        </mat-form-field>
+
+        <!-- Full Name -->
+        <mat-form-field class="form-group col-md-3" appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="fullName" placeholder="First Name">
+          <mat-error *ngIf="submitted && f.fullName.errors && f.fullName.errors.required">Full Name is
+            required</mat-error>
+        </mat-form-field>
+
+        <!-- Middle Name -->
+        <mat-form-field class="form-group col-md-3" appearance="outline">
+          <mat-label>Middle Name</mat-label>
+          <input matInput formControlName="middleName" placeholder="Middle Name">
+        </mat-form-field>
+
+        <!-- Last Name -->
+        <mat-form-field class="form-group col-md-3" appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" placeholder="Last Name">
+          <mat-error *ngIf="submitted && f.lastName.errors && f.lastName.errors.required">Last Name is
+            required</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <!-- Start Date -->
+        <mat-form-field class="form-group col-md-3" appearance="outline">
+          <mat-label>Start Date</mat-label>
+          <input matInput placeholder="Start Date" formControlName="startDate" [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="submitted && f.startDate.errors && f.startDate.errors.required">Start Date is
+            required</mat-error>
+        </mat-form-field>
+
+        <!-- End Date -->
+        <mat-form-field class="form-group col-md-3" appearance="outline">
+          <mat-label>End Date</mat-label>
+          <input matInput placeholder="End Date" formControlName="endDate" [matDatepicker]="pickerEnd">
+          <mat-datepicker-toggle matSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+          <mat-datepicker #pickerEnd></mat-datepicker>
+          <mat-error *ngIf="submitted && f.endDate.errors && f.endDate.errors.required">End Date is required</mat-error>
+        </mat-form-field>
+
+        <!-- Email -->
+        <mat-form-field class="form-group col-md-3" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="Email">
+          <mat-error *ngIf="submitted && f.email.errors">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Password -->
+        <mat-form-field class="form-group col-md-3" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" placeholder="Password">
+          <mat-error *ngIf="submitted && f.password.errors">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <button mat-raised-button class="btn" type="submit">Add User</button>
+        <button mat-raised-button class="btn" type="submit">Update User</button>
+      </div>
+    </form>
+  </mat-tab>
+
+  <!-- User Roles Tab -->
+  <mat-tab label="User Roles">
+    <div class="form-group row" style="margin-top: 30px;">
+      <label for="appInputID" class="col-sm-4 pull-left text-right">Role Name :</label>
+      <div id="appInputID" class="col-sm-6 pull-left">
+        <div class="col-md-6 pull-left">
+          <mat-form-field appearance="outline">
+            <mat-label>Role Name</mat-label>
+            <mat-select [(ngModel)]="selectedRole" placeholder="Select Role">
+              <mat-option *ngFor="let role of allRowData" [value]="role">{{ role.role_code }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 pull-left">
+          <button mat-raised-button class="btn" type="button" (click)="assignRole()">Assign Role</button>&nbsp;
+          <button mat-raised-button class="btn" type="button" (click)="update()">Update</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <ag-grid-angular class="grid-with-lines" [pagination]="true" class="ag-theme-alpine"
+      style="width: 100%;height:250px;" #agGrid (gridReady)="onGridReady($event)" [columnDefs]="columnDefs"
+      [rowData]="userRoleData" [paginationPageSize]="25" [rowSelection]="rowSelection" [suppressRowClickSelection]="true"
+      [gridOptions]="gridOptions">
+    </ag-grid-angular>
+    <select id="page-size" [(ngModel)]="pageSize" (ngModelChange)="onPageSizeChanged()"
+      [ngModelOptions]="{standalone: true}">
+      <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+    </select>
+    <!-- Add your ag-grid-angular component here -->
+  </mat-tab>
+</mat-tab-group>

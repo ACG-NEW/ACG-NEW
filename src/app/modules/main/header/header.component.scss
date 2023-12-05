@@ -1,0 +1,128 @@
+.fa-bars {
+  cursor: pointer;
+}
+
+.nav-item {
+  .nav-link {
+    cursor: pointer;
+  }
+}
+
+.nav-item {
+  button.nav-link {
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.matoption {
+  font-size: 10px;
+}
+
+
+::ng-deep .mat-form-field-wrapper {
+  margin-bottom: -1.0em;
+  margin-top: -0.2em;
+}
+
+.mat-form-field {
+  margin-right: 25px;
+}
+
+.p {
+  font-size: 12px;
+  margin: 0px;
+  font-weight: 500;
+}
+.iconLg{
+  font-size:16px;
+  color:red;
+  margin: 0px;
+}
+
+::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+  padding: 0.4em 0px !important;
+
+}
+
+::ng-deep .mat-form-field-label-wrapper {
+  top: -1.5em;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.1em) scale(.75);
+  width: 133.33333%;
+
+}
+.mat-autocomplete-panel {
+  position:relative;
+  right:3px;
+}
+_:-ms-input-placeholder, :root {
+  body[style] {
+    position: inherit !important;
+    top: inherit !important;
+    width: inherit !important;
+  }
+
+  .md-click-catcher.md-wbTheme-theme {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+  }
+}
+.mat-option:hover {
+  background-color: #46718e;
+  color: #fff;
+}
+
+.btn {
+  line-height: 20px;
+  font-size: 12px;
+  margin: 3px;
+  // width: 20px;
+}
+
+.alert-message {
+  display: block;
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.btn {
+  line-height: 20px !important;
+  font-size: 12px !important;
+  margin: 3px !important;
+  // width: 20px;
+}
+
+.btnU {
+  line-height: 18px;
+  font-size: 12px;
+  margin: 0px;
+}
+
+.btn:hover {
+  background-color: #c004fc !important;
+  color: #fff !important;
+}
+
+.btnU:hover {
+  background-color: #c004fc !important;
+  color: #fff !important;
+}
+// .btn {
+//   line-height: 20px;
+//   font-size: 12px;
+//   margin: 3px;
+//   // width: 20px;
+// }
+
+// .btn:hover {
+//   background-color: #c004fc;
+//   color: #fff;
+// }

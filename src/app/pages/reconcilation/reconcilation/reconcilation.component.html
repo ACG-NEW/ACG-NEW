@@ -1,0 +1,101 @@
+<section class="container-fluid">
+  <div class="col-sm-6 pagename">
+    <h5 class="adj">Reconciliation</h5>
+  </div>
+  <form [formGroup]="ReconcilationForm" #reconfrm="ngForm">
+    <mat-card>
+      <div class="mat-card-content" fxLayout="column" style="margin-top: -10px;margin-bottom: -25px;">
+        <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutGap.lt-md="0px"
+          style="text-align: center;">
+          <mat-form-field appearance="outline">
+            <mat-label>Select PSP Name</mat-label>
+            <input matInput formControlName="pspName" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onPspNameSelected($event)">
+              <mat-option *ngFor="let psp of filteredPSPNames | async" [value]="psp.pspName">
+                {{ psp.pspName }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Sub A/C Name</mat-label>
+            <input matInput formControlName="subAcName" [matAutocomplete]="auto2">
+            <mat-autocomplete #auto2="matAutocomplete" [displayWith]="displaySubAcct"
+              (optionSelected)="onSubAcctSelected($event)">
+              <mat-option *ngFor="let subAcct of filteredSubAccts | async" [value]="subAcct">
+                {{ subAcct.label }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <button type="button" mat-stroked-button color="primary" value="find" class="btn" (click)="randomMatchig()"
+            [disabled]="!ReconcilationForm.controls.subAcName.valid">Find</button>
+          <button type="button" mat-stroked-button color="primary" value="find" class="btn"
+            [disabled]="!ReconcilationForm.controls.subAcName.valid" (click)="allTransactions()">All</button>
+        </div>
+      </div>
+    </mat-card>
+
+    <div class="container-fluid">
+      <b>PSP Transactions</b>
+      <b style="float: right;margin-left:15px ;">Sum: {{pspsum}}</b>
+      <b style="float: right;">Count: {{pspcount}}</b>
+      <!-- <mat-form-field appearance="outline" style="width:230px;margin-bottom: -15px;font-size: 12px;">
+        <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+      </mat-form-field> -->
+      <mat-divider></mat-divider>
+      <ag-grid-angular  class="grid-with-lines" [pagination]="true" class="ag-theme-alpine" style="width: 100%; height:245px;" #agGrid
+        (gridReady)="onGridReady($event)" [columnDefs]="columnDefs1" [rowData]="pspDataSource" [paginationPageSize]="25"
+        [rowSelection]="rowSelection" [suppressRowClickSelection]="true" (rowSelected)="onRowSelected($event)"
+        [gridOptions]="gridOptions">
+      </ag-grid-angular>
+      <div style="margin-top: -4px;">
+        <!-- <label for="page-size">Rows per page:</label> -->
+        <select id="page-size" [(ngModel)]="psppageSize" (ngModelChange)="onpspPageSizeChanged()"
+          [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let size of psppageSizes" [value]="size">{{ size }}</option>
+        </select>
+        <button type="button" style="margin-left: 10px;" mat-stroked-button color="primary" value="match" class="btn"
+          (click)="pspMatch()" [disabled]="pspCheckeData.length < 2 || ezeCheckeData.length > 0">Match</button>
+
+        <button style="float:right" type="button" [disabled]="pspDataSource.length <= 0" mat-stroked-button
+          color="accent" value="match" class="btn" (click)="exportPspdata()">Export</button>
+      </div>
+      <b>Cashier Transactions</b>
+      <b style="float: right;margin-left:15px ;">Sum: {{ezesum}}</b>
+      <b style="float: right;">Count: {{ezecount}}</b>
+      <!-- <mat-form-field appearance="outline" style="width:230px;margin-bottom: -15px;font-size: 12px;">
+        <input matInput (keyup)="applycashierFilter($event)" placeholder="Filter">
+      </mat-form-field> -->
+      <mat-divider></mat-divider>
+      <!-- <ng-container *ngIf="!isLoading; else loading"> -->
+
+      <!-- </ng-container> -->
+      <ag-grid-angular  class="grid-with-lines" [pagination]="true" class="ag-theme-alpine" style="width: 100%; height:245px;" #agGrid
+        (gridReady)="onGridReady1($event)" [columnDefs]="columnDefs2" [rowData]="cashDataSource"
+        [paginationPageSize]="25" [rowSelection]="rowSelection" [suppressRowClickSelection]="true"
+        (rowSelected)="onEZERowSelected($event)" [gridOptions]="gridOptions1">
+      </ag-grid-angular>
+      <div style="margin-top: -4px;">
+        <!-- <label for="page-size" >Rows per page:</label> -->
+        <select id="page-size" [(ngModel)]="pageSize" (ngModelChange)="onPageSizeChanged()"
+          [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+        </select>
+        <button type="button" style="margin-left: 10px;" mat-stroked-button color="primary" value="match" class="btn"
+          (click)="ezeMatch()" [disabled]="ezeCheckeData.length < 2 || pspCheckeData.length > 0 ">Match</button>
+        <button style="float:right" type="button" mat-stroked-button color="accent" value="match" class="btn"
+          (click)="exportEzedata()" [disabled]="cashDataSource.length <= 0">Export</button>
+      </div>
+      <div class="input-row" style="text-align: center;margin-top: 0.5em;margin-top: -20px;" fxLayout="row"
+        fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutGap.lt-md="0px">
+        <button mat-stroked-button color="warn" class="btn" type="button" (click)="Reconcile()"
+          [disabled]="pspCheckeData.length === 0 || ezeCheckeData.length === 0">
+          Reconcile
+        </button>
+        <button mat-stroked-button color="primary" class="btn" type="button" (click)="Cancel()">
+          <mat-icon>cancel</mat-icon>Cancel
+        </button>
+
+      </div>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,19 @@
+<div class="aggrid" style="margin-top: 0.5em; text-align: center;">
+  <ag-grid-angular [pagination]="true" class="ag-theme-alpine" style="width: 100%; height:450px;" #agGrid
+    (gridReady)="onGridReady($event)" [columnDefs]="columnDefs" [rowData]="rowData" [paginationPageSize]="25"
+    [rowSelection]="'single'" [gridOptions]="gridOptions">
+  </ag-grid-angular>
+</div>
+<label for="page-size">Rows per page:</label>
+<select id="page-size" [(ngModel)]="pageSize" (ngModelChange)="onPageSizeChanged()"
+  [ngModelOptions]="{standalone: true}">
+  <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+</select>
+<div style="float: right;">
+  <mat-dialog-actions>
+    <button mat-raised-button type="button" color="primary" class="btn" [mat-dialog-close]="true">Close</button>
+    <button mat-stroked-button [disabled]="exportTmp" (click)="onExportBtnClick()" type="button" class="primary"
+    class="btn"><mat-icon>save_alt</mat-icon>Export</button>
+  </mat-dialog-actions>
+
+</div>

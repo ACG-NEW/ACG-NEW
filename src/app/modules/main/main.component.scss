@@ -1,0 +1,19 @@
+:host {
+    display: block;
+}
+
+.content-wrapper>*:first-child {
+    display: block;
+    height: 100%;
+    position: fixed;
+}
+
+// .sidebar {
+//     height: 100%;
+//     background-color: white;
+// }
+
+.header {
+     display: flexbox !important;
+  }
+

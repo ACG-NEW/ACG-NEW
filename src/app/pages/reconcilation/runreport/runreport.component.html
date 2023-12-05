@@ -1,0 +1,123 @@
+<section class="container-fluid">
+  <form [formGroup]="runReportForm" (ngSubmit)="execute()" #runReportFrm="ngForm" style="margin-top: 10px;">
+    <mat-accordion multi="true">
+      <mat-expansion-panel [(expanded)]="panel1Expanded">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h4>Run Report</h4>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-card style="margin-top: -25px;">
+          <div class="form-container" fxLayout="row" style="margin-bottom: -10px;">
+            <mat-form-field floatLabel='never' class="objName" appearance="outline">
+              <mat-label>Object Name</mat-label>
+              <input type="text" placeholder="Object Name" formControlName="objectName" matInput
+                [matAutocomplete]="auto">
+              <mat-autocomplete [displayWith]="displayFn" (optionSelected)="objname($event)" #auto="matAutocomplete">
+                <mat-option class="matoption" *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option.objectName}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+            <div class="message" [ngStyle]="{'color': isError ? 'red' : 'green'}" *ngIf="result !==''">{{result}}</div>
+          </div>
+
+          <!-- <div class="mat-card-content" fxLayout="column"
+            style="margin-bottom: -10px;margin-top:-10px">
+            <mat-form-field floatLabel='never' class="objName" appearance="outline">
+              <mat-label>Object Name</mat-label>
+              <input type="text" placeholder="Object Name" formControlName="objectName" matInput
+                [matAutocomplete]="auto">
+              <mat-autocomplete [displayWith]="displayFn" (optionSelected)="objname($event)" #auto="matAutocomplete">
+                <mat-option class="matoption" *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option.objectName}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+            <div class="message" [ngStyle]="{'color': isError ? 'red' : 'green'}">{{result}}</div>
+            <span style="margin-left: 15px; font-size: 13px; font-weight: 600;" [ngStyle]="{'color': isError ? 'red' : 'green'}">{{result}}</span>
+          </div> -->
+          <div class="container-fluid " style="margin-bottom: 0px;margin-top:0px">
+            <table mat-table #table [dataSource]="dataSource" matSort class="mat-elevation-z8" clss="excont">
+              <tr *matHeaderRowDef="displayedColumns; sticky: 'true'" mat-header-row></tr>
+              <tr *matRowDef="let row; columns: displayedColumns;let i = index;" mat-row></tr>
+              <ng-container matColumnDef="S.No">
+                <th mat-header-cell *matHeaderCellDef class="theader">S.No</th>
+                <td mat-cell *matCellDef="let row;let i=index;">
+                  <label>{{i+1}}</label>
+                </td>
+              </ng-container>
+              <ng-container matColumnDef="parameterName">
+                <th mat-header-cell *matHeaderCellDef class="theader">Parameter Name</th>
+                <td mat-cell *matCellDef="let row;let i=index" style="text-align: left;">
+                  <span style="color: red;" *ngIf="row.mandatory==true">*</span>
+                  <mat-form-field appearance="outline" style="width: 275px;">
+                    <input type="text" [ngClass]="{'disabled-highlight': true}" value="{{row.paramName}}" matInput
+                      disabled style="font-weight: 800;" />
+                  </mat-form-field>
+                  <!-- <span style="color: red;">*</span><label>{{row.paramName}}</label> -->
+                </td>
+              </ng-container>
+              <ng-container matColumnDef="parametervalues">
+                <th mat-header-cell *matHeaderCellDef class="theader">Parameter Values</th>
+                <td mat-cell *matCellDef="let row;let i=index">
+                  <select style="height: 25px;border-color: rgb(207, 211, 211); border-radius: 5px;"
+                    *ngIf="row.lov==true" (change)="pspChange(row, $event.target.value, i)">
+                    <option *ngFor="let option of row.filteredOptions" [value]="option.label" panelWidth="auto">
+                      {{ option.value || 'null' }}
+                    </option>
+                  </select>
+                  <!-- <mat-form-field  appearance="outline"> -->
+                  <input type="date" style="height: 25px;border-color: rgb(207, 211, 211); border-radius: 5px;"
+                    *ngIf="row.paramType=='DATE' && row.lov!=true" [(ngModel)]="row.paramValue"
+                    [ngModelOptions]="{standalone: true}" name="edate" />
+                  <!-- </mat-form-field> -->
+                  <input style="height: 25px;border-color: rgb(207, 211, 211); border-radius: 5px;"
+                    *ngIf="row.paramType=='VARCHAR2' && row.lov!=true" type="text" [(ngModel)]="row.paramValue"
+                    [ngModelOptions]="{standalone: true}" />
+                  <input type="number" style="height: 25px;border-color: rgb(207, 211, 211); border-radius: 5px;"
+                    *ngIf="row.paramType=='NUMBER' && row.lov!=true" [(ngModel)]="row.paramValue"
+                    [ngModelOptions]="{standalone: true}" />
+                </td>
+              </ng-container>
+            </table>
+          </div>
+        </mat-card>
+        <div class="input-row" style="text-align: center;margin-top:5px; margin-bottom: -10px;" class="buttonCls"
+          fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutGap.lt-md="0px">
+          <button mat-stroked-button color="primary" class="primary" class="btn " type="submit">
+            <mat-icon>settings</mat-icon>Execute
+          </button>
+          <button mat-stroked-button color="warn" class="btn" type="button" (click)="Cancel()">
+            <mat-icon>clear</mat-icon>Cancel
+          </button>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel [(expanded)]="panel2Expanded">
+        <mat-expansion-panel-header>
+          <h4>Report Data</h4>
+        </mat-expansion-panel-header>
+        <div class="aggrid" style="margin-top: -25px; text-align: center;">
+          <ag-grid-angular [pagination]="true" [paginationPageSize]="25" [rowData]="rowData" [columnDefs]="columnDefs"
+            [rowSelection]="'single'" [gridOptions]="gridOptions" class="ag-theme-alpine"
+            style="width: 100%; height:400px;" (gridReady)="onGridReady($event)">
+          </ag-grid-angular>
+          <!-- <ag-grid-angular [pagination]="true" class="ag-theme-alpine" style="width: 100%; height:450px;" #agGrid
+            (gridReady)="onGridReady($event)" [columnDefs]="columnDefs" [rowData]="rowData" [paginationPageSize]="25"
+            [rowSelection]="'single'" [gridOptions]="gridOptions">
+          </ag-grid-angular> -->
+        </div>
+        <label for="page-size">Rows per page:</label>
+        <select id="page-size" [(ngModel)]="pageSize" (ngModelChange)="onPageSizeChanged()"
+          [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+        </select>
+        <div class="input-row" style="text-align: center; margin-bottom: -10px;margin-top:-25px" class="buttonCls"
+          fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutGap.lt-md="0px">
+          <button mat-stroked-button [disabled]="exportTmp" (click)="onExportBtnClick()" type="button" class="primary"
+            class="btn"><mat-icon>save_alt</mat-icon>Export</button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </form>
+</section>

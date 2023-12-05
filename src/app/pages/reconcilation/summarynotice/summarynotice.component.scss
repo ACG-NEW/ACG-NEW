@@ -1,0 +1,129 @@
+::ng-deep .mat-form-field-wrapper {
+    margin-bottom: -1.0em;
+    margin-top: -0.2em;
+  }
+  
+  .btn {
+    line-height: 20px;
+    font-size: 12px;
+    margin: 3px;
+  }
+  
+  tr.mat-header-row {
+    height: 100px;
+  }
+  
+  
+  th {
+    font-size: 11px;
+    font-weight: 500;
+    //position: sticky;
+  }
+  
+  table {
+    width: 100% !important;
+    padding: 1em;
+    // overflow-y: auto !important;
+  }
+  
+  
+  .mat-cell {
+    padding: 1px 1px 1px 0;
+    font-size: 12px;
+  }
+  
+  .mat-header-cell {
+    height: 10px;
+    padding: 1px 1px 1px 0;
+  }
+  
+  .mat-row-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: #070607;
+  }
+  
+  .mat-form-field {
+    width: 220px;
+    font-size: 12px;
+    padding-left: 30px;
+  }
+  
+  .btn:hover {
+    background-color: #c004fc;
+    color: #fff;
+  }
+  
+  .mat-sort-header {
+    color: #fff !important;
+        height: 100px;
+
+  }
+  
+  .mat-sort-header-arrow {
+    color: #000 !important;
+  }
+  
+  .bg-1 {
+    background-color: rgb(251, 251, 251);
+    border-radius: 10px;
+  }
+  
+  .mat-option:hover {
+    background-color: #c004fc;
+    color: #fff;
+  }
+  
+  .excont {
+    max-height: 430px;
+    max-width: 100%;
+  }
+  .tblsno{
+    text-align: center;
+    //padding-right: 10em;
+    //padding-left: 0rem;
+  }
+  
+//   ::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+//     padding: 0.4em 0px !important;
+  
+//   }
+  
+//   ::ng-deep .mat-form-field-label-wrapper {
+//     top: -1.5em;
+//   }
+  
+//   ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+//     transform: translateY(-1.1em) scale(.75);
+//     width: 133.33333%;
+  
+//   }
+  
+  // .md-autocomplete {
+  //   font-size: 10px;
+  //   padding: 0;
+  //   line-height: 24px;
+  //   height: 24px;
+  // }
+  
+  // .md-autocomplete-suggestions li .layout-column {
+  //   line-height: 10px;
+  // }
+  
+  // .md-virtual-repeat-container.md-not-found {
+  //   height: 24px;
+  // }
+  
+  // .mat-cell {
+  //   padding: 1px 1px 1px 0;
+  //   font-size: 12px;
+  // }
+  
+  // .mat-header-cell {
+  //   height: 10px;
+  //   padding: 1px 1px 1px 0;
+  // }
+  

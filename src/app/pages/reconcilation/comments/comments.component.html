@@ -1,0 +1,155 @@
+<section class="container-fluid">
+  <div class="col-sm-6 pagename">
+    <h4 class="adj">Comments</h4>
+  </div>
+  <div class="excont">
+    <table mat-table #table [dataSource]="dataSource" matSort>
+      <tr *matHeaderRowDef="displayedColumns; sticky: 'true'" mat-header-row></tr>
+      <tr *matRowDef="let row; columns: displayedColumns;let i = index;" mat-row></tr>
+      <ng-container matColumnDef="sno">
+        <th mat-header-cell *matHeaderCellDef class="theader">S.No</th>
+        <td mat-cell *matCellDef="let row;let i =index">{{i+1}}</td>
+      </ng-container>
+      <ng-container matColumnDef="clear">
+        <th mat-header-cell *matHeaderCellDef class="theader">Clear</th>
+        <td mat-cell *matCellDef="let row; let i =index">
+          <!-- <mat-form-field style=" width: 3vw; padding-left: 0px;"> -->
+          <input type="checkbox" (click)="clearRow(row,i)" disabled>
+          <!-- </mat-form-field> -->
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef class="theader">Date</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-form-field style="width: 8vw; padding-left: 0px;" appearance="outline">
+            <input type="text" [(ngModel)]="row.commentDate" [matDatepicker]="cellDatePicker1"
+              [ngModelOptions]="{standalone: true}" matInput disabled />
+            <mat-datepicker-toggle matSuffix [for]="cellDatePicker1"></mat-datepicker-toggle>
+            <mat-datepicker #cellDatePicker1></mat-datepicker>
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="user">
+        <th mat-header-cell *matHeaderCellDef class="theader">User</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-form-field style=" width: 6vw; padding-left: 0px;" appearance="outline">
+            <input type="text" matInput [(ngModel)]="row.userName" [ngModelOptions]="{standalone: true}" disabled>
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="userrole">
+        <th mat-header-cell *matHeaderCellDef class="theader">User Role</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-form-field style=" width: 10vw; padding-left: 10px;" appearance="outline">
+            <input type="text" matInput [(ngModel)]="row.userRole" [ngModelOptions]="{standalone: true}" disabled>
+          </mat-form-field>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="side">
+        <th mat-header-cell *matHeaderCellDef class="theader"><span
+            style="color: red;padding: 3px; font-size: 20px;">*</span>Side</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-form-field style=" width: 8vw; padding-left: 10px;" appearance="outline">
+            <mat-select [(ngModel)]="row.modificationSide" [ngModelOptions]="{standalone: true}">
+              <mat-option *ngFor="let x of sideList" [value]="x.value">{{x.label}}</mat-option>
+            </mat-select>
+            <!-- <input type="text" matInput [(ngModel)]="row.lookupDesc" [ngModelOptions]="{standalone: true}"> -->
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="standardremarks">
+        <th mat-header-cell *matHeaderCellDef class="theader"><span
+            style="color: red;padding: 3px; font-size: 20px;">*</span>Standard Remarks</th>
+        <td mat-cell *matCellDef="let row; let i =index">
+          <mat-form-field style="width: 30vw;margin-left: 0px;padding-left: 0px;" appearance="outline">
+            <mat-select [(ngModel)]="row.stdRemarks" [ngModelOptions]="{standalone: true}">
+              <mat-option *ngFor="let x of standardrmarkList" [value]="x.value">{{x.label}}</mat-option>
+
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="actiontype">
+        <th mat-header-cell *matHeaderCellDef class="theader"> <span
+            style="color: red;padding: 3px; font-size: 20px;">*</span>Action Type</th>
+        <td mat-cell *matCellDef="let row;let i=index;">
+          <mat-form-field style=" width: 30vw; padding-left: 0px;" appearance="outline"
+            *ngIf="row.modificationSide==''">
+            <mat-select [(ngModel)]="row.actiontype" [ngModelOptions]="{standalone: true}">
+              <mat-option *ngFor="let x of actionTypeList" [value]="x.value">{{x.label}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field style=" width: 30vw; padding-left: 0px;" appearance="outline"
+            *ngIf="row.modificationSide=='PSPSIDE'">
+            <mat-select [(ngModel)]="row.actiontype" [ngModelOptions]="{standalone: true}"
+              (ngModelChange)="updateRefferdRole(row,i)">
+              <mat-option *ngFor="let x of pspSide" [value]="x.value">{{x.label}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field style=" width: 30vw; padding-left: 0px;" appearance="outline"
+            *ngIf="row.modificationSide=='EZESIDE'">
+            <mat-select [(ngModel)]="row.actiontype" [ngModelOptions]="{standalone: true}"
+              (ngModelChange)="updateRefferdRole(row,i)">
+              <mat-option *ngFor="let x of ezeSide" [value]="x.value">{{x.label}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field style=" width: 30vw; padding-left: 0px;" appearance="outline"
+            *ngIf="row.modificationSide=='UNDECIDED'">
+            <mat-select [(ngModel)]="row.actiontype" [ngModelOptions]="{standalone: true}"
+              (ngModelChange)="updateRefferdRole(row,i)">
+              <mat-option *ngFor="let x of unDecided" [value]="x.value">{{x.label}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field style=" width: 30vw; padding-left: 0px;" appearance="outline"
+            *ngIf="row.modificationSide=='BOTH'">
+            <mat-select [(ngModel)]="row.actiontype" [ngModelOptions]="{standalone: true}"
+              (ngModelChange)="updateRefferdRole(row,i)">
+              <mat-option *ngFor="let x of both" [value]="x.value">{{x.label}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef class="theader">Role</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-form-field style=" width: 15vw; padding-left: 0px;" appearance="outline">
+            <input type="text" matInput [(ngModel)]="row.refferdRole" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="remarks">
+        <th mat-header-cell *matHeaderCellDef class="theader">Remarks</th>
+        <td mat-cell *matCellDef="let row;let i=index">
+          <mat-form-field style=" width: 8vw; padding-left: 0px;" appearance="outline">
+            <textarea matInput [(ngModel)]="row.remarks" [ngModelOptions]="{standalone: true}"></textarea>
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef class="theader">Delete</th>
+        <td mat-cell *matCellDef="let row;let i=index">
+          <input type="checkbox" style="margin-top: 10px;" [checked]="deleteData.indexOf(row.commentId) !== -1"
+            (click)="Delete($event,row,i)" [disabled]="row.commentId ===''">
+        </td>
+      </ng-container>
+    </table>
+  </div>
+
+  <div style="float: right;margin-top: 5px;">
+    <button matTooltip="addRow" mat-raised-button matTooltipPosition="below" type="button" class="btn" mat-button
+      color="accent" (click)="addRow()" [disabled]="dataSource.length > 0">
+      Add Row
+    </button>
+  </div>
+  <div class="input-row" style="text-align: center;margin-top: 0.5em;" fxLayout="row" fxLayout.lt-md="column"
+    fxLayoutGap="10px" fxLayoutGap.lt-md="0px">
+    <button mat-stroked-button color="primary" class="primary" class="btn" type="button" (click)="save()">
+      <mat-icon>save</mat-icon>Save
+    </button>
+    <button mat-stroked-button color="warn" class="btn" type="button" (click)="Cancel()">
+      <mat-icon>clear</mat-icon>Cancel
+    </button>
+  </div>
+
+</section>

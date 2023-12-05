@@ -1,0 +1,150 @@
+.card-header {
+  color: rgb(10, 141, 193);
+  padding-left: 80px;
+  text-align: center;
+}
+
+.login-box-msg {
+  color: #007bff;
+  font-size: 23px;
+  font-family: 'sanserif';
+
+}
+.version {
+  font-size: 0.8em;
+  margin-left: 4px;
+  color: #c004fc;
+  font-weight: 600;
+}
+.brand-link {
+  background-color: white !important;
+}
+
+// .mat-form-field {
+//   font-size: 16px;
+// }
+
+.login-background {
+  background-color: rgba(13, 100, 214, 0.514) !important;
+// width: 450px;
+}
+
+.btnLogin {
+  padding-left: 6.5em;
+  padding-right: 2em;
+}
+
+.frgtPass {
+  text-align: center;
+  padding-top: 0.8em;
+  // text-underline-position: below;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  margin-bottom: -1.0em;
+  margin-top: -0.2em;
+}
+
+mat-form-field {
+  width: auto !important;
+  font-size: 0.9em;
+  margin: auto;
+  margin-bottom: 0px;
+  font-weight: 500;
+  // padding: 2em,auto;
+  // padding:  auto !important;
+}
+
+.btn {
+  line-height: 20px;
+  font-size: 10px;
+  // margin: 13px;
+  // width: 20px;
+}
+
+.btn:hover {
+  background-color: #c004fc;
+  color: #fff;
+}
+
+.card-outline {
+  border-color: #c004fc;
+}
+
+.primary {
+  background-color: #007bff !important;
+  border-radius: 10px !important;
+  color: #fff !important;
+}
+
+.card-body {
+  background-color: #fff;
+  padding-left: 3px;
+  align-items: center;
+}
+
+.sud ul {
+  list-style-type: none;
+  padding-right: 2rem;
+}
+
+.sud ul li a {
+  color: #007bff;
+}
+
+.sud ul li a:hover {
+  color: rgb(74, 73, 73);
+}
+::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+  padding: 0.4em 0px !important;
+
+}
+
+::ng-deep .mat-form-field-label-wrapper {
+  top: -1.5em;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.1em) scale(.75);
+  width: 133.33333%;
+
+}
+.input-group{
+  text-align: center;
+}
+
+.controls{
+padding: 10 auto;
+}
+
+.btnSSO{
+  background-color: #c004fc;
+  width: 270px;
+  height: 35px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  margin-bottom: -1.0em;
+  margin-top: -0.2em;
+}
+
+.card-footer{
+
+  height: 30px;
+}
+// .brand-image{
+//   width: 60px;
+//   height: 90%;
+// }
+.brand-image {
+  // Set the width and height of the logo
+  width: 150px; // Set your desired width
+  height: 150px; // Set your desired height
+
+  // Add styles to highlight the logo
+  border: 2px solid #ffcc00; // Add a border color to highlight
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Add a box shadow for emphasis
+}

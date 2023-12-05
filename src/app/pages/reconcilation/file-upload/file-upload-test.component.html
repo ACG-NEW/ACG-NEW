@@ -1,0 +1,86 @@
+<section class="container-fluid bg-1">
+  <div class="col-sm-6 pagename">
+    <h4 class="adj">Upload Files</h4>
+  </div>
+  <div>
+    <mat-card>
+      <form [formGroup]="lookupForm" #lkpFrm="ngForm">
+        <table class="file-upload-table">
+          <tr>
+            <td>
+              <input type="file" class="file-upload" (change)="onFileChange($event, 0)" #fileInput0
+                style="width: 350px;">
+                <button *ngIf="fileInput0.value" mat-icon-button color="warn" class="btnupload" (click)="cancelFile(0)">
+                  <mat-icon aria-label="Cancel">clear</mat-icon>
+                </button>
+              <!-- <button *ngIf="fileInput0.value"  mat-stroked-button color="accent" class="btnupload" (click)="cancelFile(0)"><span class="material-icons">clear</span></button> -->
+              <span> <label class="error-msg"
+                  [style.color]="msg[0] === 'Uploaded successfully!' ? 'green' : 'red'">{{msg[0]}}</label></span>
+              <span [style.color]="msg[0] ? 'red' : 'green'"
+                style="font-size: 13px;font-weight: 600;">{{uploadProgressview[0]}}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="file" class="file-upload" (change)="onFileChange($event, 1)" [disabled]="!fileInput0.value"
+                #fileInput1 style="width: 350px;">
+                <button *ngIf="fileInput1.value"   mat-icon-button color="accent" class="btnupload" (click)="cancelFile(1)"><span class="material-icons">clear</span></button>
+              <span> <label class="error-msg"
+                  [style.color]="msg[1] === 'Uploaded successfully!' ? 'green' : 'red'">{{msg[1]}}</label></span>
+              <span [style.color]="msg[1] ? 'red' : 'green'"
+                style="font-size: 13px;font-weight: 600;">{{uploadProgressview[1]}}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="file" class="file-upload" (change)="onFileChange($event, 2)" [disabled]="!fileInput1.value"
+                #fileInput2 style="width: 350px;">
+                <button *ngIf="fileInput2.value"   mat-icon-button color="accent" class="btnupload" (click)="cancelFile(2)"><span class="material-icons">clear</span></button>
+              <span> <label class="error-msg"
+                  [style.color]="msg[2] === 'Uploaded successfully!' ? 'green' : 'red'">{{msg[2]}}</label></span>
+              <span [style.color]="msg[2] ? 'red' : 'green'"
+                style="font-size: 13px;font-weight: 600;">{{uploadProgressview[2]}}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="file" class="file-upload" (change)="onFileChange($event, 3)" [disabled]="!fileInput2.value"
+                #fileInput3 style="width: 350px;">
+                <button *ngIf="fileInput3.value"   mat-icon-button color="accent" class="btnupload" (click)="cancelFile(3)"><span class="material-icons">clear</span></button>
+              <span> <label class="error-msg"
+                  [style.color]="msg[3] === 'Uploaded successfully!' ? 'green' : 'red'">{{msg[3]}}</label></span>
+              <span [style.color]="msg[3] ? 'red' : 'green'"
+                style="font-size: 13px;font-weight: 600;">{{uploadProgressview[3]}}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="file" class="file-upload" (change)="onFileChange($event, 4)" [disabled]="!fileInput3.value"
+                #fileInput4 style="width: 350px;">
+                <button *ngIf="fileInput4.value"   mat-icon-button color="accent" class="btnupload" (click)="cancelFile(4)"><span class="material-icons">clear</span></button>
+              <span> <label class="error-msg"
+                  [style.color]="msg[4] === 'Uploaded successfully!' ? 'green' : 'red'">{{msg[4]}}</label></span>
+              <span [style.color]="msg[4] ? 'red' : 'green'" style="font-size: 13px;font-weight: 600;">
+                {{uploadProgressview[4]}}</span>
+            </td>
+          </tr>
+        </table>
+        <div style="margin-top: 25px;">
+          <button class="btnupload" mat-stroked-button color="primary" [disabled]="btnTmp"
+            (click)="uploadFile()">Upload</button>
+          <button class="btnupload" mat-stroked-button color="accent" (click)="cancel()">Cancel</button>
+        </div>
+      </form>
+    </mat-card>
+    <!-- <div class="aggrid">
+      <ag-grid-angular [pagination]="true" class="ag-theme-alpine" style="width: 100%; height:430px;" #agGrid
+        [columnDefs]="columnDefs" [rowData]="rowData" [paginationPageSize]="pageSize" [rowSelection]="'single'">
+      </ag-grid-angular>
+      <label for="page-size">Rows per page:</label>
+      <select id="page-size" [(ngModel)]="pageSize" [ngModelOptions]="{standalone: true}"
+        (ngModelChange)="onPageSizeChanged()">
+        <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+      </select>
+    </div> -->
+  </div>
+</section>

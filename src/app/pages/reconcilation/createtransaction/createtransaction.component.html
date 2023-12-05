@@ -1,0 +1,445 @@
+<section class="container-fluid">
+  <div class="col-sm-6 pagename">
+    <h4 class="adj">Create Transaction</h4>
+  </div>
+  <div>
+    <form [formGroup]="createTransactionForm" (ngSubmit)="saveDetails()" #transactionfrm="ngForm">
+      <mat-card>
+        <div class="mat-card-content" fxLayout="column">
+          <div class="input-row" style="margin-bottom: -15px;" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px"
+            fxLayoutGap.lt-md="0px">
+            <mat-form-field appearance="outline" style="width: 220px;">
+              <mat-label>Select PSP Name</mat-label>
+              <input matInput formControlName="pspName" [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onPspNameSelected($event)">
+                <mat-option *ngFor="let psp of filteredPSPNames | async" [value]="psp.pspName">
+                  {{ psp.pspName }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 220px;">
+              <mat-label>Sub A/C Name</mat-label>
+              <input matInput formControlName="subAcName" [matAutocomplete]="auto2">
+              <mat-autocomplete #auto2="matAutocomplete" [displayWith]="displaySubAcct"
+                (optionSelected)="onSubAcctSelected($event)">
+                <mat-option *ngFor="let subAcct of filteredSubAccts | async" [value]="subAcct">
+                  {{ subAcct.label }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>batch No</mat-label>
+              <input matInput formControlName="batchNo" [matAutocomplete]="auto3">
+              <mat-autocomplete #auto3="matAutocomplete" [displayWith]="displayBatch"
+                (optionSelected)="onbatchId($event)">
+                <mat-option *ngFor="let x of filteredbatchId | async" [value]="x">
+                  {{ x.batchId }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" style="width: 220px;">
+              <mat-label>Transaction Side</mat-label>
+              <mat-select formControlName="transactionSide" matInput placeholder="transactionSide">
+                <mat-option *ngFor="let x of sourceSideList" [value]="x.value">{{x.label}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 220px;">
+              <mat-label>Type</mat-label>
+              <input type="text" matInput formControlName="type" matInput placeholder="Type">
+            </mat-form-field>
+
+          </div>
+        </div>
+      </mat-card>
+      <br>
+      <div class="container-fluid excont">
+        <table class="table" mat-table #table [dataSource]="dataSource" class="">
+          <tr *matHeaderRowDef="displayedColumns; sticky: 'true'" mat-header-row></tr>
+          <tr *matRowDef="let row; columns: displayedColumns;let i = index;" mat-row></tr>
+          <ng-container matColumnDef="serialNo">
+            <th mat-header-cell *matHeaderCellDef style="text-align: left; padding-left: 2px;" class="theader">S.No</th>
+            <td mat-cell *matCellDef="let row;let i =index"><label style="margin-bottom: 0px;">{{i+1}}</label>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="clear">
+            <th mat-header-cell *matHeaderCellDef style="text-align: right; padding-left: 5px;" class="theader">Clear
+            </th>
+            <td mat-cell *matCellDef="let row; let i =index">
+              <input type="checkbox" (click)="clearRow(row,i)" [(ngModel)]="row.clear" disabled
+                [ngModelOptions]="{standalone: true}">
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="rejc">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;" class="theader">Rejc</th>
+            <td mat-cell *matCellDef="let row">
+              <input type="checkbox" [(ngModel)]="row.rejc" [ngModelOptions]="{standalone: true}" disabled>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="aprv">
+            <th mat-header-cell *matHeaderCellDef class="theader">Aprv</th>
+            <td mat-cell *matCellDef="let row">
+              <input type="checkbox" [(ngModel)]="row.aprv" [ngModelOptions]="{standalone: true}" disabled>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="transType">
+            <th mat-header-cell *matHeaderCellDef class="theader">Trans Type</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 8vw;" appearance="outline">
+                <mat-select [(ngModel)]="row.transaction_type" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+                  <mat-option *ngFor="let x of transactionTypeList" [value]="x.value">{{x.label}}
+                  </mat-option>
+                </mat-select>
+
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+
+
+
+          <ng-container matColumnDef="txnType">
+            <th mat-header-cell *matHeaderCellDef class="theader">Txn Type</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 8vw;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.txnType" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="sourceSide">
+            <th mat-header-cell *matHeaderCellDef class="theader">Source Side</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 8vw;" appearance="outline">
+                <mat-select [(ngModel)]="row.sourceSide" [ngModelOptions]="{standalone: true}" [disabled]="nameTmp">
+                  <mat-option *ngFor="let x of soureNamesList" [value]="x.value">{{x.label}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="sourceRef">
+            <th mat-header-cell *matHeaderCellDef class="theader">Source Ref</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 6vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.sourceRefv" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="ref">
+            <th mat-header-cell *matHeaderCellDef class="theader">Ref</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 4vw;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.ref" [ngModelOptions]="{standalone: true}" disabled>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="currency">
+            <th mat-header-cell *matHeaderCellDef class="theader">Currency</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 4vw;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.currency" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="transDate">
+            <th mat-header-cell *matHeaderCellDef class="theader">Trans Date</th>
+            <td mat-cell *matCellDef="let row; let i =index">
+              <!-- <label>{{row.transDate}}</label> -->
+              <mat-form-field appearance="outline">
+                <mat-label>Trans Date</mat-label>
+                <input [matDatepicker]="picker" matInput placeholder="Trans Date" [(ngModel)]="row.transDate"
+                  [ngModelOptions]="{standalone: true}">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="accountingDate">
+            <th mat-header-cell *matHeaderCellDef class="theader">Accounting Date</th>
+            <td mat-cell *matCellDef="let row; let i =index">
+              <!-- <label>{{row.accountingDate}}</label> -->
+              <mat-form-field appearance="outline">
+                <mat-label>Accounting Date</mat-label>
+                <input [matDatepicker]="picker2" matInput placeholder="Accounting Date" [(ngModel)]="row.accountingDate"
+                  [ngModelOptions]="{standalone: true}">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Amount</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 4vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.amount" required [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="baseAmount">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Base Amount</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 4vw;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.baseAmount" required [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="baseCurrency">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Base Currency</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.baseCurrency" required [disabled]="nameTmp"
+                  [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="baseAmountEur">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Base Amount EUR</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 6vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.baseAmountEur" required [disabled]="nameTmp"
+                  [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="accountAmount">
+            <th mat-header-cell *matHeaderCellDef class="theader">Account Amount </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 6vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.accountAmount" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="accountCurrency">
+            <th mat-header-cell *matHeaderCellDef class="theader">Account Currency</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.accountCurrency" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="settlementAmount">
+            <th mat-header-cell *matHeaderCellDef class="theader">Settlement Amount</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.settlementAmount" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="settlementCurrency">
+            <th mat-header-cell *matHeaderCellDef class="theader">Settlement Currency</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.settlementCurrency" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="country">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Country</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 20vw; padding-left: 0px;" appearance="outline">
+                <mat-select [(ngModel)]="row.country" [ngModelOptions]="{standalone: true}" [disabled]="nameTmp">
+                  <mat-option *ngFor="let x of countryNamesList" [value]="x.value">{{x.label}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="product">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Product</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 20vw; padding-left: 0px;" appearance="outline">
+                <mat-select [(ngModel)]="row.product" [ngModelOptions]="{standalone: true}" [disabled]="nameTmp">
+                  <mat-option *ngFor="let x of productNamesList" [value]="x.value">{{x.label}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="transactionAccounting">
+            <th mat-header-cell *matHeaderCellDef class="theader">Transaction Accounting</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <mat-select [(ngModel)]="row.transactionAccounting" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+                  <mat-option *ngFor="let x of transactionAccountingList" [value]="x.value">{{x.label}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="ac">
+            <th mat-header-cell *matHeaderCellDef class="theader">A/C</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.ac" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="chargeReserveCreation">
+            <th mat-header-cell *matHeaderCellDef class="theader">Charge/Reserve Creation</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <mat-select [(ngModel)]="row.chargeCreation" [ngModelOptions]="{standalone: true}" [disabled]="nameTmp">
+                  <mat-option *ngFor="let x of chargeCreationNamesList" [value]="x.value">{{x.label}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="accountingForCharges">
+            <th mat-header-cell *matHeaderCellDef class="theader">Accounting for charges</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <mat-select [(ngModel)]="row.accountingCharges" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+                  <mat-option *ngFor="let x of accountChargeNamesList" [value]="x.value">{{x.label}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="accountingForReserves">
+            <th mat-header-cell *matHeaderCellDef class="theader">Accounting for Reserves</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <mat-select [(ngModel)]="row.accountingReserves" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+                  <mat-option *ngFor="let x of accountreservesNamesList" [value]="x.value">{{x.label}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="insertIntoSource">
+            <th mat-header-cell *matHeaderCellDef class="theader">Insert Into Source</th>
+            <td mat-cell *matCellDef="let row">
+              <input type="checkbox" [(ngModel)]="row.insert" [ngModelOptions]="{standalone: true}"
+                [disabled]="nameTmp">
+            </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="remarks">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 12px; font-size: 20px;">*</span>Remarks</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 30vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.remarks" required [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="pspReference">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>Psp References</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.pspReference" required [disabled]="nameTmp"
+                  [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+
+
+          <ng-container matColumnDef="ezeReference">
+            <th mat-header-cell *matHeaderCellDef class="theader"><span
+                style="color: red;padding: 3px; font-size: 20px;">*</span>EZE Reference</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.ez_reference" required [disabled]="nameTmp"
+                  [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef class="theader">Status</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-form-field style=" width: 12vw; padding-left: 0px;" appearance="outline">
+                <input type="text" matInput [(ngModel)]="row.status" [ngModelOptions]="{standalone: true}"
+                  [disabled]="nameTmp">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef class="theader">Delete</th>
+            <td mat-cell *matCellDef="let row;let i=index">
+              <small>
+                <mat-icon class="maticon" style="cursor: pointer;" (click)="Delete(i)">delete</mat-icon>
+              </small>
+            </td>
+          </ng-container>
+        </table>
+      </div>
+      <div class="m-3" style="float:right; margin-top: 0px;">
+        <button matTooltip="Add Row" mat-raised-button matTooltipPosition="below" type="button" class="btn" mat-button
+          color="accent" (click)="addRow()">
+          Add Row
+        </button>
+      </div>
+      <br>
+      <div class="input-row" style="text-align: center;margin-top: 0.5em;" fxLayout="row" fxLayout.lt-md="column"
+        fxLayoutGap="10px" fxLayoutGap.lt-md="0px">
+        <button mat-stroked-button color="primary" class="primary" class="btn" type="submit">
+          <mat-icon>save</mat-icon>Save
+        </button>
+        <button mat-stroked-button color="warn" class="btn" type="button" (click)="Cancel()">
+          <mat-icon>cancel</mat-icon>Cancel
+        </button>
+        <button mat-stroked-button color="warn" class="btn" type="button" (click)="Refresh()">
+          <mat-icon>refresh</mat-icon>Refresh
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>

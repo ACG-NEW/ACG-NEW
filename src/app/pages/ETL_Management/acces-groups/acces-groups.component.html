@@ -1,0 +1,52 @@
+<!-- your-component.component.html -->
+
+<section id="main-content">
+  <section class="wrapper">
+    <div class="col-sm-6 pagename">
+      <h4 class="adj">Access Groups</h4>
+    </div>
+    <div>
+      <div class="container-fluid">
+        <mat-card>
+          <!-- <mat-card-header><mat-icon>filter_alt</mat-icon> Search Access Groups Data</mat-card-header> -->
+          <mat-card-content>
+            <form [formGroup]="accessGroupForm" (ngSubmit)="search()">
+              <div class="form-group row">
+                <mat-form-field class="col-sm-2 pull-left" appearance="outline">
+                  <mat-label>Application Name:</mat-label>
+                  <mat-select formControlName="applicationName">
+                    <mat-option [value]="-1">--Select--</mat-option>
+                    <mat-option *ngFor="let appName of applicationNames" [value]="appName.APPLICATION_ID">
+                      {{ appName.APPLICATION_NAME }}
+                    </mat-option>
+                  </mat-select>
+                  <p *ngIf="isAppNameError" class="error text-sm-right">{{ appNameError }}</p>
+                </mat-form-field>
+
+                <!-- <mat-form-field class="col-sm-2 pull-left">
+                  <mat-label>Access Group:</mat-label> -->
+                  <app-condition-dropdown ></app-condition-dropdown>
+                  <!-- <input matInput formControlName="accessGroup" placeholder="Access group">
+                  <p *ngIf="isAccGrpError" class="error text-sm-right">{{ accGrpError }}</p>
+                </mat-form-field> -->
+
+                <div class="col-sm-2 pull-left">
+                  <button mat-button color="primary" type="submit">Search</button>
+                  <button mat-button color="warn" (click)="cancel()">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+
+        <hr />
+
+        <ag-grid-angular class="grid-with-lines" [pagination]="true" class="ag-theme-alpine" [gridOptions]="gridOptions"
+        style="width: 100%;height:350px;" #agGrid (gridReady)="onGridReady($event)" [columnDefs]="columnDefs"
+        [rowData]="rowData" [paginationPageSize]="25" [rowSelection]="rowSelection"
+        [suppressRowClickSelection]="true" (rowSelected)="onRowSelected($event)" [gridOptions]="gridOptions">
+      </ag-grid-angular>
+      </div>
+    </div>
+  </section>
+</section>

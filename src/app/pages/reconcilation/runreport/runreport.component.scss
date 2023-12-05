@@ -1,0 +1,230 @@
+/* .fill {
+  flex: 1;
+} */
+
+
+.mat-form-field {
+  // width: 180px;
+  font-size: 12px;
+  padding-left: 30px;
+  font-weight: 600;
+}
+
+
+
+.btn {
+  line-height: 20px;
+  font-size: 16px;
+  margin: 3px;
+  // width: 20px;
+
+}
+
+/* tr.mat-row {
+    position: relative;
+    height: auto;
+    color: #070607;
+} */
+tr.mat-header-row {
+  height: 30px;
+}
+
+// .tbl{
+//     height: 30px;
+// }
+
+th {
+  // color: #e014bef5;
+  font-size: 11px;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-weight: 500;
+  position: sticky;
+}
+
+table {
+  width: 100%;
+  overflow-y: auto;
+  // height: 30px;
+  // height: 10px !important;
+}
+
+// table:hover {
+//   border: 1px solid #c004fc !important;
+
+// }
+
+.mat-sort-header {
+  color: #4d4d4d;
+}
+
+.mat-cell {
+  padding: 1px 1px 1px 0;
+  font-size: 12px;
+}
+
+tr.mat-header-row {
+  height: 100px;
+  border-radius: 10px;
+  background-color: #c004fc;
+
+}
+
+.mat-header-cell {
+  height: 10px;
+  padding: 1px 1px 1px 0;
+}
+
+::ng-deep .toolStyle {
+  background: #b71c1c;
+}
+
+// .mat-card{
+//     padding: 1em;
+//     border-radius: 0.5rem;
+//     background: #dcf2fb;
+//     color: gray;
+//     border:1px solid #c004fc !important;
+// }
+
+.top {
+  margin-top: 1rem;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.btn {
+  line-height: 20px;
+  font-size: 12px;
+  margin: 3px;
+  // width: 20px;
+}
+
+.btn:hover {
+  background-color: #c004fc;
+  color: #fff;
+}
+
+
+.excont {
+  height: 400px !important;
+  max-height: 450px;
+  max-width: 100%;
+  overflow-y: auto;
+  // padding-top: 0px;
+}
+
+.objName {
+    width: 400px;
+}
+
+::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+  padding: 0.4em 0px !important;
+
+}
+
+::ng-deep .mat-form-field-label-wrapper {
+  top: -1.5em;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.1em) scale(.75);
+  width: 133.33333%;
+
+}
+// ::ng-deep .ag-header-cell-label {
+//   height: 20px !important;
+//    line-height: 20px !important;
+// }
+
+::ng-deep .ag-paging-panel {
+  height: 23px !important;
+   line-height: 23px !important;
+}
+
+::ng-deep .ag-header-row {
+  height: 23px !important;
+  background-color: #c004fc !important;
+  color: white !important;
+}
+
+::ng-deep .ag-row {
+  height: 28px !important;
+  font-size: 12px !important;
+  // text-align: center !important;
+  line-height: 30px !important;
+}
+::ng-deep .ag-cell-not-inline-editing {
+  display: flex !important;
+  // padding: 3px !important;
+  line-height: 20px !important;
+   align-items: center !important;
+}
+.disabled-highlight {
+  background-color: #ffffcc;
+  color: #333;
+}
+
+.ag-header-row {
+  background-color: #c004fc !important;
+  /* your desired color */
+}
+// mat-expansion-panel-header {
+//   min-height: 10px; // set the desired height here
+//   // padding: 0px 10px; // adjust the padding as needed
+// }
+// mat-expansion-panel-header-title{
+//   min-height: 15px;
+// }
+::ng-deep .ag-cell {
+  border-right: 1px solid #ccc !important;
+}
+// .message {
+//   margin-left: 15px;
+//   font-size: 13px;
+//   font-weight: 600;
+//   border: 1px solid black;
+//   padding: 5px;
+//   border-radius: 5px;
+// }
+
+.form-container {
+  display: flex;
+  align-items: center;
+}
+.objName {
+  margin-right: 10px;
+}
+.message {
+  font-size: 12px;
+  font-weight: 600;
+  // border-radius: 5px;
+   border: 1px solid rgb(239, 230, 230);
+   padding: 5px;
+  margin-top: -15px;
+   border-radius: 3px;
+   max-width: 800px;
+}
+
+.scrolling-word {
+  white-space: nowrap; /* prevent word from wrapping to new line */
+  overflow: hidden; /* hide the overflow content */
+  animation: scrolling 5s linear infinite; /* animation */
+}
+
+@keyframes scrolling {
+  from {
+    transform: translateX(80%); /* start the animation from 100% (right side of container) */
+  }
+  to {
+    transform: translateX(-100%); /* end the animation at -100% (left side of container) */
+  }
+}
+.custom-panel {
+  width: auto; /* or set to desired value */
+}
+.wrap-text-cell {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  line-height: normal !important;
+}

@@ -1,0 +1,460 @@
+/* You can add global styles to this file, and also import other style files */
+// @import '~bootstrap/scss/bootstrap';
+
+/* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
+
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700');
+
+@import '~admin-lte/plugins/fontawesome-free/css/all.min.css';
+@import '~admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';
+@import '~admin-lte/dist/css/adminlte.min.css';
+@import "~ag-grid-community/styles//ag-grid.css";
+@import "~ag-grid-community/styles//ag-theme-alpine.css";
+@import '~ngx-toastr/toastr';
+
+body {
+  width: 100vw;
+  // height: 100vw;
+}
+
+// ::-webkit-scrollbar {
+//     width: 0px;
+//     background: transparent;
+// }
+
+.user-menu>.nav-link {
+  cursor: pointer;
+}
+
+.user-menu>.nav-link:after {
+  content: none;
+}
+
+.user-menu>.dropdown-menu {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 0;
+  width: 280px;
+}
+
+.user-menu>.dropdown-menu,
+.user-menu>.dropdown-menu>.user-body {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.user-menu>.dropdown-menu>li.user-header {
+  height: 175px;
+  padding: 10px;
+  text-align: center;
+}
+
+.user-menu>.dropdown-menu>li.user-header>img {
+  z-index: 5;
+  height: 50px;
+  width: 50px;
+  border: 3px solid;
+  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-menu>.dropdown-menu>li.user-header>p {
+  z-index: 5;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.user-menu>.dropdown-menu>li.user-header>p>small {
+  display: block;
+  font-size: 12px;
+}
+
+.user-menu>.dropdown-menu>.user-body {
+  border-bottom: 1px solid #495057;
+  border-top: 1px solid #dee2e6;
+  padding: 15px;
+}
+
+.user-menu>.dropdown-menu>.user-body::after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+@media (min-width: 576px) {
+  .user-menu>.dropdown-menu>.user-body a {
+    background: #ffffff !important;
+    color: #495057 !important;
+  }
+}
+
+.user-menu>.dropdown-menu>.user-footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.user-menu>.dropdown-menu>.user-footer::after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.user-menu>.dropdown-menu>.user-footer .btn-default {
+  color: #6c757d;
+}
+
+@media (min-width: 576px) {
+  .user-menu>.dropdown-menu>.user-footer .btn-default:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+.user-menu .user-image {
+  border-radius: 50%;
+  float: left;
+  height: 2.1rem;
+  margin-right: 10px;
+  margin-top: -2px;
+  width: 2.1rem;
+}
+
+@media (min-width: 576px) {
+  .user-menu .user-image {
+    float: none;
+    line-height: 10px;
+    margin-right: 0.4rem;
+    margin-top: -8px;
+  }
+}
+
+.user-menu .user-image {
+  height: 1.6rem;
+  width: 1.6rem;
+  margin-right: 0;
+  margin-left: -8px;
+}
+
+.content {
+  padding: 0 0.5rem;
+}
+
+// Sidebar menu animation
+// Needed for open/close menu animation for menus with child nodes
+.nav .nav-item:not(.menu-open)>.ng-trigger-openClose,
+.nav .nav-item>.ng-trigger-openClose.ng-animating {
+  overflow: hidden;
+  display: Gray;
+}
+
+// Override original AdminLTE transform
+.nav-sidebar .menu-is-opening>.nav-link i.right,
+.nav-sidebar .menu-is-opening>.nav-link svg.right,
+.nav-sidebar .menu-open>.nav-link i.right,
+.nav-sidebar .menu-open>.nav-link svg.right {
+  transform: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+tr.mat-row {
+
+  height: 25px !important;
+// padding-bottom: 10px !important;
+}
+
+// tr.mat-header-row {
+//   height: 30px !important;
+//   // display: block;
+//   /* text-align: center; */
+// }
+
+
+.mat-cell {
+  padding: 1px 1px 1px 1px !important;
+  font-size: 12px !important;
+  margin-bottom: 3px !important;
+}
+
+// .mat-header-cell {
+//   height: 10px;
+//   padding: 1px 1px 1px 0;
+// }
+
+.mat-elevation-z8 {
+  overflow-x: auto;
+}
+
+// .mat-card-content {
+
+//   // display: flex !important;
+//   // flex-direction: column !important;
+//   // align-items: center !important;
+//   // gap:15px !important;
+
+// }
+
+
+h4 {
+  color: rgb(4, 182, 252);
+  font-weight: bold !important;
+}
+
+.matCheck {
+  display: inline-block;
+  height: 14px !important;
+  line-height: 0;
+  margin: auto;
+  margin-right: 8px;
+  order: 0;
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 16px;
+  flex-shrink: 0;
+}
+
+.mat-checkbox-inner-container {
+  display: inline-block;
+  height: 14px !important;
+  line-height: 0;
+  // margin: auto;
+  order: 0;
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 14px;
+
+  flex-shrink: 0;
+}
+
+.mat-checkbox-inner-container-no-side-margin {
+  margin-left: 0;
+  margin-right: 1rem !important;
+}
+
+.mat-card {
+  border-radius: .2rem;
+  // background-color: hsl(156, 15%, 94%);
+  // background: hsl(156, 15%, 94%);
+  border: 1px solid #46718e !important;
+}
+
+tr.mat-header-row {
+  // height: 50px ;
+  height: 5px !important;
+  border-radius: 10px !important;
+  background-color: #c004fc !important;
+}
+
+
+.pagename {
+   margin-left: 0.5em !important;
+   border-left: 4px solid #46718e !important;
+}
+
+.adj {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.3rem !important;
+  color: rgb(37, 140, 195);
+  font-size: 12px !important;
+  font-weight: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  // padding-left: 50px;
+
+}
+
+.content-wrapper {
+  background-color: #fff !important;
+}
+
+.theader {
+  color: white !important;
+  padding-left: 0px;
+  //  text-align: center;
+  width: auto;
+}
+
+.table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.buttonCls {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.brand-link {
+  background-color: white;
+  height: 40px;
+  margin: 3px;
+
+  // background-color: rgb(216, 215, 212) !important;
+}
+
+.tblFields {
+  padding-left: 0px !important;
+  padding-right: 9px !important;
+}
+
+.tblsno {
+  padding-left: 0px !important;
+  padding-right: 9px !important;
+  width: 60px !important;
+}
+
+.control {
+  width: 100px;
+  font-size: 12px;
+}
+
+
+.mat-option {
+  font-size: 13px;
+
+  font-weight: 600;
+
+  height: 25px !important;
+}
+
+.addRow {
+  float: right;
+  margin-top: 5px;
+}
+
+table.mat-table {
+  thead.mat-header-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+  }
+
+  th.mat-header-cell {
+    white-space: nowrap !important;
+  }
+}
+
+table.mat-table {
+  tbody.mat-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+  }
+
+  td.mat-cell {
+    white-space: nowrap !important;
+    //  margin: 3px;
+  }
+}
+
+
+table.mat-table {
+  th.mat-header-cell,
+  td.mat-cell {
+     padding-left: .5rem !important;
+    font-size: 12px !important;
+    // text-align: center !important;
+  }
+}
+
+table.mat-table .mat-form-field {
+  height: 20px !important;
+  // padding-left: 5px;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  // text-align: center;
+}
+
+
+
+::ng-deep .mat-autocomplete {
+  position: absolute !important;
+  bottom: 0 !important;
+}
+
+.sidebar-collapse .main-header {
+  // width: 100% !important;
+  margin-left: 0 !important;
+}
+.sidebar-collapse .content-wrapper {
+  margin-left: 0 !important;
+}
+
+
+.disabledUR {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+}
+::ng-deep .ag-paging-panel {
+  height: 23px !important;
+   line-height: 23px !important;
+}
+
+::ng-deep .ag-header-row {
+  height: 23px !important;
+  background-color: #46718e !important;
+  color: white !important;
+}
+
+::ng-deep .ag-row {
+  height: 28px !important;
+  font-size: 12px !important;
+  // text-align: center !important;
+  line-height: 30px !important;
+}
+::ng-deep .ag-cell-not-inline-editing {
+  display: flex !important;
+  // padding: 3px !important;
+  line-height: 20px !important;
+   align-items: center !important;
+}
+.disabled-highlight {
+  background-color: #ffffcc;
+  color: #333;
+}
+
+.ag-header-row {
+  background-color: #46718e !important;
+  /* your desired color */
+}
+.autocomplete-overlay {
+  width: unset !important;
+}
+
+/* Set the font size for mat-form-field */
+.mat-form-field {
+  font-size: 10px !important;
+}
+
+/* Override the width to be auto for mat-form-field */
+.mat-form-field-wrapper {
+  width: auto !important;
+}
+
+
+.btn {
+  line-height: 20px !important;
+  font-size: 10px !important;
+  margin: 3px !important;
+  background-color:#46718e !important;
+  color: white;
+  // width: 20px;
+}
+.lnkrenderer {
+  color: #007bff !important;
+  text-decoration: underline !important;
+  background-color: transparent !important;
+  cursor: pointer !important;
+  touch-action: manipulation !important;
+  }

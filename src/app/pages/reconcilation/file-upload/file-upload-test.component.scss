@@ -1,0 +1,104 @@
+.example-button-row {
+  margin-right: 25px;
+}
+
+.example-disabled {
+  display: inline-block;
+}
+
+
+.btnupload {
+  line-height: 25px;
+  font-size: 15px;
+  margin: 3px;
+  // width: 20px;
+}
+
+.btnupload:hover {
+  background-color: #c004fc;
+  color: #fff;
+}
+
+.aggrid {
+  margin-top: 0.5rem;
+}
+
+.file-input {
+  display: none;
+}
+
+::ng-deep .ag-paging-panel {
+  height: 23px !important;
+  line-height: 23px !important;
+}
+
+::ng-deep .ag-header-row {
+  height: 23px !important;
+  background-color: #c004fc !important;
+  color: white !important;
+}
+
+::ng-deep .ag-row {
+  height: 28px !important;
+  font-size: 12px !important;
+  // text-align: center !important;
+  line-height: 30px !important;
+}
+
+::ng-deep .ag-cell-not-inline-editing {
+  display: flex !important;
+  // padding: 3px !important;
+  line-height: 20px !important;
+  align-items: center !important;
+}
+::ng-deep .ag-cell {
+  border-right: 1px solid #ccc !important;
+}
+
+/* CSS code for table view */
+.file-upload-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom: 1px solid #ddd;
+
+}
+
+.file-upload-table tr td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.file-upload {
+  margin-right: 10px;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.btnupload {
+  margin-left: 15px;
+}
+
+// .file-upload:focus {
+//   /* Add your desired background color */
+//   background-color: #a3a0a0;
+//   /* Add your desired text color */
+//   color: #ffffff;
+//   /* Add any other styles as needed */
+// }
+
+
+// .file-upload {
+//   background-color: #c004fc; /* Change to your desired color */
+//   color: white; /* Text color */
+//   padding: 2px 2px; /* Button padding */
+//   border: none; /* Remove border */
+//   border-radius: 4px; /* Rounded corners */
+//   cursor: pointer;
+// }
+// .btnupload:active .mat-icon {
+//   color: white;
+// }

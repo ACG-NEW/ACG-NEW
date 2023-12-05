@@ -1,0 +1,939 @@
+<section class="container-fluid">
+  <div class="col-sm-6 pagename">
+    <h4 class="adj">Unreconciliation</h4>
+  </div>
+  <form [formGroup]="UnReconcilationForm" #reconfrm="ngForm">
+    <mat-card>
+      <div class="mat-card-content" fxLayout="column" style="margin-bottom: -10px;">
+        <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutGap.lt-md="0px">
+          <mat-form-field appearance="outline">
+            <mat-label>PSP Name</mat-label>
+            <input type="text" placeholder="PSP Name" formControlName="psp" matInput>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card>
+    <div class="container-fluid">
+      <b>PSP Transactions</b>
+      <mat-divider></mat-divider>
+      <table class="table" mat-table #table [dataSource]="pspDataSource" style="min-height: 190px;max-height: 300px;">
+        <tr *matHeaderRowDef="displayedColumns1; sticky: 'true'" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns1;let i = index;" mat-row></tr>
+        <ng-container matColumnDef="sno">
+          <th mat-header-cell *matHeaderCellDef class="theader">S.No</th>
+          <td mat-cell *matCellDef="let row;let i=index">
+            {{i+1}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="Comments">
+          <th mat-header-cell *matHeaderCellDef class="theader"> <mat-icon style="margin-bottom: -10px;">
+              comment</mat-icon></th>
+          <td mat-cell *matCellDef="let row">
+            <mat-icon style="margin-bottom: -15px;"> comment</mat-icon>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="All">
+          <th mat-header-cell *matHeaderCellDef class="theader">
+            <input type="checkbox" style="margin-bottom: -20px;" [(ngModel)]="pspselectAllChecked"
+              [ngModelOptions]="{standalone: true}" (click)="pspselectAll()">
+          </th>
+          <td mat-cell *matCellDef="let row;let i=index;">
+            <input type="checkbox" style="margin-top: 10px;" [(ngModel)]="row.isSelected" (change)="pspcheck(row,i)"
+              [ngModelOptions]="{standalone: true}">
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="UR">
+          <th mat-header-cell *matHeaderCellDef class="theader">UR</th>
+          <td mat-cell *matCellDef="let row;let i=index;">
+            <button type="button" class="btnU" disabled><b>U</b></button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="ME">
+          <th mat-header-cell *matHeaderCellDef class="theader">ME</th>
+          <td mat-cell *matCellDef="let row">
+            <button type="button" class="btnU" disabled><b>M</b></button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="F_TRANSACTION_CURRENCY">
+          <th mat-header-cell *matHeaderCellDef class="theader">TransactionCurrency</th>
+          <td mat-cell *matCellDef="let element">
+            <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_TRANSACTION_CURRENCY}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_REMARKS Column -->
+        <ng-container matColumnDef="F_REMARKS">
+          <th mat-header-cell *matHeaderCellDef class="theader">Remarks</th>
+          <td mat-cell *matCellDef="let element">
+            <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_REMARKS}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_PROCESSING_AGENT_ID Column -->
+        <ng-container matColumnDef="F_EZECASH_PROCESSING_AGENT_ID">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashProcessingAgentID </th>
+          <td mat-cell *matCellDef="let element">
+            <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_PROCESSING_AGENT_ID}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- f_update_side Column -->
+        <ng-container matColumnDef="f_update_side">
+          <th mat-header-cell *matHeaderCellDef class="theader">UpdateSide </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.f_update_side}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_PLAYER_ID Column -->
+        <ng-container matColumnDef="F_EZECASH_PLAYER_ID">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashPlayerID</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_PLAYER_ID}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PRODUCT Column -->
+        <ng-container matColumnDef="F_PRODUCT">
+          <th mat-header-cell *matHeaderCellDef class="theader">Product</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PRODUCT}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PLAYER_REGISTRATION_BRAND Column -->
+        <ng-container matColumnDef="F_PLAYER_REGISTRATION_BRAND">
+          <th mat-header-cell *matHeaderCellDef class="theader">PlayerRegistartionBrand</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PLAYER_REGISTRATION_BRAND}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_RECORD_ID Column -->
+        <ng-container matColumnDef="F_RECORD_ID">
+          <th mat-header-cell *matHeaderCellDef class="theader">RecordId </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECORD_ID}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_REFERENCE Column -->
+        <ng-container matColumnDef="F_EZECASH_REFERENCE">
+          <th mat-header-cell *matHeaderCellDef class="theader">EzeCashRefference </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_REFERENCE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PSP_TRANSACTION_STATUS_2 Column -->
+        <ng-container matColumnDef="F_PSP_TRANSACTION_STATUS_2">
+          <th mat-header-cell *matHeaderCellDef class="theader">PSPTransactionStatus2</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PSP_TRANSACTION_STATUS_2}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="F_SETTLEMENT_AMOUNT">
+          <th mat-header-cell *matHeaderCellDef class="theader"> SETTLEMENT_AMOUNT </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_SETTLEMENT_AMOUNT}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PSP_TRANSACTION_STATUS_1 Column -->
+        <ng-container matColumnDef="F_PSP_TRANSACTION_STATUS_1">
+          <th mat-header-cell *matHeaderCellDef class="theader">PSPTransactionStatus1 </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PSP_TRANSACTION_STATUS_1}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_PROCESSOR_CATEGORY Column -->
+        <ng-container matColumnDef="F_EZECASH_PROCESSOR_CATEGORY">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashProcessorCategory </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_PROCESSOR_CATEGORY}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_TRANSACTION_STATUS Column -->
+        <ng-container matColumnDef="F_EZECASH_TRANSACTION_STATUS">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashTransactionStatus </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_TRANSACTION_STATUS}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_RECONCILIATION_TYPE Column -->
+        <ng-container matColumnDef="F_RECONCILIATION_TYPE">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconciliationType</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECONCILIATION_TYPE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PLAYER_SECOND_NAME Column -->
+        <ng-container matColumnDef="F_PLAYER_SECOND_NAME">
+          <th mat-header-cell *matHeaderCellDef class="theader">PlayerSecondName</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PLAYER_SECOND_NAME}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_VALUE_DATE Column -->
+        <ng-container matColumnDef="F_VALUE_DATE">
+          <th mat-header-cell *matHeaderCellDef class="theader">ValueDate </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_VALUE_DATE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_RECONCILIATION_STATUS Column -->
+        <ng-container matColumnDef="F_RECONCILIATION_STATUS">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconciliationStatus</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECONCILIATION_STATUS}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_COUNTRY Column -->
+        <ng-container matColumnDef="F_COUNTRY">
+          <th mat-header-cell *matHeaderCellDef class="theader">Country</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_COUNTRY}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_TRANSACTION_AMOUNT Column -->
+        <ng-container matColumnDef="F_TRANSACTION_AMOUNT">
+          <th mat-header-cell *matHeaderCellDef class="theader">TransactionAmount </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_TRANSACTION_AMOUNT}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+        <!-- F_ACTION_TYPE Column -->
+        <ng-container matColumnDef="F_ACTION_TYPE">
+          <th mat-header-cell *matHeaderCellDef class="theader">ActionType </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_ACTION_TYPE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_DEPOSIT_REFERENCE_ID Column -->
+        <ng-container matColumnDef="F_EZECASH_DEPOSIT_REFERENCE_ID">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashDepositReferenceID</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_DEPOSIT_REFERENCE_ID}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_ROLE Column -->
+        <ng-container matColumnDef="F_ROLE">
+          <th mat-header-cell *matHeaderCellDef class="theader">Role</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_ROLE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_PAYMENT_MODE Column -->
+        <ng-container matColumnDef="F_EZECASH_PAYMENT_MODE">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashPaymentMode</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_PAYMENT_MODE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_FRONT_END Column -->
+        <ng-container matColumnDef="F_FRONT_END">
+          <th mat-header-cell *matHeaderCellDef class="theader">FrontEnd </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_FRONT_END}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- f_sequence_id Column -->
+        <!-- <ng-container matColumnDef="f_sequence_id">
+          <th mat-header-cell *matHeaderCellDef class="theader">sequence_id </th>
+          <td mat-cell *matCellDef="let element"> {{element.f_sequence_id}} </td>
+        </ng-container> -->
+
+        <!-- F_PSP_REFERENCE Column -->
+        <ng-container matColumnDef="F_PSP_REFERENCE">
+          <th mat-header-cell *matHeaderCellDef class="theader">PSPReference</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PSP_REFERENCE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_RECON_TYPE Column -->
+        <ng-container matColumnDef="F_RECON_TYPE">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconType</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECON_TYPE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- f_reconciliation_flag Column -->
+        <ng-container matColumnDef="f_reconciliation_flag">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconciliationFlag</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.f_reconciliation_flag}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_ACCOUNT_CURRENCY Column -->
+        <ng-container matColumnDef="F_ACCOUNT_CURRENCY">
+          <th mat-header-cell *matHeaderCellDef class="theader">AccountCurrency</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_ACCOUNT_CURRENCY}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="F_POINT_IN_RECON_DATE">
+          <th mat-header-cell *matHeaderCellDef class="theader">PointInReconDate</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_POINT_IN_RECON_DATE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_TRANSACTION_CATEGORY Column -->
+        <ng-container matColumnDef="F_EZECASH_TRANSACTION_CATEGORY">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashTransactionCategory</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_TRANSACTION_CATEGORY}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PLAYER_FIRST_NAME Column -->
+        <ng-container matColumnDef="F_PLAYER_FIRST_NAME">
+          <th mat-header-cell *matHeaderCellDef class="theader">PlayerFirstName</th>
+          <td mat-cell *matCellDef="let element">
+            <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PLAYER_FIRST_NAME}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_RECON_DATE Column -->
+        <ng-container matColumnDef="F_RECON_DATE">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconDate</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECON_DATE}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_NARRATIVE Column -->
+        <ng-container matColumnDef="F_NARRATIVE">
+          <th mat-header-cell *matHeaderCellDef class="theader">Narrative</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_NARRATIVE}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_SETTLEMENT_CURRENCY Column -->
+        <ng-container matColumnDef="F_SETTLEMENT_CURRENCY">
+          <th mat-header-cell *matHeaderCellDef class="theader">SettlementCurrency</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_SETTLEMENT_CURRENCY}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_TRANSACTION_DATE Column -->
+        <ng-container matColumnDef="F_TRANSACTION_DATE">
+          <th mat-header-cell *matHeaderCellDef class="theader">TransactionDate </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_TRANSACTION_DATE}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_ACCOUNT_AMOUNT Column -->
+        <ng-container matColumnDef="F_ACCOUNT_AMOUNT">
+          <th mat-header-cell *matHeaderCellDef class="theader">AccountAmount </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_ACCOUNT_AMOUNT}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_BASE_AMOUNT Column -->
+        <ng-container matColumnDef="F_BASE_AMOUNT">
+          <th mat-header-cell *matHeaderCellDef class="theader">BaseAmount </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_BASE_AMOUNT}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_ISSUE Column -->
+        <ng-container matColumnDef="F_ISSUE">
+          <th mat-header-cell *matHeaderCellDef class="theader">Issue</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_ISSUE}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="F_RECONCILIATION_METHOD">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconciliationMethod</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECONCILIATION_METHOD}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- f_file_name Column -->
+        <ng-container matColumnDef="f_file_name">
+          <th mat-header-cell *matHeaderCellDef class="theader">FileName </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.f_file_name}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PLAYER_INFORMATION_2 Column -->
+        <ng-container matColumnDef="F_PLAYER_INFORMATION_2">
+          <th mat-header-cell *matHeaderCellDef class="theader">PlayerInformation2 </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PLAYER_INFORMATION_2}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PLAYER_INFORMATION_1 Column -->
+        <ng-container matColumnDef="F_PLAYER_INFORMATION_1">
+          <th mat-header-cell *matHeaderCellDef class="theader">PlayerInformation1</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PLAYER_INFORMATION_1}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_BASE_CURRENCY Column -->
+        <ng-container matColumnDef="F_BASE_CURRENCY">
+          <th mat-header-cell *matHeaderCellDef class="theader">BaseCurrency</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_BASE_CURRENCY}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+      </table>
+      <!-- <div>
+        <button type="button" mat-stroked-button color="primary" value="match" class="btn"
+          (click)="Match()">Match</button>
+      </div> -->
+      <b>Cashier Transactions</b>
+      <mat-divider></mat-divider>
+      <table class="table" mat-table #table [dataSource]="ezeDataSource" style="min-height: 190px;max-height: 300px;">
+        <tr *matHeaderRowDef="displayedColumns2; sticky: 'true'" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns2;let i = index;" mat-row></tr>
+        <ng-container matColumnDef="sno">
+          <th mat-header-cell *matHeaderCellDef class="theader">S.No</th>
+          <td mat-cell *matCellDef="let row;let i=index">
+            {{i+1}}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Comments">
+          <th mat-header-cell *matHeaderCellDef class="theader"> <mat-icon style="margin-bottom: -10px;">
+              comment</mat-icon></th>
+          <td mat-cell *matCellDef="let row">
+            <mat-icon style="margin-bottom: -15px;"> comment</mat-icon>
+            <!-- <mat-form-field>
+              <input type="text" disabled matInput [(ngModel)]="row.Comments" [ngModelOptions]="{standalone: true}">
+            </mat-form-field> -->
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="All">
+          <th mat-header-cell *matHeaderCellDef class="theader">
+            <input type="checkbox" style="margin-bottom: -20px;" [(ngModel)]="ezeselectAllChecked"
+              [ngModelOptions]="{standalone: true}" (click)="ezeselectAll()">
+          </th>
+          <td mat-cell *matCellDef="let row;let i=index;">
+            <input type="checkbox" style="margin-top: 10px;" [(ngModel)]="row.isSelected" (change)="ezecheked(row,i)"
+              [ngModelOptions]="{standalone: true}">
+          </td>
+
+          <!-- <td mat-cell *matCellDef="let row;let i=index;">
+            <input type="checkbox" style="margin-top: 10px;" (click)="ezecheked(row,i)"
+              [checked]="ezeCheckeData.indexOf(row.F_RECORD_ID) !== -1">
+          </td> -->
+        </ng-container>
+        <ng-container matColumnDef="UR">
+          <th mat-header-cell *matHeaderCellDef class="theader">UR</th>
+          <td mat-cell *matCellDef="let row;let i=index;">
+            <button type="button" disabled class="btnU" disabled><b>U</b></button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="ME">
+          <th mat-header-cell *matHeaderCellDef class="theader">ME</th>
+          <td mat-cell *matCellDef="let row;let i=index;">
+            <button type="button" disabled class="btnU" disabled><b>M</b></button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="F_TRANSACTION_CURRENCY">
+          <th mat-header-cell *matHeaderCellDef class="theader">TransactionCurrency</th>
+          <td mat-cell *matCellDef="let element">
+            <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_TRANSACTION_CURRENCY}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_REMARKS Column -->
+        <ng-container matColumnDef="F_REMARKS">
+          <th mat-header-cell *matHeaderCellDef class="theader">Remarks</th>
+          <td mat-cell *matCellDef="let element">
+            <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_REMARKS}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_PROCESSING_AGENT_ID Column -->
+        <ng-container matColumnDef="F_EZECASH_PROCESSING_AGENT_ID">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashProcessingAgentID </th>
+          <td mat-cell *matCellDef="let element">
+            <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_PROCESSING_AGENT_ID}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- f_update_side Column -->
+        <ng-container matColumnDef="f_update_side">
+          <th mat-header-cell *matHeaderCellDef class="theader">UpdateSide </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.f_update_side}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_PLAYER_ID Column -->
+        <ng-container matColumnDef="F_EZECASH_PLAYER_ID">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashPlayerID</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_PLAYER_ID}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PRODUCT Column -->
+        <ng-container matColumnDef="F_PRODUCT">
+          <th mat-header-cell *matHeaderCellDef class="theader">Product</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PRODUCT}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PLAYER_REGISTRATION_BRAND Column -->
+        <ng-container matColumnDef="F_PLAYER_REGISTRATION_BRAND">
+          <th mat-header-cell *matHeaderCellDef class="theader">PlayerRegistartionBrand</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PLAYER_REGISTRATION_BRAND}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_RECORD_ID Column -->
+        <ng-container matColumnDef="F_RECORD_ID">
+          <th mat-header-cell *matHeaderCellDef class="theader">RecordId </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECORD_ID}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_REFERENCE Column -->
+        <ng-container matColumnDef="F_EZECASH_REFERENCE">
+          <th mat-header-cell *matHeaderCellDef class="theader">EzeCashRefference </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_REFERENCE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PSP_TRANSACTION_STATUS_2 Column -->
+        <ng-container matColumnDef="F_PSP_TRANSACTION_STATUS_2">
+          <th mat-header-cell *matHeaderCellDef class="theader">PSPTransactionStatus2</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PSP_TRANSACTION_STATUS_2}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="F_SETTLEMENT_AMOUNT">
+          <th mat-header-cell *matHeaderCellDef class="theader"> SETTLEMENT_AMOUNT </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_SETTLEMENT_AMOUNT}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PSP_TRANSACTION_STATUS_1 Column -->
+        <ng-container matColumnDef="F_PSP_TRANSACTION_STATUS_1">
+          <th mat-header-cell *matHeaderCellDef class="theader">PSPTransactionStatus1 </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PSP_TRANSACTION_STATUS_1}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_PROCESSOR_CATEGORY Column -->
+        <ng-container matColumnDef="F_EZECASH_PROCESSOR_CATEGORY">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashProcessorCategory </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_PROCESSOR_CATEGORY}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_TRANSACTION_STATUS Column -->
+        <ng-container matColumnDef="F_EZECASH_TRANSACTION_STATUS">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashTransactionStatus </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_TRANSACTION_STATUS}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_RECONCILIATION_TYPE Column -->
+        <ng-container matColumnDef="F_RECONCILIATION_TYPE">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconciliationType</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECONCILIATION_TYPE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PLAYER_SECOND_NAME Column -->
+        <ng-container matColumnDef="F_PLAYER_SECOND_NAME">
+          <th mat-header-cell *matHeaderCellDef class="theader">PlayerSecondName</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PLAYER_SECOND_NAME}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_VALUE_DATE Column -->
+        <ng-container matColumnDef="F_VALUE_DATE">
+          <th mat-header-cell *matHeaderCellDef class="theader">ValueDate </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_VALUE_DATE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_RECONCILIATION_STATUS Column -->
+        <ng-container matColumnDef="F_RECONCILIATION_STATUS">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconciliationStatus</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECONCILIATION_STATUS}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_COUNTRY Column -->
+        <ng-container matColumnDef="F_COUNTRY">
+          <th mat-header-cell *matHeaderCellDef class="theader">Country</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_COUNTRY}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_TRANSACTION_AMOUNT Column -->
+        <ng-container matColumnDef="F_TRANSACTION_AMOUNT">
+          <th mat-header-cell *matHeaderCellDef class="theader">TransactionAmount </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_TRANSACTION_AMOUNT}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+        <!-- F_ACTION_TYPE Column -->
+        <ng-container matColumnDef="F_ACTION_TYPE">
+          <th mat-header-cell *matHeaderCellDef class="theader">ActionType </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_ACTION_TYPE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_DEPOSIT_REFERENCE_ID Column -->
+        <ng-container matColumnDef="F_EZECASH_DEPOSIT_REFERENCE_ID">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashDepositReferenceID</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_DEPOSIT_REFERENCE_ID}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_ROLE Column -->
+        <ng-container matColumnDef="F_ROLE">
+          <th mat-header-cell *matHeaderCellDef class="theader">Role</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_ROLE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_PAYMENT_MODE Column -->
+        <ng-container matColumnDef="F_EZECASH_PAYMENT_MODE">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashPaymentMode</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_PAYMENT_MODE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_FRONT_END Column -->
+        <ng-container matColumnDef="F_FRONT_END">
+          <th mat-header-cell *matHeaderCellDef class="theader">FrontEnd </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_FRONT_END}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- f_sequence_id Column -->
+        <!-- <ng-container matColumnDef="f_sequence_id">
+          <th mat-header-cell *matHeaderCellDef class="theader">sequence_id </th>
+          <td mat-cell *matCellDef="let element"> {{element.f_sequence_id}} </td>
+        </ng-container> -->
+
+        <!-- F_PSP_REFERENCE Column -->
+        <ng-container matColumnDef="F_PSP_REFERENCE">
+          <th mat-header-cell *matHeaderCellDef class="theader">PSPReference</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PSP_REFERENCE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_RECON_TYPE Column -->
+        <ng-container matColumnDef="F_RECON_TYPE">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconType</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECON_TYPE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- f_reconciliation_flag Column -->
+        <ng-container matColumnDef="f_reconciliation_flag">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconciliationFlag</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.f_reconciliation_flag}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_ACCOUNT_CURRENCY Column -->
+        <ng-container matColumnDef="F_ACCOUNT_CURRENCY">
+          <th mat-header-cell *matHeaderCellDef class="theader">AccountCurrency</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_ACCOUNT_CURRENCY}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="F_POINT_IN_RECON_DATE">
+          <th mat-header-cell *matHeaderCellDef class="theader">PointInReconDate</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_POINT_IN_RECON_DATE}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_EZECASH_TRANSACTION_CATEGORY Column -->
+        <ng-container matColumnDef="F_EZECASH_TRANSACTION_CATEGORY">
+          <th mat-header-cell *matHeaderCellDef class="theader">EZECashTransactionCategory</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_EZECASH_TRANSACTION_CATEGORY}}" />
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PLAYER_FIRST_NAME Column -->
+        <ng-container matColumnDef="F_PLAYER_FIRST_NAME">
+          <th mat-header-cell *matHeaderCellDef class="theader">PlayerFirstName</th>
+          <td mat-cell *matCellDef="let element">
+            <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PLAYER_FIRST_NAME}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_RECON_DATE Column -->
+        <ng-container matColumnDef="F_RECON_DATE">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconDate</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECON_DATE}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_NARRATIVE Column -->
+        <ng-container matColumnDef="F_NARRATIVE">
+          <th mat-header-cell *matHeaderCellDef class="theader">Narrative</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_NARRATIVE}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_SETTLEMENT_CURRENCY Column -->
+        <ng-container matColumnDef="F_SETTLEMENT_CURRENCY">
+          <th mat-header-cell *matHeaderCellDef class="theader">SettlementCurrency</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_SETTLEMENT_CURRENCY}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_TRANSACTION_DATE Column -->
+        <ng-container matColumnDef="F_TRANSACTION_DATE">
+          <th mat-header-cell *matHeaderCellDef class="theader">TransactionDate </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_TRANSACTION_DATE}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_ACCOUNT_AMOUNT Column -->
+        <ng-container matColumnDef="F_ACCOUNT_AMOUNT">
+          <th mat-header-cell *matHeaderCellDef class="theader">AccountAmount </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_ACCOUNT_AMOUNT}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_BASE_AMOUNT Column -->
+        <ng-container matColumnDef="F_BASE_AMOUNT">
+          <th mat-header-cell *matHeaderCellDef class="theader">BaseAmount </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_BASE_AMOUNT}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_ISSUE Column -->
+        <ng-container matColumnDef="F_ISSUE">
+          <th mat-header-cell *matHeaderCellDef class="theader">Issue</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_ISSUE}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="F_RECONCILIATION_METHOD">
+          <th mat-header-cell *matHeaderCellDef class="theader">ReconciliationMethod</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_RECONCILIATION_METHOD}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- f_file_name Column -->
+        <ng-container matColumnDef="f_file_name">
+          <th mat-header-cell *matHeaderCellDef class="theader">FileName </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.f_file_name}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PLAYER_INFORMATION_2 Column -->
+        <ng-container matColumnDef="F_PLAYER_INFORMATION_2">
+          <th mat-header-cell *matHeaderCellDef class="theader">PlayerInformation2 </th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PLAYER_INFORMATION_2}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_PLAYER_INFORMATION_1 Column -->
+        <ng-container matColumnDef="F_PLAYER_INFORMATION_1">
+          <th mat-header-cell *matHeaderCellDef class="theader">PlayerInformation1</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_PLAYER_INFORMATION_1}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+        <!-- F_BASE_CURRENCY Column -->
+        <ng-container matColumnDef="F_BASE_CURRENCY">
+          <th mat-header-cell *matHeaderCellDef class="theader">BaseCurrency</th>
+          <td mat-cell *matCellDef="let element"> <mat-form-field appearance="outline" style="width: 8vw;">
+              <input type="text" disabled matInput value="{{element.F_BASE_CURRENCY}}">
+            </mat-form-field>
+          </td>
+        </ng-container>
+
+      </table>
+
+      <!-- <div>
+        <button type="button" mat-stroked-button color="primary" value="match" class="btn"
+          (click)="Match()">Match</button>
+      </div> -->
+      <div class="input-row" style="text-align: center;margin-top: 0.5em;" fxLayout="row" fxLayout.lt-md="column"
+        fxLayoutGap="10px" fxLayoutGap.lt-md="0px">
+        <button mat-stroked-button color="warn" class="btn" type="button" (click)="unReconcile()" *ngIf="!unMachRecon"
+          [disabled]="pspCheckeData.length === 0 || ezeCheckeData.length === 0">
+          Unreconcile
+        </button>
+        <button mat-stroked-button color="warn" class="btn" type="button" (click)="undoMatch()" *ngIf="unMachRecon">
+          Undo Match
+        </button>
+        <button mat-stroked-button color="primary" class="btn" type="button" (click)="cancel()">
+          <mat-icon>cancel</mat-icon>Cancel
+        </button>
+        <!-- <button mat-stroked-button color="primary" class="primary" class="btn" type="button">
+          <mat-icon>export</mat-icon>Export
+        </button> -->
+      </div>
+    </div>
+  </form>
+</section>

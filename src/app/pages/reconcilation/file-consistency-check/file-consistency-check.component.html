@@ -1,0 +1,193 @@
+<section class="container-fluid">
+  <div class="col-sm-6 pagename">
+    <h4 class="adj">File Consistency Check</h4>
+  </div>
+  <div>
+    <div>
+
+      <table class="table" mat-table #table [dataSource]="dataSource">
+        <tr *matHeaderRowDef="displayedColumns; sticky: 'true'" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns;let i = index;" mat-row></tr>
+        <ng-container matColumnDef="serialNo">
+          <th mat-header-cell *matHeaderCellDef class="theader">S.No</th>
+          <td mat-cell *matCellDef="let row;let i=index"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">{{i+1}}</label>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="psp">
+          <th mat-header-cell *matHeaderCellDef class="theader">PSP</th>
+          <td mat-cell *matCellDef="let row; let i=index"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">
+              {{row.pspName}}
+            </label>
+          </td>
+        </ng-container>
+        <!-- <ng-container matColumnDef="psp">
+          <th mat-header-cell *matHeaderCellDef class="theader">PSP</th>
+          <td mat-cell *matCellDef="let row;let i=index;">
+
+            <label> <a (click)="open(row,i)" style="cursor: pointer;"><u>{{row.pspName}}</u></a></label>
+          </td>
+        </ng-container> -->
+        <ng-container matColumnDef="pspSubAc">
+          <th mat-header-cell *matHeaderCellDef class="theader">PSP Sub A/C Name</th>
+          <td mat-cell *matCellDef="let row;let i=index;">
+            <!-- <label>{{row.pspSubAccountName}}</label> -->
+            <label style="margin-top: 10px;"
+              [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+              <a (click)="open(row,i,'pspSubAc')" style="cursor: pointer;"><u>{{row.pspSubAccountName}}</u></a></label>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="fileName">
+          <th mat-header-cell *matHeaderCellDef class="theader">File Name</th>
+          <td mat-cell *matCellDef="let row"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">{{row.fileName}}</label>
+          </td>
+        </ng-container>
+        <!-- <ng-container matColumnDef="txnDate">
+          <th mat-header-cell *matHeaderCellDef class="theader">Txn Date</th>
+          <td mat-cell *matCellDef="let row; let i =index" [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label>{{row.transactionsDate}}</label>
+          </td>
+        </ng-container> -->
+        <ng-container matColumnDef="txnDate">
+          <th mat-header-cell *matHeaderCellDef class="theader">Txn Date</th>
+          <td mat-cell *matCellDef="let row; let i =index"
+            [style.color]="row.saStatus === 'ERROR' || row.transactionsDate.includes('DATE ERROR') ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">{{row.transactionsDate}}</label>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="txnType">
+          <th mat-header-cell *matHeaderCellDef class="theader">Txn Type</th>
+          <td mat-cell *matCellDef="let row"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">{{row.transactionsType}}</label>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="currency">
+          <th mat-header-cell *matHeaderCellDef class="theader">Currency</th>
+          <td mat-cell *matCellDef="let row"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">{{row.currency}}</label>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="noofTxns">
+          <th mat-header-cell *matHeaderCellDef class="theader">No of Txns</th>
+          <td mat-cell *matCellDef="let row" class="text-right"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">{{row.noOfTransactions}}</label>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="totalAmount">
+          <th mat-header-cell *matHeaderCellDef class="theader">Total Amount</th>
+          <td mat-cell *matCellDef="let row" class="text-right"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">{{row.totalAmount}}</label>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="fees">
+          <th mat-header-cell *matHeaderCellDef class="theader">Fees</th>
+          <td mat-cell *matCellDef="let row" class="text-right"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">{{row.fees}}</label>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="duplicateRecords">
+          <th mat-header-cell *matHeaderCellDef class="theader">Duplicate Records</th>
+          <td mat-cell *matCellDef="let row;let i=index;" class="text-right"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label (click)="open(row,i,'duplicateRecords')"
+              style=" cursor: pointer;margin-top: 10px;"><u>{{row.duplicateRecords}}</u></label>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="noOfRejectedRecords">
+          <th mat-header-cell *matHeaderCellDef class="theader">No of Rejected Records</th>
+          <td mat-cell *matCellDef="let row" class="text-right"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">{{row.rejectedRecords}}</label>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="viewlog">
+          <th mat-header-cell *matHeaderCellDef class="theader">View log</th>
+          <td mat-cell *matCellDef="let row;let i=index;"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <!-- <label>{{row.viewLog}}</label> -->
+            <label style="margin-top: 10px;"> <a (click)="open(row,i,'viewlog')"
+                style="cursor: pointer;"><u>{{row.viewLog}}</u></a></label>
+
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="fileStatus">
+          <th mat-header-cell *matHeaderCellDef class="theader">File Status</th>
+          <td mat-cell *matCellDef="let row;let i=index;"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;">{{row.fileStatus}}</label>
+            <!-- <label> <a (click)="open(row,i,'fileStatus')" style="cursor: pointer;"><u>{{row.fileStatus}}</u></a></label> -->
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="saStatus">
+          <th mat-header-cell *matHeaderCellDef class="theader">SA Status</th>
+          <td mat-cell *matCellDef="let row;let i=index"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <label style="margin-top: 10px;"> <a (click)="open(row,i,'saStatus')"
+                style="cursor: pointer;"><u>{{row.saStatus}}</u></a></label>
+          </td>
+        </ng-container>
+        <!-- <ng-container matColumnDef="saStatus">
+          <th mat-header-cell *matHeaderCellDef class="theader">SA Status</th>
+          <td mat-cell *matCellDef="let row;let i=index">
+            <label  style.color="row.saStatus === 'ERROR' ? 'red' : ''"> <a (click)="open(row,i,'saStatus')"
+                style="cursor: pointer;"><u>{{row.saStatus}}</u></a></label>
+          </td>
+        </ng-container> -->
+        <ng-container matColumnDef="formatConversionStatus">
+          <th mat-header-cell *matHeaderCellDef class="theader">Format Conversion Status</th>
+          <td mat-cell *matCellDef="let row;let i=index"
+            [style.color]="row.saStatus === 'ERROR' || row.fileStatus==='ERROR' || row.duplicateRecords > 0 || row.transactionsDate.includes('DATE ERROR') || row.pspSubAccountName === 'Not_Identified' ? 'red' : '#0091ff'">
+            <!-- <label> {{row.formatConversionStatus}}</label> -->
+            <label style="margin-top: 10px;"> <a (click)="open(row,i,'formatConversionStatus')"
+                style="cursor: pointer;"><u>{{row.formatConversionStatus}}</u></a></label>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="process">
+          <th mat-header-cell *matHeaderCellDef class="theader">Process</th>
+          <td mat-cell *matCellDef="let row;let i=index">
+            <input type="checkbox" style="margin-top: 10px;cursor: pointer;" (click)="processChk($event,row,i)" title="Process File"
+              [checked]="modifiedFCCLines?.indexOf(row.fileName) !== -1"
+              [disabled]="row.pspSubAccountId===''  || deleteFCCLines.indexOf(row.fileName) !== -1 || !(row.fileStatus =='SA COMPLETE' && row.saStatus == 'COMPLETED' && row.formatConversionStatus =='COMPLETED')">
+          </td>
+          <!-- !row.processFile || -->
+        </ng-container>
+        <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef class="theader">Delete</th>
+          <td mat-cell *matCellDef="let row;let i=index">
+            <input type="checkbox" (click)="deleteChk($event,row,i)" style="margin-top: 10px; cursor: pointer;"
+              [checked]="deleteFCCLines.indexOf(row.fileName) !== -1" title="Delete File"
+              [disabled]="modifiedFCCLines.indexOf(row.fileName) !== -1">
+          </td>
+          <!-- !row.deleteFile || -->
+        </ng-container>
+      </table>
+      <div class="input-row" style="text-align: center;" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px"
+        fxLayoutGap.lt-md="2px">
+        <button mat-stroked-button color="primary" class="primary" class="btn" type="button" (click)="refresh()">
+          <mat-icon>refresh</mat-icon>Refresh
+        </button>
+        <button mat-stroked-button color="primary"
+          [disabled]="modifiedFCCLines.length <= 0 && deleteFCCLines.length <= 0 " class="primary" class="btn"
+          type="button" (click)="process()">
+          Process
+        </button>
+        <button mat-raised-button (click)="exportToExcel()" class="btn" type="button"
+          [disabled]="dataSource.length == 0">Export to Excel</button>
+      </div>
+    </div>
+  </div>
+</section>
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>

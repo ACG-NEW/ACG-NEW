@@ -1,0 +1,61 @@
+::ng-deep .ag-paging-panel {
+  height: 23px !important;
+  line-height: 23px !important;
+}
+
+::ng-deep .ag-header-row {
+  height: 23px !important;
+  background-color:  #46718e !important;
+  color: white !important;
+}
+:ng-deep .ag-icon-menu{
+  color: white !important;
+}
+::ng-deep .ag-row {
+  height: 28px !important;
+  font-size: 12px !important;
+  // text-align: center !important;
+  line-height: 30px !important;
+}
+
+::ng-deep .ag-cell-not-inline-editing {
+  display: flex !important;
+  // padding: 3px !important;
+  line-height: 20px !important;
+  align-items: center !important;
+}
+
+.disabled-highlight {
+  background-color: #ffffcc;
+  color: #333;
+}
+
+.txtalign {
+  text-align: right !important;
+}
+
+
+.cell-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.btn-enabled {
+  // background-color: green;
+  color: red;
+}
+::ng-deep .ag-cell {
+  border-right: 1px solid #ccc !important;
+}
+.grid-with-lines {
+  border-collapse: collapse !important;
+}
+
+.ag-header-row {
+  background-color: #46718e !important;
+  /* your desired color */
+}
+@media (max-width: 768px) {
+  .ag-theme-alpine {
+    width: 100% !important;
+  }
+}

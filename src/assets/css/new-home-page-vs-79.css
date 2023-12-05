@@ -1,0 +1,3472 @@
+body,
+div,
+ul,
+ol,
+li,
+h1,
+h4,
+h5,
+h6,
+form,
+input,
+button,
+textarea,
+select,
+p,
+td,
+map {
+ margin:0;
+ padding:0;
+ line-height:auto;
+ font-size:15px;
+ font-weight:normal;
+ font-family:    'Roboto', sans-serif;!important;
+ color:#111111 !important;
+}
+html {
+ font-size:16px;
+ font-weight:normal;
+ font-family:'Roboto',sans-serif !important;
+ color:#72727d;
+ background:#f1f1f2;
+ direction:ltr
+}
+img {
+ border:0;
+ outline:0
+}
+ol,
+ul,
+li {
+ list-style:none
+}
+a:link,
+a:hover,
+a:visited,
+a:focus {
+ text-decoration:none;
+ outline:0
+}
+a:hover {
+ text-decoration:underline;
+ outline:0
+}
+input,
+textarea,
+select {
+ outline:none !important
+}
+textarea {
+ resize:none;
+ -webkit-appearance:none
+}
+table {
+ border:0;
+ border-spacing:0
+}
+a,
+a:focus,
+a:hover {
+ color:#111111;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.clearfix,
+.clear {
+ clear:both
+}
+.spacer_2 {
+ padding:2px
+}
+.spacer_4 {
+ padding:4px
+}
+.spacer_5 {
+ padding:5px
+}
+.spacer_6 {
+ padding:6px
+}
+.pd_0 {
+ padding:0
+}
+.margin_0 {
+ margin:0
+}
+.align_r,
+.tr {
+ text-align:right
+}
+.align_c {
+ text-align:center
+}
+.margin_t10 {
+ margin:10px 0 0
+}
+.pos_rel {
+ position:relative
+}
+.valign_middle {
+ vertical-align:middle
+}
+.over_hidden {
+ overflow:hidden
+}
+.padding_0 {
+ padding:0
+}
+.deactivate {
+ color:#dfe0e3 !important
+}
+.fix {
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ z-index:100
+}
+.pink_heading {
+ color:#ff5a60 !important
+}
+.pink_heading_bg {
+ background:#ff5a60;
+ padding:25px 0
+}
+.white_txt {
+ color:#fff
+}
+.jumbotron {
+ padding-top:40px
+}
+.dn {
+ display:none
+}
+.d_inline {
+ display:inline
+}
+.d_block {
+ display:inline-block
+}
+.float_l {
+ float:left
+}
+.select_drop {
+ color:#b1b3b9 !important
+}
+.select_drop option {
+ color:#72727d !important
+}
+.sign_up_btn {
+ background:0;
+ border:2px solid #fff;
+ border-radius:3px;
+ padding:11px 60px;
+ font-size:18px;
+ color:#fff;
+ display:inline-block;
+ transition:all .3s ease-in-out;
+ box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+ text-decoration:none !important
+}
+.sign_up_btn:visited {
+ color:#fff !important
+}
+.sign_up_btn:focus {
+ border:2px solid #fff;
+ border-radius:3px;
+ color:#fff
+}
+.home_banner {
+ width:100%
+}
+.home_banner.ri_img1 {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-banner-ri.jpg) no-repeat center center
+}
+.home_banner.ri_img2 {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-banner-1.jpg) no-repeat center center
+}
+.home_banner.ri_img3 {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-banner-2.jpg) no-repeat center center
+}
+.home_banner.ri_img_tvc {
+ background:url(https://img2.shaadi.com/assests/2017/images/home-page-banner-tvc-v3.jpg) no-repeat center center
+}
+.home_banner.ri_img_tvc_v1 {
+ background:url(https://img2.shaadi.com/assests/2017/images/home-page-banner-tvc-play.jpg) no-repeat center center
+}
+.home_banner.nri {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-banner-nri.jpg) no-repeat center center
+}
+.home_banner.nrishaadi {
+ background:url(https://img2.shaadi.com/assests/2017/images/nri-banner.jpg) no-repeat center center
+}
+.home_banner.bengali {
+ background:url(https://img2.shaadi.com/assests/2018/images/bengali-banner-v2.jpg) no-repeat center center
+}
+.home_banner.gujarati {
+ background:url(https://img2.shaadi.com/assests/2018/images/marathi-banner-v2.jpg) no-repeat center center
+}
+.home_banner.hindi {
+ background:url(https://img2.shaadi.com/assests/2017/images/home-page-banner-tvc-play.jpg) no-repeat center center
+}
+.home_banner.malayalee {
+ background:url(https://img2.shaadi.com/assests/2017/images/malayalee-banner.jpg) no-repeat center center
+}
+.home_banner.marathi {
+ background:url(https://img2.shaadi.com/assests/2018/images/marathi-banner-v2.jpg) no-repeat center center
+}
+.home_banner.muslim {
+ background:url(https://img2.shaadi.com/assests/2017/images/muslim-banner.jpg) no-repeat center center
+}
+.home_banner.parsi {
+ background:url(https://img2.shaadi.com/assests/2017/images/parsi-banner.jpg) no-repeat center center
+}
+.home_banner.punjabi {
+ background:url(https://img2.shaadi.com/assests/2017/images/home-page-banner-tvc-play.jpg) no-repeat center center
+}
+.home_banner.tamil {
+ background:url(https://img2.shaadi.com/assests/2018/images/telugu-banner-v2.jpg) no-repeat center center
+}
+.home_banner.telugu {
+ background:url(https://img2.shaadi.com/assests/2018/images/telugu-banner-v2.jpg) no-repeat center center
+}
+.home_banner.assamese {
+ background:url(https://img2.shaadi.com/assests/2017/images/hindi-banner.jpg) no-repeat center center
+}
+.home_banner.buddhist {
+ background:url(https://img2.shaadi.com/assests/2017/images/hindi-banner.jpg) no-repeat center center
+}
+.home_banner.hindu {
+ background:url(https://img2.shaadi.com/assests/2017/images/hindi-banner.jpg) no-repeat center center
+}
+.home_banner.christian {
+ background:url(https://img2.shaadi.com/assests/2017/images/parsi-banner.jpg) no-repeat center center
+}
+.home_banner.kannada {
+ background:url(https://img2.shaadi.com/assests/2018/images/telugu-banner-v2.jpg) no-repeat center center
+}
+.home_banner.kashmiri {
+ background:url(https://img2.shaadi.com/assests/2017/images/muslim-banner.jpg) no-repeat center center
+}
+.home_banner.konkani {
+ background:url(https://img2.shaadi.com/assests/2017/images/marathi-banner.jpg) no-repeat center center
+}
+.home_banner.manipuri {
+ background:url(https://img2.shaadi.com/assests/2017/images/hindi-banner.jpg) no-repeat center center
+}
+.home_banner.odia {
+ background:url(https://img2.shaadi.com/assests/2018/images/bengali-banner-v2.jpg) no-repeat center center
+}
+.home_banner.sindhi {
+ background:url(https://img2.shaadi.com/assests/2017/images/hindi-banner.jpg) no-repeat center center
+}
+.home_banner.tulu {
+ background:url(https://img2.shaadi.com/assests/2017/images/telugu-banner.jpg) no-repeat center center
+}
+.home_banner.urdu {
+ background:url(https://img2.shaadi.com/assests/2017/images/muslim-banner.jpg) no-repeat center center
+}
+.home_banner.marwari {
+ background:url(https://img2.shaadi.com/assests/2017/images/gujrati-banner.jpg) no-repeat center center
+}
+.home_banner.jain {
+ background:url(https://img2.shaadi.com/assests/2017/images/gujrati-banner.jpg) no-repeat center center
+}
+.home_banner.sikh {
+ background:url(https://img2.shaadi.com/assests/2017/images/punjabi-banner.jpg) no-repeat center center
+}
+.top_heading {
+ font-size:50px;
+ color:#fff
+}
+.top_wrap {
+ padding:19px 0 0;
+ margin:0 auto;
+ background:0;
+ box-shadow:none;
+ color:#fff
+}
+.top_wrap_dock {
+ background:rgba(255,255,255,0.9);
+ box-shadow:0 5px 6px #000
+}
+.container_head,
+.container_head_tvc {
+ font-size:2.2em;
+ font-weight:500;
+ line-height:50px;
+ font-family:'Raleway',sans-serif !important;
+ text-align:center;
+ color:#fff;
+ text-shadow:1px 1px 1px #1f2a1f;
+ margin:290px auto auto;
+ letter-spacing:1px
+}
+.revampContainerHead {
+ margin:340px auto 0
+}
+.position_r {
+ position:relative
+}
+.container_drop_down,
+.container_drop_down_tvc_play {
+ background:rgba(0,0,0,0.5);
+ border-radius:3px;
+ color:#fff !important;
+ margin:32px auto 15px;
+ padding:15px 19px 0;
+ overflow:hidden
+}
+.container_drop_down_tvc_play {
+ margin:47px auto 0
+}
+.container_drop_txt {
+ color:#fff;
+ margin:0 0 8px
+}
+.btn-input {
+ display:block
+}
+.btn-input .btn.form-control {
+ text-align:left
+}
+.btn-input .btn.form-control span:first-child {
+ left:10px;
+ overflow:hidden;
+ position:absolute;
+ right:25px
+}
+.btn-input .btn.form-control .caret {
+ margin-top:-1px;
+ position:absolute;
+ right:10px;
+ top:50%
+}
+.lets_begin_btn {
+ background:#00bcd5 !important;
+ text-shadow:none;
+ border-radius:3px;
+ border-color:#00bcd5;
+ box-shadow:none
+}
+.lets_begin_btn:hover {
+ background:red
+}
+.registerFreeWrap {
+ width:100%;
+ padding:30px
+}
+.revisedRegisterFreeWrap {
+ width:100%;
+ padding:30px
+}
+.registerFree {
+ font-size:18px !important;
+ box-shadow:0 4px 8px rgba(0,188,213,0.35) !important;
+ margin:0 auto !important;
+ width:275px !important;
+ height:42px !important;
+ border-radius:4px !important
+}
+.registerFree:hover,
+.registerFree:focus,
+.registerFree:active {
+ box-shadow:0 4px 8px rgba(0,188,213,0.18) !important;
+ color:#fff !important
+}
+.revisedRegisterFree {
+ width:240px !important;
+ height:45px !important;
+ border-radius:10px !important;
+ font-size:18px !important;
+ background-image:linear-gradient(211deg,#73ba5c 0,#23bbc9 100%) !important;
+ margin:0 auto !important;
+ border:none !important
+}
+.revisedRegisterFree:hover,
+.revisedRegisterFree:focus,
+.revisedRegisterFree:active {
+ border:none !important;
+ box-shadow:none !important;
+ color:#fff !important
+}
+.registerFreeArrow {
+ background:url(https://img2.shaadi.com/assests/2020/images/whiteRightArrow.svg) no-repeat left top;
+ display:inline-block;
+ margin:0 0 0 4px;
+ height:11px;
+ width:10px;
+ background-size:7px
+}
+.viewMatches {
+ padding-top:10px;
+ text-align:center;
+ color:white;
+ font-size:14px
+}
+.find_someone_head,
+.community_find_someone_head {
+ color:#cc1100;
+ font-size:30px;
+ text-align:center;
+ font-family:Arial, Helvetica, sans-serif; !important;
+ font-weight:500
+}
+.community_find_someone_head a {
+ color:#ff5a60
+}
+.margin_60 {
+ margin:30px 0
+}
+.margin_btm_60 {
+ margin:0 0 60px
+}
+.shaadi_logo_v3 {
+ background:url(https://img.shaadi.com/imgs/logos/community/shaadi-v3.png) no-repeat left top;
+ height:42px
+}
+.home_logo {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-logo.png) no-repeat left top;
+ height:42px
+}
+.assamese_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/assamese-logo.png) no-repeat left top;
+ width:200px;
+ height:30px;
+ margin:12px 0 0
+}
+.bengali_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/bengali-logo.png) no-repeat left top;
+ width:165px;
+ height:35px;
+ margin:6px 0 0
+}
+.gujarati_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/gujarati-logo.png) no-repeat left top;
+ width:173px;
+ height:35px;
+ margin:6px 0 0
+}
+.hindi_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/hindi-logo.png) no-repeat left top;
+ width:145px;
+ height:30px;
+ margin:12px 0 0
+}
+.kashmiri_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/kashmiri-logo.png) no-repeat left top;
+ width:195px;
+ height:30px;
+ margin:12px 0 0
+}
+.konkani_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/konkani-logo.png) no-repeat left top;
+ width:186px;
+ height:30px;
+ margin:12px 0 0
+}
+.manipuri_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/manipuri-logo.png) no-repeat left top;
+ width:190px;
+ height:35px;
+ margin:6px 0 0
+}
+.marathi_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/marathi-logo.png) no-repeat left top;
+ width:185px;
+ height:30px;
+ margin:12px 0 0
+}
+.odia_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/odia-logo.png) no-repeat left top;
+ width:138px;
+ height:30px;
+ margin:12px 0 0
+}
+.punjabi_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/punjabi-logo.png) no-repeat left top;
+ width:166px;
+ height:35px;
+ margin:6px 0 0
+}
+.sindhi_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/sindhi-logo.png) no-repeat left top;
+ width:156px;
+ height:30px;
+ margin:12px 0 0
+}
+.urdu_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/urdu-logo.png) no-repeat left top;
+ width:145px;
+ height:30px;
+ margin:12px 0 0
+}
+.marwari_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/marwari-logo.png) no-repeat left top;
+ width:198px;
+ height:30px;
+ margin:12px 0 0
+}
+.tulu_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/tulu-logo.png) no-repeat left top;
+ width:136px;
+ height:30px;
+ margin:12px 0 0
+}
+.telugu_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/telugu-logo.png) no-repeat left top;
+ width:156px;
+ height:35px;
+ margin:7px 0 0
+}
+.kannada_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/kannada-logo.png) no-repeat left top;
+ width:189px;
+ height:30px;
+ margin:12px 0 0
+}
+.malayalee_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/malayalee-logo.png) no-repeat left top;
+ width:197px;
+ height:35px;
+ margin:6px 0 0
+}
+.tamil_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/tamil-logo.png) no-repeat left top;
+ width:149px;
+ height:30px;
+ margin:12px 0 0
+}
+.parsi_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/parsi-logo.png) no-repeat left top;
+ width:140px;
+ height:35px;
+ margin:6px 0 0
+}
+.hindu_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/hindu-logo.png) no-repeat left top;
+ width:154px;
+ height:30px;
+ margin:12px 0 0
+}
+.muslim_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/muslim-logo.png) no-repeat left top;
+ width:175px;
+ height:30px;
+ margin:6px 0 0
+}
+.christian_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/christian-logo.png) no-repeat left top;
+ width:192px;
+ height:30px;
+ margin:12px 0 0
+}
+.buddhist_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/buddhist-logo.png) no-repeat left top;
+ width:191px;
+ height:30px;
+ margin:12px 0 0
+}
+.jain_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/jain-logo.png) no-repeat left top;
+ width:121px;
+ height:35px;
+ margin:6px 0 0
+}
+.sikh_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/sikh-logo.png) no-repeat left top;
+ width:133px;
+ height:30px;
+ margin:12px 0 0
+}
+.nri_logo {
+ background:url(https://img2.shaadi.com/assests/2017/images/logos/nri-logo.png) no-repeat left top;
+ width:121px;
+ height:35px;
+ margin:12px 0 0
+}
+.member_login {
+ font-size:16px;
+ color:#fff;
+ display:inline-block;
+ vertical-align:middle;
+ line-height:30px
+}
+.shaadi_meet_signup {
+ color:#19bdd6;
+ font-family:Roboto;
+ font-size:24px;
+ font-weight:400;
+ line-height:16px
+}
+.shaadi_meet_login {
+ color:#51505d;
+ font-family:Roboto;
+ font-size:24px;
+ font-weight:400;
+ line-height:16px;
+ margin-left:26px
+}
+.shaadi_meet_login:link,
+.member_login:focus {
+ text-decoration:none
+}
+.shaadi_meet_login:hover {
+ text-decoration:underline
+}
+.member_login:link,
+.member_login:focus {
+ color:#fff;
+ text-decoration:none
+}
+.member_login:hover {
+ color:#fff;
+ text-decoration:underline
+}
+.member_login_icon,
+.member_login_arrow,
+.help_top_arrow,
+.shaadi_red_logo,
+.best_matches,
+.max_respones,
+.privacy,
+.download_btn {
+ background-image:url(https://img2.shaadi.com/assests/2018/images/sprite-homepg-v5.png);
+ background-repeat:no-repeat
+}
+.member_login_icon {
+ background-position:left -40px;
+ width:30px;
+ height:30px;
+ display:inline-block;
+ vertical-align:middle;
+ margin:0 6px 0 35px
+}
+.member_login_arrow {
+ background-position:0 -492px;
+ display:inline-block;
+ height:10px;
+ margin:0 0 0 5px;
+ vertical-align:middle;
+ width:10px
+}
+.help_top_arrow {
+ background-position:left -510px;
+ height:10px;
+ margin:0;
+ position:absolute;
+ right:57px;
+ top:24px;
+ width:16px
+}
+.step_no {
+ font-weight:600
+}
+.sign_up,
+.interact,
+.connect {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-icon-sprite.png) no-repeat left 1px;
+ height:148px;
+ width:133px;
+ margin:0 auto;
+ display:block;
+ position:relative;
+ background-size:100%;
+ transition:all .5s ease-in-out 0
+}
+.sign_up span,
+.interact span,
+.connect span {
+ position:absolute;
+ top:0;
+ left:0;
+ height:148px;
+ width:133px;
+ background:url(https://img2.shaadi.com/assests/2016/images/home-icon-sprite.png) no-repeat left -147px;
+ opacity:0;
+ background-size:100%;
+ transition:all .5s ease-in-out 0
+}
+.interact {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-icon-sprite.png) no-repeat left -292px;
+ background-size:100%;
+ transition:all .5s ease-in-out 0
+}
+.interact span {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-icon-sprite.png) no-repeat left -440px;
+ background-size:100%
+}
+.connect {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-icon-sprite.png) no-repeat left -591px;
+ background-size:100%
+}
+.connect span {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-icon-sprite.png) no-repeat left -739px;
+ background-size:100%
+}
+.sign_up span:hover,
+.interact span:hover,
+.connect span:hover {
+ opacity:1
+}
+.shaadi_red_logo {
+ background-position:left -254px;
+ height:77px;
+ margin:60px auto 49px;
+ width:77px
+}
+.aadhaar_icon {
+ display:inline-block;
+ background:url(https://img2.shaadi.com/assests/2018/images/aadhaar-icon.png) left top/cover no-repeat;
+ width:110px;
+ height:66px;
+ margin:3px 0 57px
+}
+.best_matches,
+.max_respones,
+.privacy {
+ background-position:0 -332px;
+ display:inline-block;
+ height:40px;
+ margin:0 5px;
+ vertical-align:middle;
+ width:40px;
+ text-align:left;
+ background-size:100%
+}
+.google_play_wrap {
+ margin:0;
+ padding:25px 0
+}
+.google_play,
+.download_btn {
+ margin:6px 10px 0 0;
+ display:inline-block;
+ vertical-align:middle
+}
+.best_matches_txt {
+ display:inline-block;
+ vertical-align:middle;
+ text-align:left
+}
+.max_respones {
+ background-position:0 -376px
+}
+.privacy {
+ background-position:0 -418px
+}
+.special_someone_wrap {
+ margin:53px 0 72px;
+ line-height:1.3em
+}
+.special_someone_wrap a {
+ display:inline-block;
+ color:#00bcd5;
+ font-size:24px;
+ font-weight:400;
+ margin:0 0 10px;
+ line-height:26px
+}
+.special_someone_wrap a:hover {
+ text-decoration:underline
+}
+h5 {
+ color:#72727d;
+ font-size:13px
+}
+.your_story_waiting {
+ color:#fff;
+ font-size:27px;
+ text-align:right;
+ vertical-align:middle;
+ line-height:1.8;
+ font-weight:500;
+ font-family:'Raleway',sans-serif !important
+}
+.footer_para {
+ font-size:14px;
+ line-height:1.6
+}
+.footer_para h1 {
+ display:inline-block;
+ font-size:14px;
+ line-height:1.6 !important
+}
+.footer_para b {
+ font-size:14px;
+ line-height:1.6
+}
+.bottom_nav {
+ width:25%;
+ padding:0 15px
+}
+.bottom_nav .nav li a {
+ font-size:14px;
+ line-height:23px;
+ padding:1px 0;
+ color:#72727d
+}
+.bottom_nav_head {
+ border-bottom:1px solid #dfe0e3;
+ color:#51505d;
+ font-size:20px;
+ margin:0 0 20px;
+ padding:0 0 10px;
+ text-align:center
+}
+.nav>li>a:focus,
+.nav>li>a:hover {
+ background-color:#fff0;
+ text-decoration:underline
+}
+.footer_wrap {
+ background:#f1f1f2;
+ padding:24px 0;
+ margin:0
+}
+.footer_wrap .footer_text {
+ color:#95959d;
+ font-size:11px
+}
+.revampFooterWrap {
+ padding:24px 0 100px
+}
+.ico_white_arrow {
+ background:url(https://img2.shaadi.com/assests/2016/images/sprite-homepg-v3.png) no-repeat left -633px;
+ margin:0 0 0 5px;
+ display:inline-block;
+ width:9px;
+ height:9px
+}
+.btn_app_store {
+ margin:6px 0
+}
+.select2-results ul.select2-result-sub>li .select2-result-label {
+ padding-left:20px
+}
+.grey_right_small_arrow {
+ background:url(https://img2.shaadi.com/imgs/homepage-12/shaadi-sprite-2-v5.gif) no-repeat left -61px;
+ display:inline-block;
+ font-size:0;
+ height:9px;
+ margin:3px 0 0 5px;
+ width:5px
+}
+.navbar-wrapper {
+ position:absolute;
+ top:0;
+ left:0;
+ right:0;
+ z-index:10
+}
+.story_carousel {
+ margin:40px 0 20px
+}
+.success_story {
+ overflow:hidden;
+ margin:0 auto;
+ padding:0 5px
+}
+.story_carousel .item {
+ background-color:transparent
+}
+.story_carousel .carousel-control.left,
+.story_carousel .carousel-control.right {
+ background-image:none;
+ display:block;
+ width:auto;
+ filter:none
+}
+.story_row {
+ clear:both
+}
+.story_item {
+ max-width:300px;
+ max-height:225px;
+ margin:7.5px auto;
+ position:relative;
+ overflow:hidden;
+ border:1px solid transparent
+}
+.story_item:hover {
+ border-color:#dfe0e3
+}
+.story_item:hover .story_detail {
+ opacity:1;
+ top:0
+}
+.story_item:hover img {
+ -moz-transform:scale(1.1);
+ -ms-transform:scale(1.1);
+ -webkit-transform:scale(1.1);
+ transform:scale(1.1);
+ opacity:.1
+}
+.story_item img {
+ width:100%;
+ transform:scale(1);
+ transition:all .5s ease-in-out
+}
+.story_carousel .carousel-control.left {
+ left:-12px
+}
+.story_carousel .carousel-control.right {
+ right:-12px
+}
+.story_carousel .icon-prev {
+ background:url(https://img2.shaadi.com/assests/2016/images/sprite-homepg-v3.png) no-repeat left -531px;
+ height:30px !important;
+ width:17px !important
+}
+.story_carousel .icon-next {
+ background:url(https://img2.shaadi.com/assests/2016/images/sprite-homepg-v3.png) no-repeat left -571px;
+ height:30px !important;
+ width:17px !important
+}
+.story_carousel .icon-prev::before,
+.story_carousel .icon-next::before {
+ display:none
+}
+.story_detail {
+ position:absolute;
+ top:100%;
+ opacity:0;
+ overflow:hidden;
+ padding:25px;
+ transition:all .5s ease-in-out
+}
+.person_name {
+ font-size:22px;
+ color:#51505d
+}
+.story_detail .person_info {
+ font-size:14px;
+ margin:0
+}
+.person_name::after {
+ background:#00bcd5;
+ height:2px;
+ content:" ";
+ width:50px;
+ display:block;
+ margin:5px 0 10px
+}
+.story_carousel .carousel-indicators {
+ bottom:auto;
+ top:100%
+}
+.story_carousel .carousel-indicators li {
+ background:#d7d7d7;
+ border:1px solid #d7d7d7
+}
+.story_carousel .carousel-indicators .active {
+ background:#00bcd5;
+ border:1px solid #00bcd5;
+ width:10px;
+ height:10px;
+ margin:1px
+}
+.person_info a {
+ display:inline-block
+}
+.ico_arrow {
+ background:url(https://img2.shaadi.com/assests/2016/images/sprite-homepg-v3.png) no-repeat left -613px;
+ margin:0 0 0 5px;
+ display:inline-block;
+ width:7px;
+ height:9px
+}
+.popular_sites {
+ text-align:center;
+ margin:0 0 60px
+}
+.popular_sites li a {
+ padding:0 5px;
+ color:#fff;
+ line-height:0em;
+ font-size:13px
+}
+.popular_sites li {
+ float:none;
+ display:inline-block
+}
+.popular_sites li a::after {
+ content:"|";
+ display:inline-block;
+ position:absolute;
+ right:-4px
+}
+.popular_sites li:last-child a::after {
+ display:none
+}
+.popular_sites>li>a:hover,
+.bottom_nav>li>a:hover {
+ background-color:none !important;
+ text-decoration:underline !important
+}
+.popular_sites>li>a:focus,
+.bottom_nav>li>a:focus {
+ background-color:none !important;
+ text-decoration:none !important
+}
+.matrimonial_nav {
+ text-align:center;
+ margin:43px 0 54px
+}
+.matrimonial_nav li {
+ display:inline-block
+}
+.matrimonial_nav li:after {
+ content:"|";
+ position:absolute
+}
+.matrimonial_nav a {
+ color:#72727d;
+ padding:0 5px;
+ font-size:14px
+}
+.matrimonial_nav li a {
+ color:#00bcd5
+}
+.matrimonial_nav li:last-child::after {
+ display:none
+}
+.traster_btn_wrap {
+ border-bottom:1px solid #dfe0e3;
+ border-top:1px solid #dfe0e3;
+ margin-bottom:55px;
+ margin-top:38px;
+ position:relative
+}
+.traster_btn_inner {
+ padding:20px 0
+}
+.traster_btn {
+ background:#00bcd5;
+ border-radius:3px 3px 0 0;
+ color:#fff;
+ font-size:20px;
+ padding:4px 20px;
+ position:absolute;
+ bottom:101%;
+ left:50%;
+ margin:0 0 0 -103px
+}
+.hlp_drp_dwn_new,
+.hlp_drp_dwn,
+.new_hlp_drp_dwn,
+.new_hlp_drp_dwn2 {
+ background:#fff;
+ border-radius:3px;
+ box-shadow:0 4px 12px rgba(43,59,93,0.35);
+ cursor:default !important;
+ display:none;
+ position:absolute;
+ right:29px;
+ top:33px;
+ z-index:998;
+ font-size:12px !important;
+ width:371px
+}
+.hlp_drp_dwn_new {
+ background-color:#fafafa;
+ width:391px
+}
+.hlp_drp_dwn .global_no_wrapper {
+ background:#fff;
+ float:left;
+ padding:22px 20px 20px 32px;
+ width:246px;
+ font-size:12px !important;
+ border-radius:3px 0
+}
+.hlp_drp_dwn_new .global_no_wrapper {
+ background:#fff;
+ border-radius:3px;
+ border-right:1px solid #ececec;
+ float:left;
+ padding:15px 20px 20px;
+ width:257px
+}
+.pp_wrap {
+ color:#72727d
+}
+.need_help_heading {
+ text-align:center
+}
+.hlp_drp_dwn_new .help_heading,
+.need_help_heading {
+ border-top:1px solid #ececec;
+ color:#72727d;
+ font-size:18px;
+ font-weight:bold;
+ margin:6px 0 0;
+ padding:11px 0 9px
+}
+.chat_write_wrp {
+ margin:0 auto;
+ padding:9px 0 16px;
+ width:195px;
+ font-size:14px
+}
+.chat_write_inner_lft_wrp {
+ border-right:1px solid #e5e6e8;
+ float:left;
+ width:102px;
+ font-size:14px
+}
+.chat_with_us_icon {
+ background:url(https://img2.shaadi.com/community/images/chat-write-icons.png) no-repeat left -1px;
+ height:51px;
+ margin:0 0 10px 12px;
+ width:52px
+}
+#hlp_section .hlp_drp_dwn_new .chat_write_wrp a {
+ color:#00bcd5
+}
+.hlp_drp_dwn_new a,
+.hlp_drp_dwn a {
+ color:#00bcd5 !important
+}
+.chat_link_loader_none {
+ display:none
+}
+.chat_link_loader {
+ background:url(https://img2.shaadi.com/community/images/help-loader.gif) no-repeat left top;
+ height:12px;
+ margin:0 0 0 5px;
+ vertical-align:middle;
+ width:12px
+}
+.chat_write_inner_rt_wrp {
+ float:left;
+ width:92px
+}
+.write_to_us_icon {
+ background:url(https://img2.shaadi.com/community/images/chat-write-icons.png) no-repeat left -54px;
+ height:51px;
+ margin:0 0 10px 30px;
+ width:52px
+}
+.hlp_drp_dwn_new .need_hlp_btm {
+ float:left;
+ padding:12px 5px 0 14px;
+ width:119px
+}
+.icon_aus_flag,
+.icon_ind_flag,
+.icon_singpr_flag,
+.icon_uk_flag,
+.icon_usa_flag,
+.icon_mal_flag,
+.icon_pak_flag,
+.icon_nz_flag,
+.icon_can_flag,
+.icon_sa_flag,
+.icon_uae_flag {
+ background-image:url(https://img2.shaadi.com/community/images/shaadi-sprite-v2.png);
+ background-repeat:no-repeat;
+ float:left;
+ height:12px;
+ width:16px
+}
+.icon_aus_flag {
+ background-position:left -218px
+}
+.icon_ind_flag {
+ background-position:left -142px
+}
+.icon_singpr_flag {
+ background-position:left -204px
+}
+.icon_uk_flag {
+ background-position:left -154px
+}
+.icon_usa_flag {
+ background-position:left -166px
+}
+.icon_mal_flag {
+ background-position:left -232px
+}
+.icon_pak_flag {
+ background-position:left -178px
+}
+.icon_nz_flag {
+ background-position:left -244px
+}
+.icon_can_flag {
+ background-position:left -192px
+}
+.icon_sa_flag {
+ background-position:left -258px
+}
+.icon_uae_flag {
+ background-position:left -131px
+}
+.country_name {
+ color:#777;
+ float:left;
+ font-size:14px;
+ line-height:12px;
+ margin:0 0 0 6px
+}
+.hlp_drp_dwn .country_number {
+ color:#72727d;
+ font:bold 22px arial;
+ margin:7px 0 12px
+}
+#hlp_section a {
+ color:#72727d
+}
+.hlp_drp_dwn .other_number_arrow {
+ background:url(https://img2.shaadi.com/imgs/homepage-12/shaadi-sprite-2-v8.png) no-repeat left -35px;
+ display:inline-block;
+ height:8px;
+ margin:0 0 0 3px;
+ width:6px
+}
+.hlp_drp_dwn .need_hlp_btm {
+ background:#fafafa;
+ border-left:1px solid #ececec;
+ float:left;
+ padding:12px 5px 12px 14px;
+ width:124px;
+ border-radius:0 3px 3px 0
+}
+.hlp_drp_dwn ul {
+ margin:0 0 0 5px
+}
+.hlp_drp_dwn li {
+ padding:0 5px;
+ font-size:12px
+}
+.help_txt {
+ font-size:12px
+}
+.hlp_drp_dwn_new .grey,
+.hlp_drp_dwn .grey {
+ padding:10px 0;
+ text-decoration:none;
+ font-size:12px;
+ display:block
+}
+.hlp_drp_dwn .grey {
+ display:block
+}
+.hlp_drp_dwn_new .grey:hover,
+.hlp_drp_dwn .grey:hover {
+ text-decoration:underline
+}
+.logo_wrap .grey {
+ color:#72727d
+}
+.help_wrap {
+ left:-188px;
+ position:absolute;
+ top:5px;
+ width:371px
+}
+.search_pannel_btn,
+.search_pannel_btn_nri {
+ width:150px;
+ box-shadow:none;
+ border:0;
+ height:40px;
+ -webkit-appearance:none;
+ -moz-appearance:none;
+ appearance:none;
+ background:transparent
+}
+.search_pannel_btn_nri {
+ width:357px;
+ height:40px
+}
+.btn-group {
+ background:#fff url(https://img2.shaadi.com/assests/2016/images/ico-dropdwn.png) no-repeat;
+ background-position:calc(100% - 10px) 50%;
+ border-radius:3px
+}
+.search_pannel_to {
+ padding:10px 11px 0 11px;
+ float:left !important;
+ color:#fff
+}
+.search_pannel_btn option {
+ border:0
+}
+.search_pannel_agg_wrap {
+ color:#fff
+}
+.search_pannel_age {
+ width:78px
+}
+.search_pannel_mt {
+ width:193px
+}
+.search_pannel_lets {
+ background:#00bcd5;
+ border:1px solid #fff;
+ border-radius:3px;
+ color:#fff;
+ display:inline-block;
+ font-size:18px;
+ margin:31px 0 0;
+ padding:7px 0;
+ text-align:center;
+ width:100%;
+ border:0;
+ cursor:pointer;
+ text-rendering:optimizeLegibility;
+ box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+ transition:all 300ms ease
+}
+.search_bottom_pd {
+ padding-bottom:30px
+}
+.search_bottom_tvc_pd {
+ padding-bottom:15px
+}
+.member_login_wrap {
+ margin:10px 0 0
+}
+.marketing {
+ padding-left:15px;
+ padding-right:15px
+}
+.marketing .col-lg-4 {
+ text-align:center;
+ margin-bottom:20px
+}
+.marketing h2 {
+ font-weight:normal
+}
+.marketing .col-lg-4 p {
+ margin-left:10px;
+ margin-right:10px
+}
+.featurette-divider {
+ margin:80px 0
+}
+.featurette {
+ padding-top:120px;
+ overflow:hidden
+}
+.featurette-image {
+ margin-top:-120px
+}
+.featurette-image.pull-left {
+ margin-right:40px
+}
+.featurette-image.pull-right {
+ margin-left:40px
+}
+.featurette-heading {
+ font-size:50px;
+ font-weight:300;
+ line-height:1;
+ letter-spacing:-1px
+}
+.none {
+ display:none
+}
+.reg_layer_wrap {
+ background:#fff;
+ width:371px;
+ padding:30px 15px 27px 15px;
+ font-weight:normal;
+ font-family:'Roboto',sans-serif;
+ border-radius:3px
+}
+.reg_layer_wrap .reg_layer_header {
+ line-height:24px;
+ color:#51505d;
+ text-align:center
+}
+.reg_layer_wrap .reg_layer_header .reg_msg1 {
+ font-size:20px;
+ display:block
+}
+.reg_layer_wrap .reg_layer_header .reg_msg2 {
+ font-size:16px;
+ display:block
+}
+.reg_layer_frm_wrap {
+ padding:17px 17px 0 16px
+}
+.reg_layer_frm_wrap label {
+ font-weight:normal;
+ font-size:16px;
+ color:#72727d;
+ display:inline-block;
+ margin:0 0 4px;
+ padding:0
+}
+.reg_layer_frm_wrap input[type="text"],
+.reg_layer_frm_wrap input[type="password"],
+.reg_layer_frm_wrap select {
+ background:#fff;
+ font:normal 16px 'Roboto',sans-serif;
+ color:#72727d;
+ height:38px;
+ line-height:38px;
+ border:1px solid #dfe0e3;
+ border-radius:3px;
+ padding:0 12px;
+ width:308px
+}
+.reg_layer_frm_wrap input[type="text"]#login_page {
+ color:#72727d !important
+}
+.placeholder.hint_link {
+ color:#b1b3b9 !important
+}
+.reg_layer_frm_wrap .form_field_divider {
+ padding:9px 0 0
+}
+.reg_layer_frm_wrap .common_error {
+ color:#72727d;
+ border:1px solid #e53a41 !important;
+ border-radius:3px
+}
+.reg_layer_error,
+.err_text {
+ font-size:12px;
+ color:#e53a41;
+ padding:4px 0 0
+}
+.reg_layer_frm_focus {
+ border:1px solid #00bcd5 !important
+}
+.reg_layer_frm_wrap select {
+ width:306px;
+ border:1px solid #dfe0e3 !important
+}
+.native_dropdown .container_drop_down select {
+ border:1px solid #dfe0e3 !important
+}
+.reg_layer_frm_wrap .mand_mark {
+ display:none
+}
+.reg_layer_frm_wrap #layer_gender_error,
+.reg_layer_frm_wrap #layer_gender {
+ display:inline-block
+}
+.reg_layer_frm_wrap .reg_gen_wrapper {
+ float:left;
+ margin:10px 0 0
+}
+.layer_gender_width {
+ width:250px !important
+}
+#layer_gender {
+ width:237px
+}
+#layer_gender label {
+ display:inline-block;
+ margin:0 10px 0 0
+}
+.reg_gen_label {
+ float:left;
+ width:68px;
+ margin:10px 0 0 !important
+}
+.reg_layer_frm_wrap input[type="radio"] {
+ margin:5px 5px 0 0;
+ vertical-align:top
+}
+.reg_layer_frm_wrap span {
+ color:#72727d;
+ font-size:16px;
+ margin:0;
+ vertical-align:middle
+}
+.select2-container.select_drop a span {
+ color:#b1b3b9 !important
+}
+.positive_act_btn,
+.reg_layer_actn_btn,
+.pos_act_btn_green_med,
+.accepted_members {
+ background:#00bcd5;
+ text-align:center;
+ color:#fff !important;
+ border-radius:3px;
+ cursor:pointer;
+ text-rendering:optimizeLegibility;
+ box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+ transition:all 300ms ease;
+ text-decoration:none !important
+}
+.btnLogin,
+.loginWithOtp {
+ display:block;
+ text-align:center;
+ text-decoration:none;
+ font:400 16px Roboto;
+ box-shadow:0 4px 8px rgba(0,188,213,0.18);
+ color:#fff;
+ background-color:#00bcd5;
+ margin:30px auto 2px;
+ width:180px;
+ height:40px;
+ line-height:27px;
+ border-radius:23px;
+ padding:7px 15px 9px
+}
+.loginWithOtp {
+ color:#00bcd5;
+ background-color:#fff;
+ border:1px solid #00bcd5;
+ margin:0 auto 35px
+}
+.btnLogin:hover,
+.loginWithOtp:hover {
+ text-decoration:none;
+ box-shadow:0 4px 8px rgba(0,188,213,0.18);
+ color:#fff;
+ background-color:#0194a8
+}
+.loginWithOtp:hover {
+ color:#00bcd5;
+ background-color:#dff4f7
+}
+.orSeparator {
+ background:url(https://img2.shaadi.com/assests/2020/images/orSeparator.svg) no-repeat center center;
+ text-align:center;
+ width:163px;
+ margin:0 auto;
+ padding:3px 0
+}
+.txtOrSeparator {
+ color:#b1b3b9 !important;
+ font-family:Roboto;
+ font-size:11px !important;
+ font-weight:400;
+ text-transform:uppercase;
+ background:#fff;
+ display:inline-block !important;
+ padding:0 7px
+}
+.positive_act_btn:hover,
+.accepted_members:hover {
+ text-decoration:none;
+ color:#fff !important;
+ background-color:#0194a8;
+ box-shadow:0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15)
+}
+.reg_layer_actn_btn {
+ display:block;
+ font-size:20px;
+ line-height:42px;
+ margin:15px 0 10px
+}
+.reg_layer_login_line {
+ font-size:15px;
+ color:#72727d;
+ text-align:center
+}
+.reg_layer_login_line a {
+ color:#00bcd5
+}
+.reg_layer_frm_wrap .f_name,
+.reg_layer_frm_wrap .l_name {
+ width:147px !important
+}
+.reg_layer_frm_wrap .l_name {
+ margin:0 0 0 10px !important
+}
+.reg_layer_frm_day {
+ width:80px !important;
+ margin:0 8px 0 0 !important
+}
+.reg_layer_frm_month {
+ width:110px !important;
+ margin:0 5px 0 0 !important
+}
+.reg_layer_frm_year {
+ width:92px !important;
+ margin:0 0 0 3px !important
+}
+.reg_layer_tnc_line {
+ font-size:15px;
+ color:#72727d;
+ text-align:center
+}
+.reg_layer_tnc_line a {
+ color:#00bcd5
+}
+.reg_layer_tooltip_wrap,
+.reg_tooltip_wrapper {
+ position:relative
+}
+.reg_tooltip_wrapper {
+ font-size:13px !important;
+ color:#51505d
+}
+.reg_layer_tooltip {
+ width:252px;
+ position:absolute;
+ right:-265px;
+ top:-27px;
+ z-index:1;
+ background:#fff2b3;
+ padding:9px;
+ border-radius:3px;
+ box-shadow:1px 1px 5px #d9d9d9;
+ display:none
+}
+.reg_layer_left_arrow {
+ width:0;
+ height:20px;
+ border-top:10px solid transparent;
+ border-bottom:10px solid transparent;
+ border-right:10px solid #fff2b3;
+ position:absolute;
+ left:-19px;
+ bottom:50%;
+ margin:0 0 -10px
+}
+#layer_gender_error .reg_layer_tooltip {
+ right:-175px
+}
+#layer_gender_error .reg_layer_tooltip-b {
+ right:-259px !important;
+ top:-4px !important
+}
+.help_wrap_db .hide {
+ display:block !important;
+ position:relative
+}
+.help_wrap_db #hlp_section a.fl {
+ position:absolute;
+ left:263px;
+ top:-1px;
+ color:#fff;
+ font-size:16px
+}
+.nri_arrow {
+ margin:0 0 0 37px !important
+}
+.login_overly {
+ border:0;
+ border-radius:3px;
+ position:relative
+}
+.login_overly .header {
+ background:#f1f1f2;
+ padding:19px 8px 20px 15px;
+ border-radius:3px 3px 0 0;
+ position:relative;
+ border:1px solid #fff
+}
+.reg_layer_close {
+ background:url(https://img2.shaadi.com/assests/2016/images/reg-layer-new-close.png) no-repeat 9px 8px;
+ clear:both;
+ cursor:pointer;
+ display:block;
+ float:right;
+ height:30px;
+ position:absolute;
+ right:8px;
+ top:8px;
+ width:30px
+}
+.login_overly .left_header {
+ font:normal 20px arial !important;
+ color:#51505d;
+ float:left
+}
+.login_overly .right_header {
+ color:#72727d;
+ font:15px arial !important;
+ margin:10px 0 0 11px;
+ text-align:center;
+ width:225px
+}
+.login_overly .regi_free_link {
+ color:#00bcd5
+}
+.signUpFree,
+.signUpFree:hover {
+ color:#95959d !important;
+ font-weight:500;
+ text-decoration:none;
+ border-radius:12px;
+ padding:5px 7px
+}
+.signUpFree:hover {
+ background-color:#f1f1f2
+}
+.signUpArrow {
+ background:url(https://img2.shaadi.com/assests/2020/images/signUpArrow-v1.svg) no-repeat left top;
+ width:7px;
+ height:14px;
+ display:inline-block !important;
+ margin:0 0 -3px 0 !important;
+ background-size:6px
+}
+.login_overly .form_container {
+ background:#fff;
+ padding:30px 50px;
+ font-size:16px !important;
+ color:#72727d;
+ border-radius:0 0 3px 3px
+}
+.login_overly .form_container label {
+ font-size:16px;
+ width:96px;
+ float:left;
+ font-weight:bold;
+ clear:both;
+ padding-top:10px;
+ color:#b1b3b9
+}
+.login_overly .form_container .input_txt {
+ width:250px;
+ border:1px solid #dfe0e3;
+ border-radius:3px;
+ font-size:16px;
+ color:#72727d !important;
+ padding:9px 8px 8px
+}
+.spacer_10 {
+ padding:10px
+}
+.login_overly .form_container .input_txt:focus {
+ border:1px solid #dfe0e3;
+ transition:border .2s linear 0,box-shadow .2s linear 0
+}
+.input_txt::placeholder {
+ font-size:12px;
+ color:#b1b3b9
+}
+.login_overly .form_container .error:focus {
+ box-shadow:0 0 5px #dc5858;
+ border:1px solid #dc5858;
+ transition:border .2s linear 0,box-shadow .2s linear 0
+}
+.login_overly .form_container .sign_in_sect {
+ padding:20px 0 20px 100px
+}
+.login_overly .form_container .pos_act_btn_green_big {
+ font-size:18px;
+ color:#fff;
+ padding:6px 14px;
+ border-radius:3px;
+ background:#86b035;
+ border:1px solid #5d8d19;
+ display:inline-block;
+ box-shadow:inset 0 1px 0 #a5cf65;
+ cursor:pointer
+}
+.login_overly .form_container .pos_act_btn_green_big:hover {
+ background:#689626;
+ text-decoration:none
+}
+.login_overly .form_container .checkbox {
+ width:12px;
+ height:12px;
+ vertical-align:middle;
+ float:left;
+ margin:12px 8px 0 18px
+}
+.login_overly .form_container .stay_sign {
+ font-size:12px;
+ float:left;
+ padding:0
+}
+.login_overly .form_container .icon_help {
+ background:url(https://img2.shaadi.com/community/images/shaadi-sprite-v1.png) no-repeat left -395px;
+ height:16px;
+ width:16px;
+ cursor:pointer !important;
+ float:left;
+ margin:10px 0 0 8px
+}
+.login_overly .form_container .forgot_password {
+ margin:0 29px 0 100px;
+ padding-top:8px;
+ border-top:1px dashed #e1e1e1;
+ font-size:12px;
+ color:#69c;
+ text-align:right
+}
+.login_overly .form_container .forgot_password a {
+ color:#00bcd5
+}
+.login_overly .social_form_container {
+ margin:0 0 0 97px
+}
+#frmlogin .form_container .sign_in_btn_wrap {
+ margin:12px 0 23px !important
+}
+#frmlogin .form_container .sign_in_btn_wrap .pos_act_btn_green_med {
+ width:290px;
+ margin:12px 0 23px
+}
+.reg_effect {
+ box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+ transition:all 300ms ease
+}
+.sign_in_btn_wrap .pos_act_btn_green_med {
+ margin:0 !important
+}
+#frmlogin .form_container .social_sign_in_btn_wrap {
+ height:auto;
+ margin:0
+}
+#frmlogin .form_container .pos_act_btn_green_med {
+ font:normal 20px arial;
+ padding:7px 15px 9px;
+ display:inline-block;
+ cursor:pointer
+}
+#frmlogin .form_container .stay_signed_in {
+ margin:0;
+ display:block;
+ width:294px
+}
+#frmlogin .form_container .stay_signed_in #remember_me {
+ float:left;
+ margin:3px 5px 0 0;
+ padding:0;
+ vertical-align:middle
+}
+#frmlogin .form_container .stay_signed_in .icon_help {
+ float:left;
+ background:url(https://img2.shaadi.com/imgs/my-shaadi/ver2/tooltip-icon.gif) no-repeat left top;
+ height:18px;
+ width:16px;
+ display:block;
+ padding:0 0 5px;
+ cursor:help;
+ margin:2px 0 0 5px !important
+}
+#frmlogin .form_container .signin_mail_icon {
+ background:url(https://img2.shaadi.com/imgs/homepage-13/social-btn.png) no-repeat left -180px;
+ width:22px;
+ height:23px;
+ display:inline-block;
+ float:left
+}
+#frmlogin .form_container .stay_signed_txt {
+ color:#72727d;
+ float:left
+}
+#frmlogin .form_container .forgot_pwd_link {
+ float:right;
+ font:normal 13px 'Roboto',sans-serif !important;
+ margin:3px 7px 0 !important;
+ color:#00bcd5
+}
+#frmlogin .form_container .member_login_social_or {
+ background:url(https://img2.shaadi.com/imgs/homepage-13/memb-login-social-or.jpg) no-repeat left top;
+ margin:9px auto 8px;
+ width:220px;
+ height:22px
+}
+#frmlogin .form_container .login_sign_facebook {
+ background:#f5f5f5;
+ border:1px solid #e5e5e5;
+ display:inline-block;
+ color:#72727d;
+ font:normal 16px/20px arial;
+ padding:7px 5px;
+ display:inline-block;
+ width:256px;
+ text-align:center;
+ border-radius:3px;
+ cursor:pointer
+}
+#frmlogin .form_container .login_sign_facebook:hover {
+ background:#ededed;
+ text-decoration:none
+}
+#frmlogin .form_container .login_sign_facebook_icon {
+ background:url(https://img2.shaadi.com/imgs/homepage-13/social-btn-v2.png) no-repeat left -180px;
+ width:22px;
+ height:23px;
+ display:inline-block;
+ float:left
+}
+#frmlogin .form_container .login_sign_facebook_txt {
+ text-align:center;
+ display:inline-block
+}
+.reg_overly .content {
+ border-radius:0 0 3px 3px !important
+}
+.placeholder {
+ color:#72727d !important
+}
+.login_box_header {
+ padding:18px 8px 18px 15px !important
+}
+.logon_layer_close {
+ background:url(https://img2.shaadi.com/community/icons/big-close-v2.png) no-repeat left -207px;
+ clear:both;
+ cursor:pointer;
+ display:block;
+ float:right;
+ height:16px;
+ position:absolute;
+ right:23px;
+ top:23px;
+ width:16px
+}
+.logon_layer_close:hover {
+ background:url(https://img2.shaadi.com/community/icons/big-close-v2.png) no-repeat left -231px
+}
+#reg_box {
+ position:relative
+}
+.form-control {
+ border:none !important;
+ background:none !important;
+ font-size:16px !important
+}
+.form_dropdown {
+ color:#72727d;
+ height:40px;
+ padding:0
+}
+.select2-container {
+ display:inline-block;
+ position:relative;
+ vertical-align:middle
+}
+.select2-container,
+.select2-drop,
+.select2-search,
+.select2-search input {
+ box-sizing:border-box
+}
+.form_left_wrap .form_dropdown {
+ border:1px solid #dfe0e3;
+ float:left;
+ height:42px;
+ line-height:40px;
+ width:395px
+}
+.select2-container a {
+ color:#72727d !important
+}
+.select2-container .select2-choice {
+ -moz-user-select:none;
+ background-clip:padding-box;
+ background-color:#fff;
+ border-radius:3px;
+ color:#72727d;
+ display:block;
+ height:40px;
+ line-height:40px;
+ overflow:hidden;
+ padding:0 0 0 13px;
+ position:relative;
+ text-decoration:none;
+ white-space:nowrap
+}
+.select2-container.select2-container-disabled .select2-choice {
+ background-color:#f4f4f4;
+ border:none !important;
+ background-image:none;
+ cursor:default
+}
+.form_left_wrap .select2-container .select2-choice {
+ color:#72727d;
+ height:40px;
+ line-height:40px;
+ white-space:nowrap
+}
+.select2-container .select2-choice>.select2-chosen {
+ display:block;
+ margin-right:26px
+}
+.select2-container .select2-choice .select2-arrow {
+ display:inline-block;
+ height:100%;
+ position:absolute;
+ right:0;
+ top:0;
+ width:28px
+}
+.form_left_wrap .select2-container .select2-choice .select2-arrow {
+ height:100%
+}
+.select2-offscreen,
+.select2-offscreen:focus {
+ border:0 none !important;
+ clip:rect(0,0,0,0) !important;
+ height:1px !important;
+ left:0 !important;
+ margin:0 !important;
+ outline:0 none !important;
+ overflow:hidden !important;
+ padding:0 !important;
+ position:absolute !important;
+ top:0 !important;
+ width:1px !important
+}
+.select2-drop-mask {
+ background-color:#fff;
+ border:0 none;
+ height:auto;
+ left:0;
+ margin:0;
+ min-height:100%;
+ min-width:100%;
+ opacity:0;
+ padding:0;
+ position:fixed;
+ top:0;
+ width:auto;
+ z-index:1001
+}
+.select2-drop {
+ background:#fff;
+ border-radius:0 0 3px 3px;
+ border-width:0;
+ color:#72727d;
+ padding:5px 0;
+ position:absolute;
+ top:25px;
+ z-index:1007;
+ margin:-1px 0 0
+}
+.zindex {
+ z-index:1001 !important
+}
+#s2id_layer_postedby .select2-choice,
+#s2id_layer_day .select2-choice,
+#s2id_layer_month .select2-choice,
+#s2id_layer_year .select2-choice,
+#s2id_layer_community .select2-choice,
+#s2id_layer_mother_tongue .select2-choice,
+#s2id_layer_countryofresidence .select2-choice {
+ border:1px solid #dfe0e3 !important
+}
+#s2id_layer_community,
+#s2id_layer_mother_tongue,
+#s2id_layer_countryofresidence {
+ display:block !important
+}
+.select2-drop-active {
+ border:1px solid #dfe0e3
+}
+.select2-search {
+ display:inline-block;
+ margin:0;
+ min-height:33px;
+ padding:4px 4px 0;
+ position:relative;
+ white-space:nowrap;
+ width:100%;
+ z-index:10000
+}
+.select2-search input {
+ background:#fff url(https://img2.shaadi.com/community/my-shaadi/select2.png) no-repeat 100% -22px;
+ border:1px solid #dfe0e3;
+ border-radius:0;
+ box-shadow:none;
+ font-family:arial;
+ font-size:1em;
+ height:auto !important;
+ margin:0;
+ min-height:28px;
+ outline:0 none;
+ padding:4px 20px 4px 5px;
+ width:100%
+}
+.select2-results {
+ max-height:200px;
+ overflow-x:hidden;
+ overflow-y:auto;
+ position:relative
+}
+.select2-results li {
+ background-image:none;
+ display:list-item;
+ list-style:outside none none
+}
+.select2-results .select2-result-label {
+ -moz-user-select:none;
+ cursor:pointer;
+ margin:0;
+ min-height:1em;
+ padding:3px 7px 4px;
+ font-size:16px
+}
+.select2-results li.select2-result-with-children>.select2-result-label {
+ font-weight:bold
+}
+.select2-results ul.select2-result-sub {
+ margin:0;
+ padding-left:0
+}
+.select2-arrow b {
+ background:url(https://img2.shaadi.com/assests/2016/images/sprite-homepg-v3.png) no-repeat 10px -1031px;
+ display:block;
+ height:100%;
+ width:100%
+}
+.search_pannel_religion {
+ width:150px
+}
+.layer_logo {
+ background:url(https://img2.shaadi.com/assests/2016/images/home-page-layer-logo.png) no-repeat left top;
+ height:40px;
+ width:40px;
+ margin:9px auto 15px;
+ background-size:40px 40px
+}
+.reg_layer_heading {
+ font-size:20px;
+ color:#51505d;
+ text-align:center;
+ margin:0 0 25px
+}
+.reg_new_wrap input[type="text"],
+.reg_new_wrap input[type="password"] {
+ width:290px !important
+}
+.homepage_layer .stay_sign {
+ font-size:13px;
+ float:left;
+ margin-top:1px
+}
+.reg_new_wrap .right_header {
+ text-align:center;
+ font-size:15px;
+ color:#95959d
+}
+.reg_new_wrap .reg_layer_frm_wrap {
+ padding:17px 13px 0 26px
+}
+.forgot_pass {
+ font-size:14px;
+ color:#b1b3b9
+}
+.forgot_pass_sign_in {
+ margin:23px 0 0
+}
+.alert_layer_wrap {
+ margin:0 40px;
+ font-size:16px;
+ font-weight:normal;
+ font-family:'Roboto',sans-serif !important;
+ color:#72727d
+}
+.alert_layer {
+ margin:22px 0;
+ font-size:14px
+}
+.alert_layer li {
+ font-size:14px;
+ list-style-Type:none;
+ padding:0 0 2px 8px
+}
+li.select2-highlighted {
+ background:#3875d7
+}
+.select2-highlighted .select2-result-label {
+ color:#fff !important
+}
+.registerFreeFixWrap {
+ background-image:linear-gradient(to bottom,rgba(255,255,255,0),#fff 100%);
+ position:fixed;
+ width:100%;
+ z-index:1000;
+ bottom:0;
+ left:0
+}
+#registerForFree {
+ -webkit-animation-duration:1s;
+ animation-duration:1s
+}
+@-webkit-keyframes fadeInUp {
+ from {
+  opacity:0;
+  -webkit-transform:translate3d(0,100%,0);
+  transform:translate3d(0,100%,0)
+ }
+ to {
+  opacity:1;
+  -webkit-transform:none;
+  transform:none
+ }
+}
+@keyframes fadeInUp {
+ from {
+  opacity:0;
+  -webkit-transform:translate3d(0,100%,0);
+  transform:translate3d(0,100%,0)
+ }
+ to {
+  opacity:1;
+  -webkit-transform:none;
+  transform:none
+ }
+}
+.fadeInUp {
+ -webkit-animation-name:fadeInUp;
+ animation-name:fadeInUp
+}
+#get_started {
+ -webkit-animation-duration:1s;
+ animation-duration:1s
+}
+@-webkit-keyframes fadeInDown {
+ from {
+  opacity:0;
+  -webkit-transform:translate3d(0,-100%,0);
+  transform:translate3d(0,-100%,0)
+ }
+ to {
+  opacity:1;
+  -webkit-transform:none;
+  transform:none
+ }
+}
+@keyframes fadeInDown {
+ from {
+  opacity:0;
+  -webkit-transform:translate3d(0,-100%,0);
+  transform:translate3d(0,-100%,0)
+ }
+ to {
+  opacity:1;
+  -webkit-transform:none;
+  transform:none
+ }
+}
+.fadeInDown {
+ -webkit-animation-name:fadeInDown;
+ animation-name:fadeInDown
+}
+@-webkit-keyframes fadeInDownBig {
+ from {
+  opacity:0;
+  -webkit-transform:translate3d(0,-2000px,0);
+  transform:translate3d(0,-2000px,0)
+ }
+ to {
+  opacity:1;
+  -webkit-transform:none;
+  transform:none
+ }
+}
+@keyframes fadeInDownBig {
+ from {
+  opacity:0;
+  -webkit-transform:translate3d(0,-2000px,0);
+  transform:translate3d(0,-2000px,0)
+ }
+ to {
+  opacity:1;
+  -webkit-transform:none;
+  transform:none
+ }
+}
+.fadeInDownBig {
+ -webkit-animation-name:fadeInDownBig;
+ animation-name:fadeInDownBig
+}
+.community_member_login_icon,
+.community_member_login_arrow {
+ background-image:url(https://img2.shaadi.com/assests/2017/images/sprite-homepg-v4.png);
+ width:30px;
+ height:30px;
+ background-position:0 0;
+ display:inline-block;
+ vertical-align:middle;
+ margin:0 6px 0 35px
+}
+.community_member_login_arrow {
+ background-repeat:no-repeat;
+ background-position:0 -1047px;
+ display:inline-block;
+ height:10px;
+ margin:2px 0 0 5px;
+ vertical-align:middle;
+ width:10px
+}
+.community_member_login {
+ font-size:16px;
+ color:#72727d;
+ display:inline-block;
+ vertical-align:middle
+}
+.community_member_login_wrap {
+ margin:10px 0 0
+}
+.community_member_login:link,
+.community_member_login:focus {
+ color:#72727d
+}
+.community_member_login #hlp_section a {
+ color:#72727d !important;
+ top:-4px !important
+}
+.serach_panner_lets {
+ margin:16px auto 0
+}
+.top_title {
+ color:#fff;
+ font-size:24px;
+ line-height:42px
+}
+.trust_by_head {
+ color:#ff5a60;
+ text-align:center;
+ font:500 30px 'Raleway',sans-serif !important;
+ margin:0 0 25px
+}
+#exitIntentLayer {
+ top:5% !important
+}
+#exitIntentLayer .modal-dialog {
+ width:787px
+}
+.regexit_intent_wrapper_layer {
+ background:#f1f1f2;
+ border-radius:3px;
+ padding:21px 0 9px
+}
+.regexit_intent_wrapper_layer .edt_mobile_close {
+ right:15px;
+ z-index:1
+}
+.edt_mobile_close {
+ background:url(https://img2.shaadi.com/community/icons/big-close-v2.png) no-repeat left -203px;
+ cursor:pointer;
+ display:inline-block;
+ height:20px;
+ position:absolute;
+ right:0;
+ vertical-align:top;
+ width:20px
+}
+.edt_mobile_close:hover {
+ background-position:left -227px
+}
+.tooltip>.tooltip-inner {
+ background-color:#363636;
+ font:12px/16px "Roboto",sans-serif !important;
+ padding:8px !important
+}
+.tooltip.bottom .tooltip-arrow {
+ border-bottom-color:#363636
+}
+.modal-body {
+ padding:0 15px 15px;
+ position:relative
+}
+.regexit_intent_wrapper_layer .profile_incomp {
+ color:#72727d;
+ font:bold 28px/33px "Roboto",sans-serif;
+ text-align:center
+}
+.regexit_intent_wrapper_layer .before_you_go {
+ color:#72727d;
+ font:20px/33px "Roboto",sans-serif;
+ text-align:center
+}
+.regexit_intent_wrapper_layer {
+ background:#f1f1f2;
+ border-radius:3px;
+ padding:21px 0 9px
+}
+.regexit_intent_innerwrapper_layer {
+ margin:0 auto;
+ text-align:center;
+ width:100%
+}
+.exit_intent_miniprofile {
+ background:#fff;
+ border-radius:3px;
+ box-shadow:0 1px 2px rgba(43,59,93,0.29);
+ float:left;
+ margin:5px;
+ padding:10px;
+ text-align:center
+}
+.exit_intent_pic_miniprofile {
+ border:3px solid #fff;
+ border-radius:85px;
+ display:inline-block;
+ float:left;
+ height:82px;
+ margin:0 12px;
+ width:82px
+}
+.exit_intent_data_miniprofile {
+ float:left;
+ padding:2px 0 0;
+ width:108px
+}
+.exit_intent_data_miniprofile span {
+ color:#72727d;
+ display:block;
+ font:16px "Roboto",sans-serif;
+ margin:5px 0;
+ overflow:hidden;
+ text-align:left;
+ text-overflow:ellipsis;
+ white-space:nowrap;
+ width:108px
+}
+.regexit_intent_wrapper_layer .accepted_members {
+ width:260px
+}
+.regexit_intent_wrapper_layer .accepted_members {
+ display:inline-block;
+ font:22px/41px "Roboto",sans-serif;
+ height:41px;
+ margin:26px 23px 0 0;
+ text-align:center;
+ width:352px
+}
+.stoppg_bg_miniprofile {
+ background-position:center top;
+ background-repeat:no-repeat;
+ background-size:90px auto;
+ border-radius:85px;
+ display:inline-block;
+ height:100%;
+ width:100%
+}
+.brides_text_gradien_left,
+.brides_text_gradien_right {
+ background:#efeff0;
+ background:linear-gradient(to right,#efeff0 0,#b9b9b9 100%);
+ background:-moz-linear-gradient(left,#efeff0 0,#b9b9b9 100%);
+ background:-webkit-gradient(top,#f5ffdf 0,#f5ffdf 0,#ecf7d6 100%);
+ background:-webkit-linear-gradient(left,#efeff0 0,#b9b9b9 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#efeff0',endColorstr='#b9b9b9',GradientType=1);
+ display:inline-block;
+ height:1px;
+ vertical-align:middle;
+ width:95px
+}
+.brides_text_gradien_right {
+ background:#b9b9b9;
+ background:linear-gradient(to right,#b9b9b9 0,#efeff0 100%);
+ background:-moz-linear-gradient(left,#b9b9b9 0,#efeff0 100%);
+ background:-webkit-gradient(left,#b9b9b9 0,#efeff0 100%);
+ background:-webkit-linear-gradient(left,#b9b9b9 0,#efeff0 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b9b9b9',endColorstr='#efeff0',GradientType=1)
+}
+.brides_text {
+ color:#95959d;
+ display:inline-block;
+ font-size:20px;
+ margin:0 6px;
+ vertical-align:middle
+}
+.brides_text_spacer {
+ display:inline-block;
+ padding:11px
+}
+.regexit_intent_wrapper_layer .accepted_members {
+ display:inherit;
+ margin:26px auto 0;
+ text-align:center;
+ width:230px
+}
+.reg_layer_actn_btn_tap {
+ text-decoration:none;
+ color:#fff !important;
+ background:#0194a8
+}
+.new_hlp_drp_dwn {
+ background:#fbfbfb;
+ right:0;
+ width:118px;
+ padding:8px;
+ top:28px;
+ right:50px
+}
+.new_hlp_drp_dwn ul li a {
+ display:block;
+ padding:5px 5px 9px 5px;
+ font-size:12px;
+ text-decoration:none
+}
+.new_hlp_drp_dwn .grey {
+ color:#85868f !important
+}
+.new_hlp_drp_dwn ul li a:hover {
+ background:#f3f3f3
+}
+.new_hlp_drp_dwn2 {
+ background:#fff;
+ color:#72727d;
+ border-radius:4px;
+ box-shadow:0 8px 12px rgba(43,59,93,0.35);
+ display:none;
+ width:366px;
+ z-index:998;
+ padding:0 0 0 19px;
+ font-family:"Roboto",sans-serif;
+ margin:0
+}
+.new_hlp_drp_dwn2#help_box .regional_text .new_hlp_instant_click,
+.new_hlp_drp_dwn2#help_box .new_hlp_instant a {
+ color:#00bcd5 !important
+}
+.new_hlp_drp_dwn2 .regional_text {
+ padding:2px 0 1px
+}
+.new_hlp_drp_dwn_right_section {
+ float:left;
+ font-family:"Roboto",sans-serif;
+ font-weight:400;
+ width:121px;
+ padding:12px 8px 0
+}
+.new_hlp_contry_contact {
+ font-size:16px
+}
+.new_hlp_contact_detail {
+ line-height:18px;
+ font-weight:300;
+ font-size:12px;
+ color:#95959d
+}
+.new_hlp_instant,
+.regional_text {
+ font-size:14px;
+ color:#72727d;
+ padding:12px 0 0;
+ font-weight:300
+}
+.new_hlp_instant {
+ padding:18px 0 0
+}
+.regional_text {
+ padding:0
+}
+.new_hlp_instant_click {
+ color:#00bcd5 !important;
+ text-decoration:none;
+ font-weight:400
+}
+.new_hlp_instant_click:hover {
+ text-decoration:underline !important
+}
+.new_hlp_drp_dwn_left_section {
+ float:left;
+ width:224px;
+ padding:16px 7px 16px 0;
+ border-right:1px solid #dfe0e3
+}
+.new_hlp_drp_dwn_left_section .new_hlp_instant a {
+ color:#00bcd5 !important
+}
+.new_hlp_drp_dwn2 ul {
+ padding:0;
+ margin:0
+}
+.new_hlp_drp_dwn2 ul,
+li {
+ list-style:outside none
+}
+.new_hlp_drp_dwn2 ul li a {
+ text-decoration:none;
+ outline:0;
+ display:block;
+ padding:5px 5px 5px 19px;
+ margin:0 0 4px;
+ font-size:12px
+}
+.new_hlp_drp_dwn2 .grey {
+ color:#72727d !important;
+ font-weight:400
+}
+.new_hlp_drp_dwn2 ul li a:hover {
+ background:#f1f1f2;
+ text-decoration:none;
+ padding:5px 5px 5px 19px;
+ margin:0 0 4px
+}
+.reg_layer_actn_btn {
+ display:block !important
+}
+.reg_layer_actn_btn a {
+ color:#fff;
+ text-decoration:none
+}
+.reg_select_disabled {
+ width:308px !important;
+ height:42px !important;
+ line-height:44px !important;
+ border-radius:3px !important;
+ padding:0 !important;
+ border:1px solid #ddd !important
+}
+.tvc_video_wrap {
+ position:relative
+}
+.tvc_close,
+.tvc_close:link,
+.tvc_close:visited {
+ background:rgba(0,0,0,0) url(https://img2.shaadi.com/community/icons/big-close-v2.png) no-repeat left -207px;
+ display:block;
+ height:20px;
+ overflow:hidden;
+ width:20px;
+ top:-20px;
+ right:-20px;
+ position:absolute;
+ cursor:pointer
+}
+.tvc_close:hover {
+ background:rgba(0,0,0,0) url(https://img2.shaadi.com/community/icons/big-close-v2.png) no-repeat left -231px
+}
+@media(min-width:1200px) {
+ .tvc_text {
+  position:absolute;
+  left:-6%;
+  bottom:-60%
+ }
+ .tvc_text a {
+  font-size:12px;
+  color:#fff;
+  font-weight:400;
+  text-shadow:none;
+  text-decoration:none
+ }
+ .container {
+  width:960px
+ }
+ #frmlogin .form_container .stay_signed_in .icon_help:hover {
+  background-position:left -31px
+ }
+ .tvc_play_button {
+  background:url(https://img2.shaadi.com/assests/2017/images/tvc-play-button.png) no-repeat top center;
+  width:32px;
+  height:32px;
+  margin:10px auto 0
+ }
+ .container_drop_down_tvc_play {
+  margin:17px auto 0
+ }
+}
+@media(min-width:768px) {
+ .your_story_waiting {
+  font-size:24px
+ }
+ .marketing {
+  padding-left:0;
+  padding-right:0
+ }
+ .navbar-wrapper {
+  margin-top:20px;
+  margin-bottom:-90px
+ }
+ .navbar-wrapper .navbar {
+  border-radius:4px
+ }
+}
+@media only screen and (max-width:768px) {
+ body,
+ div,
+ ul,
+ ol,
+ li,
+ h1,
+ h2,
+ h4,
+ h5,
+ h6,
+ form,
+ input,
+ button,
+ textarea,
+ select,
+ p,
+ td,
+ map {
+  font-size:14px
+ }
+ .reg_layer_heading {
+  font-size:18px
+ }
+ .signUpArrow {
+  width:8px;
+  margin:0 -3px -5px 0 !important
+ }
+ .reg_new_wrap .right_header {
+  font-size:13px
+ }
+ .story_detail {
+  padding:15px
+ }
+ .person_name {
+  font-size:15px
+ }
+ .story_detail .person_info {
+  font-size:12px;
+  text-align:left
+ }
+ .container_drop_down {
+  margin:15px auto 0;
+  max-width:325px;
+  background:0
+ }
+ .container_drop_txt {
+  font-size:15px
+ }
+ .search_pannel_btn {
+  width:120px
+ }
+ .search_pannel_age {
+  width:51px !important
+ }
+ .native_dropdown .search_pannel_age {
+  width:56px !important
+ }
+ .search_pannel_mt {
+  width:122px
+ }
+ .search_pannel_lets {
+  width:120px
+ }
+ .search_pannel_btn_nri {
+  width:269px
+ }
+ .reg_layer_frm_wrap input[type="radio"] {
+  margin:3px 5px 0 0
+ }
+ .home_banner {
+  width:100%
+ }
+ .reg_layer_frm_wrap input[type="radio"] {
+  margin:3px 5px 0 0
+ }
+ .home_banner.ri_img1 {
+  background:url(https://img2.shaadi.com/assests/2016/images/home-banner-m-ri.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.ri_img2 {
+  background:url(https://img2.shaadi.com/assests/2016/images/home-banner-m-1.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.ri_img3 {
+  background:url(https://img2.shaadi.com/assests/2016/images/home-banner-m-2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.ri_img_tvc {
+  background:url(https://img2.shaadi.com/assests/2020/images/home-page-banner-tvc-m-v4.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.revamp_ri_img_tvc {
+  background:url(https://img2.shaadi.com/assests/2020/images/home-page-banner-tvc-m-v5.jpg) no-repeat center center;
+  background-size:cover;
+  height:100vh
+ }
+ .home_banner.revised_shaadi {
+  background:url(https://img2.shaadi.com/assests/2020/images/homepage-creative-m-v2.jpg) no-repeat center center;
+  background-size:cover;
+  height:100vh
+ }
+ .home_banner.ri_img_tvc_v1 {
+  background:url(https://img2.shaadi.com/assests/2017/images/home-page-banner-tvc-play-m.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.nri {
+  background:url(https://img2.shaadi.com/assests/2016/images/homepage-nri-m.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.revamp_nri {
+  background:url(https://img2.shaadi.com/assests/2016/images/homepage-nri-m.jpg) no-repeat center center;
+  background-size:cover;
+  height:100vh
+ }
+ .home_banner.nrishaadi {
+  background:url(https://img2.shaadi.com/assests/2017/images/nri-m-banner.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.bengali {
+  background:url(https://img2.shaadi.com/assests/2018/images/bengali-m-banner-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.gujarati {
+  background:url(https://img2.shaadi.com/assests/2018/images/marathi-m-banner-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.hindi {
+  background:url(https://img2.shaadi.com/assests/2017/images/home-page-banner-tvc-play-m.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.malayalee {
+  background:url(https://img2.shaadi.com/assests/2017/images/malayalee-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.marathi {
+  background:url(https://img2.shaadi.com/assests/2018/images/marathi-m-banner-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.muslim {
+  background:url(https://img2.shaadi.com/assests/2017/images/muslim-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.parsi {
+  background:url(https://img2.shaadi.com/assests/2017/images/parsi-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.punjabi {
+  background:url(https://img2.shaadi.com/assests/2017/images/home-page-banner-tvc-play-m.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.tamil {
+  background:url(https://img2.shaadi.com/assests/2018/images/telugu-m-banner-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.telugu {
+  background:url(https://img2.shaadi.com/assests/2018/images/telugu-m-banner-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.assamese {
+  background:url(https://img2.shaadi.com/assests/2017/images/hindi-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.buddhist {
+  background:url(https://img2.shaadi.com/assests/2017/images/hindi-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.hindu {
+  background:url(https://img2.shaadi.com/assests/2017/images/hindi-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.christian {
+  background:url(https://img2.shaadi.com/assests/2017/images/parsi-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.kannada {
+  background:url(https://img2.shaadi.com/assests/2018/images/telugu-m-banner-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.kashmiri {
+  background:url(https://img2.shaadi.com/assests/2017/images/muslim-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.konkani {
+  background:url(https://img2.shaadi.com/assests/2017/images/marathi-m-banner.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.manipuri {
+  background:url(https://img2.shaadi.com/assests/2017/images/hindi-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.odia {
+  background:url(https://img2.shaadi.com/assests/2018/images/bengali-m-banner-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.sindhi {
+  background:url(https://img2.shaadi.com/assests/2017/images/hindi-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.tulu {
+  background:url(https://img2.shaadi.com/assests/2017/images/telugu-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.urdu {
+  background:url(https://img2.shaadi.com/assests/2017/images/muslim-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.marwari {
+  background:url(https://img2.shaadi.com/assests/2017/images/gujrati-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.jain {
+  background:url(https://img2.shaadi.com/assests/2017/images/gujrati-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .home_banner.sikh {
+  background:url(https://img2.shaadi.com/assests/2017/images/punjabi-banner-m-v2.jpg) no-repeat center center;
+  background-size:cover
+ }
+ .assamese_logo,
+ .bengali_logo,
+ .gujarati_logo,
+ .konkani_logo,
+ .hindi_logo,
+ .kashmiri_logo,
+ .manipuri_logo,
+ .marathi_logo,
+ .odia_logo,
+ .punjabi_logo,
+ .sindhi_logo,
+ .urdu_logo,
+ .marwari_logo,
+ .tulu_logo,
+ .telugu_logo,
+ .kannada_logo,
+ .malayalee_logo,
+ .tamil_logo,
+ .parsi_logo,
+ .hindu_logo .muslim_logo,
+ .christian_logo,
+ .buddhist_logo,
+ .jain_logo,
+ .sikh_logo,
+ .nri_logo {
+  margin:0
+ }
+ .select_drop_m {
+  border:1px solid #dfe0e3 !important;
+  box-shadow:none
+ }
+ .form-control:focus {
+  box-shadow:none;
+  border-color:none
+ }
+ .form-control {
+  background:#fff !important
+ }
+ #frmlogin .form_container .stay_signed_in .icon_help:hover {
+  background-position:left -31px
+ }
+ .container_drop_down select option {
+  width:100px !important
+ }
+ .reg_select_disabled {
+  width:250px !important;
+  height:42px !important;
+  line-height:44px !important;
+  border-radius:3px !important;
+  padding:0 !important;
+  border:1px solid #ddd !important
+ }
+ .select2-container .select2-choice {
+  display:block;
+  height:40px;
+  line-height:39px
+ }
+ .aadhaar_icon {
+  width:85px;
+  height:50px;
+  margin:10px 0 30px
+ }
+}
+@media only screen and (max-width:767px) {
+ .btm_footer {
+  display:none
+ }
+ .google_play_wrap {
+  margin:0;
+  padding:21px 0 23px
+ }
+ .search_pannel_agg_wrap {
+  padding-right:0
+ }
+ .shaadi_red_logo {
+  margin:29px auto 16px
+ }
+ .jumbotron {
+  padding-top:30px
+ }
+ .pink_heading_bg {
+  padding:15px 0 25px
+ }
+ .pad_right_0 {
+  padding-right:0
+ }
+ .margin_60 {
+  margin:30px 0
+ }
+ .search_panel {
+  padding:0 0 14px 0
+ }
+ .help_main_wrap {
+  display:none
+ }
+ .member_login_wrap {
+  float:right;
+  margin:6px 0 0 15px
+ }
+ .bottom_nav {
+  width:auto
+ }
+ .bottom_nav_head {
+  font-size:15px;
+  margin:0 0 10px;
+  padding:0 0 17px
+ }
+ .traster_btn_inner {
+  padding:5px 0
+ }
+ .popular_sites {
+  margin:0 0 30px;
+  padding:0
+ }
+ .popular_sites li a {
+  font-size:14px;
+  padding:0 4px
+ }
+ .btn_app_store {
+  text-align:center
+ }
+ .matrimonial_nav {
+  text-align:center;
+  margin:35px 0 17px
+ }
+ .matrimonial_nav li {
+  border-bottom:0
+ }
+ .footer_wrap,
+ .footer_wrap .container .col-md-4 {
+  text-align:center
+ }
+ .traster_btn_wrap {
+  padding:0;
+  margin-bottom:5px
+ }
+ .traster_btn_wrap .col-md-4 {
+  padding:20px 0
+ }
+ .carousel-control.left {
+  left:-30px
+ }
+ .carousel-control.right {
+  right:-30px
+ }
+ .story_item {
+  max-height:100%;
+  max-width:250px;
+  text-align:center
+ }
+ .story_item:hover {
+  border:0
+ }
+ .story_carousel .carousel-control.left {
+  left:0
+ }
+ .story_carousel .carousel-control.right {
+  right:0
+ }
+ .story_carousel .carousel-control span {
+  top:101px
+ }
+ .story_item:hover img {
+  transform:scale(1);
+  opacity:1
+ }
+ .story_detail {
+  position:static;
+  opacity:1;
+  padding:0;
+  margin:27px 0 0
+ }
+ .special_someone_wrap {
+  margin:20px 0 50px
+ }
+ .story_detail .person_info {
+  font-size:14px
+ }
+ .person_name::after {
+  margin:8px auto 20px
+ }
+ .hm_btn_container {
+  text-align:center
+ }
+ .find_someone_head,
+ .community_find_someone_head {
+  font-size:19px
+ }
+ .story_carousel {
+  margin:20px 0
+ }
+ .your_story_waiting {
+  font-size:18px;
+  margin:0 0 10px;
+  text-align:center;
+  line-height:1.4
+ }
+ .sign_up_btn {
+  padding:7px 80px
+ }
+ .home_logo {
+  height:26px;
+  background-size:100%;
+  width:78px
+ }
+ .container_head,
+ .container_head_tvc {
+  font-size:1.2em;
+  line-height:22px;
+  margin:165px auto auto
+ }
+ .container_head_tvc {
+  text-shadow:0 0 10px #000,0 0 20px #000,0 0 30px #000,0 0 40px #000,0 0 70px #000,0 0 80px #000,0 0 100px #000,0 0 150px #000
+ }
+ .revampContainerHead {
+  text-shadow:none;
+  margin:310px auto 0
+ }
+ .boxedBHeadline {
+  text-shadow:none;
+  margin:0 auto
+ }
+ .boxedCHeadline {
+  text-shadow:none;
+  margin:25px auto 5px;
+  font-size:2.25em;
+  font-weight:600;
+  line-height:39px
+ }
+ .bottomFixedContent {
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute
+ }
+ .bottomFixBoxedContent {
+  left:0;
+  right:0;
+  bottom:20px;
+  position:absolute;
+  min-height:215px;
+  width:100%;
+  background:rgba(0,0,0,0.7);
+  border-radius:3px
+ }
+ .registerFreeWrap {
+  padding:16px 16px 32px
+ }
+ .revisedRegisterFreeWrap {
+  padding:16px 16px 24px
+ }
+ .tvc_text {
+  position:absolute;
+  bottom:-40%;
+  right:15px
+ }
+ .tvc_text a {
+  font-size:10px;
+  color:#fff;
+  font-weight:400;
+  text-shadow:none;
+  text-decoration:none
+ }
+ .tvc_play_button_m {
+  background:url(https://img2.shaadi.com/assests/2017/images/tvc-play-button.png) no-repeat top center;
+  width:26px;
+  height:26px;
+  background-size:26px 26px;
+  position:absolute;
+  right:20px
+ }
+ .top_wrap {
+  padding:8px 0 0
+ }
+ .container_drop_txt {
+  font-size:14px;
+  margin:0 0 4px
+ }
+ .container_inner {
+  background:rgba(0,0,0,0.5)
+ }
+ .search_pannel_lets {
+  width:100%;
+  margin:10px 0 14px
+ }
+ .search_bottom_pd {
+  padding-bottom:10px
+ }
+ .search_pd {
+  padding:0
+ }
+ .search_pannel_btn {
+  display:block;
+  width:100%
+ }
+ .btn-group {
+  width:100%
+ }
+ .reg_layer_close,
+ .reg_layer_close:hover,
+ .reg_layer_close_tap {
+  background:url(https://img2.shaadi.com/assests/2016/images/reg-layer-new-close.png) no-repeat 10px -31px;
+  position:absolute;
+  background-size:12px;
+  right:4px;
+  top:4px
+ }
+ .reg_layer_close_tap {
+  background:url(https://img2.shaadi.com/assests/2016/images/reg-layer-new-close.png) no-repeat 10px -22px
+ }
+ .reg_layer_wrap {
+  background:#fff;
+  width:300px;
+  padding:30px 14px 16px
+ }
+ .reg_layer_wrap .reg_layer_header {
+  font-family:HelveticaNeue,Helvetica,Arial !important;
+  line-height:1.4em;
+  color:#51505d;
+  text-align:center
+ }
+ .reg_layer_wrap .reg_layer_header .reg_msg1 {
+  font-size:1.2em;
+  display:block
+ }
+ .reg_layer_wrap .reg_layer_header .reg_msg2 {
+  font-size:.9em;
+  display:block
+ }
+ .reg_layer_frm_wrap {
+  padding:10px 10px 0
+ }
+ .reg_layer_frm_wrap label {
+  cursor:pointer;
+  font-size:14px;
+  color:#72727d;
+  display:inline-block;
+  margin:0 0 4px
+ }
+ .reg_layer_frm_wrap input[type="text"],
+ .reg_layer_frm_wrap input[type="password"],
+ .reg_layer_frm_wrap select {
+  font-size:14px;
+  font-family:HelveticaNeue,Helvetica,Arial;
+  color:#72727d;
+  height:38px;
+  line-height:38px;
+  border:1px solid #dfe0e3;
+  background:#fff;
+  border-radius:3px;
+  padding:0 8px;
+  width:250px
+ }
+ .reg_layer_frm_wrap .form_field_divider {
+  padding:9px 0 0
+ }
+ .reg_layer_frm_wrap .common_error {
+  color:#72727d;
+  border:1px solid #e53a41 !important
+ }
+ .reg_layer_error {
+  font-size:.9em;
+  color:#e53a41;
+  padding:4px 0 0
+ }
+ .reg_layer_frm_focus {
+  border:1px solid #00bcd5 !important
+ }
+ .reg_layer_frm_wrap select {
+  width:250px
+ }
+ .reg_layer_frm_wrap .mand_mark {
+  display:none
+ }
+ .reg_layer_frm_wrap #layer_gender_error,
+ .reg_layer_frm_wrap #layer_gender {
+  display:inline-block
+ }
+ .reg_layer_frm_wrap .reg_gen_wrapper {
+  float:left
+ }
+ #layer_gender {
+  width:190px
+ }
+ .reg_gen_label {
+  float:left;
+  width:56px
+ }
+ .reg_gen_label input[type="radio"] {
+  margin:0 10px !important;
+  vertical-align:text-bottom !important
+ }
+ .reg_layer_frm_wrap span {
+  color:#72727d;
+  display:inline-block;
+  margin:0;
+  vertical-align:middle;
+  font-size:14px
+ }
+ .reg_layer_actn_btn {
+  display:block;
+  font-size:1.2em;
+  line-height:40px;
+  background:#00bcd5;
+  text-align:center;
+  color:#fff;
+  border-radius:3px;
+  margin:15px 0 10px;
+  text-decoration:none !important
+ }
+ .reg_layer_login_line {
+  font-size:12px;
+  color:#72727d;
+  text-align:center
+ }
+ .reg_layer_login_line a {
+  color:#00bcd5
+ }
+ .reg_layer_frm_wrap .f_name,
+ .reg_layer_frm_wrap .l_name {
+  width:118px !important
+ }
+ .reg_layer_frm_wrap .l_name {
+  margin:0 0 0 10px !important
+ }
+ .reg_layer_frm_day {
+  width:67px !important;
+  margin:0 4px 0 0 !important
+ }
+ .reg_layer_frm_month {
+  width:88px !important;
+  margin:0 !important
+ }
+ .reg_layer_frm_year {
+  width:80px !important;
+  margin:0 0 0 3px !important
+ }
+ .reg_layer_tnc_line {
+  font-size:11px;
+  color:#72727d;
+  text-align:center
+ }
+ .reg_layer_tnc_line a {
+  color:#00bcd5
+ }
+ .reg_layer_tooltip_wrap {
+  position:relative
+ }
+ .reg_layer_tooltip {
+  width:242px;
+  position:absolute;
+  left:0;
+  top:-210%;
+  z-index:1;
+  background:#fff2b3;
+  padding:9px;
+  border-radius:3px;
+  box-shadow:1px 1px 5px #d9d9d9;
+  font-size:1.3em !important;
+  color:#51505d;
+  display:block
+ }
+ .reg_layer_left_arrow {
+  width:0;
+  height:0;
+  border-top:10px solid #fff2b3;
+  border-right:10px solid transparent;
+  border-left:10px solid transparent;
+  position:absolute;
+  left:0;
+  bottom:-19px
+ }
+ #layer_gender_error .reg_layer_left_arrow {
+  left:57px
+ }
+ #layer_gender_error .reg_layer_tooltip {
+  left:-61px;
+  top:-78px !important
+ }
+ .search_pannel_to {
+  padding:10px 4px 0 4px
+ }
+ .trusted_wrap {
+  width:153px;
+  text-align:left;
+  margin:0 auto
+ }
+ #layer_gender label {
+  -webkit-appearance:inherit
+ }
+ .reg_new_wrap .reg_layer_frm_wrap {
+  padding:10px 10px 0 11px
+ }
+ .reg_new_wrap input[type="text"],
+ .reg_new_wrap input[type="password"] {
+  width:250px !important
+ }
+ #frmlogin .form_container .sign_in_btn_wrap .pos_act_btn_green_med {
+  width:250px;
+  -webkit-appearance:none
+ }
+ .search_pannel_religion {
+  width:141px
+ }
+ #frmlogin .form_container .stay_signed_in {
+  width:257px
+ }
+ .alert_layer_wrap {
+  margin:0
+ }
+ .top_title {
+  font-size:14px;
+  margin:0 10px 0;
+  line-height:36px
+ }
+ .trust_by_head {
+  font:500 19px 'Raleway',sans-serif !important
+ }
+ .reg_layer_actn_btn.tap,
+ .pos_act_btn_green_med.tap {
+  text-decoration:none;
+  color:#fff !important;
+  background-color:#0194a8;
+  box-shadow:0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15)
+ }
+ .reg_layer_close.tap {
+  background-position:10px -67px
+ }
+ .search_pannel_lets.tap,
+ .reg_effect.tap {
+  background-color:#0194a8;
+  box-shadow:0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15)
+ }
+ .sign_up_btn.tap {
+  background:#fff;
+  border:2px solid #fff;
+  color:#00bcd5;
+  box-shadow:0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15)
+ }
+ .footer_para {
+  text-align:left
+ }
+ .native_dropdown .lets-dropdown {
+  width:132px !important
+ }
+ .native_dropdown .lets-dropdown-right {
+  width:150px
+ }
+ .native_dropdown .search_pannel_religion {
+  width:132px
+ }
+ .native_dropdown .search_pannel_mt {
+  width:132px
+ }
+ .native_dropdown .search_pannel_lets {
+  width:99%
+ }
+}
+@media only screen and (min-width:768px) {
+ .reg_layer_actn_btn:hover,
+ .pos_act_btn_green_med:hover {
+  text-decoration:none !important;
+  color:#fff !important;
+  background-color:#0194a8;
+  box-shadow:0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important
+ }
+ .reg_layer_close:hover {
+  background-position:9px -22px
+ }
+ .search_pannel_lets:hover,
+ .reg_effect:hover {
+  background-color:#0194a8;
+  box-shadow:0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+  border-radius:3px
+ }
+ .sign_up_btn:hover {
+  background:#fff;
+  border:2px solid #fff;
+  color:#00bcd5;
+  text-decoration:none !important;
+  box-shadow:0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15)
+ }
+}

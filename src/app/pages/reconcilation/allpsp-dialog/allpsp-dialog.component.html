@@ -1,0 +1,11 @@
+<div>
+  <ag-grid-angular style="width: 100%; max-height: 400px; height: 400px;"  [suppressRowClickSelection]="true"
+  (gridReady)="onGridReady1($event)" class="ag-theme-alpine" [rowData]="rowData" [gridOptions]="gridOptions"
+    [columnDefs]="columnDefs"></ag-grid-angular>
+
+</div>
+<div style="float: right;">
+  <button mat-raised-button class="btn" color="primary" (click)="close()">Close</button>
+  <button style="float:right" type="button" mat-stroked-button color="accent" value="match" class="btn"
+    (click)="export()" [disabled]="rowData.length <= 0">Export</button>
+</div>

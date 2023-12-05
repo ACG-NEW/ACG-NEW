@@ -1,0 +1,671 @@
+.corpix-marketing-section {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .corpix-marketing-section::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #eaebee;
+    width: 42%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .corpix-marketing-section .marketing-content .section-title {
+    padding-right: 35px;
+    margin-bottom: 50px;
+  }
+  
+  .corpix-marketing-section .marketing-image {
+    margin-left: 70px;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .corpix-marketing-section .marketing-image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(17, 56, 100, 0.4);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap {
+    max-width: 410px;
+    position: absolute;
+    top: 65px;
+    left: -40px;
+    z-index: 1;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap .shape-1 {
+    height: 90px;
+    width: 350px;
+    background: #ffa800;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    z-index: -1;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap .experience {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 0px 98px 0px rgba(0, 0, 0, 0.22);
+    padding: 30px 40px;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap .experience .experience-text {
+    position: relative;
+    padding-left: 35px;
+    margin-left: 35px;
+    margin-right: 50px;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap .experience .experience-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e1e1e1;
+    width: 1px;
+    height: 75px;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap .experience .experience-text .title {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #0a0c1c;
+  }
+
+  .corpix-marketing-05::before {
+    width: 100%;
+  }
+
+
+
+
+  .section,
+.main-wrapper {
+  float: left;
+  width: 100%;
+}
+
+/*--Section Spacing--*/
+.section-padding {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.section-padding-02 {
+  padding-top: 120px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .section-padding-02 {
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .section-padding-02 {
+    padding-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .section-padding-02 {
+    padding-top: 60px;
+  }
+}
+
+.section-padding-03 {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.corpix-marketing-section .marketing-content .section-title {
+    padding-right: 35px;
+    margin-bottom: 50px;
+  }
+
+
+
+  .section-title .title {
+    font-size: 60px;
+    line-height: 80px;
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 5px 11px 1px #d4d4d4;
+    color: #0a0c1c;
+  }
+  
+  @media only screen and (max-width: 1199px) {
+    .section-title .title {
+      font-size: 42px;
+      line-height: 60px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .section-title .title {
+      font-size: 30px;
+      line-height: 45px;
+    }
+  }
+  
+  .section-title .sub-title {
+    font-size: 24px;
+    line-height: 30px;
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffa800;
+    margin-bottom: 15px;
+  }
+  
+  .section-title .sub-title.text-color-02 {
+    color: #f82c47;
+  }
+  
+  .section-title .sub-title.text-color-03 {
+    color: #fc653c;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .section-title .sub-title {
+      font-size: 20px;
+    }
+  }
+
+  .corpix-marketing-section {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .corpix-marketing-section::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #eaebee;
+    width: 42%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .corpix-marketing-section .marketing-content .section-title {
+    padding-right: 35px;
+    margin-bottom: 50px;
+  }
+  
+  .corpix-marketing-section .marketing-image {
+    margin-left: 70px;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .corpix-marketing-section .marketing-image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(17, 56, 100, 0.4);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap {
+    max-width: 410px;
+    position: absolute;
+    top: 65px;
+    left: -40px;
+    z-index: 1;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap .shape-1 {
+    height: 90px;
+    width: 350px;
+    background: #ffa800;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    z-index: -1;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap .experience {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 0px 98px 0px rgba(0, 0, 0, 0.22);
+    padding: 30px 40px;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap .experience .experience-text {
+    position: relative;
+    padding-left: 35px;
+    margin-left: 35px;
+    margin-right: 50px;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap .experience .experience-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e1e1e1;
+    width: 1px;
+    height: 75px;
+  }
+  
+  .corpix-marketing-section .marketing-image .experience-wrap .experience .experience-text .title {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #0a0c1c;
+  }
+  
+  .corpix-marketing-tabs-menu {
+    display: flex;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .corpix-marketing-tabs-menu {
+      flex-wrap: wrap;
+    }
+  }
+  
+  .corpix-marketing-tabs-menu li {
+    background-color: #f4f5f8;
+    position: relative;
+  }
+  
+  .corpix-marketing-tabs-menu li::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: -25px;
+    right: 0;
+    border-left: 30px solid transparent;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+  }
+  
+  .corpix-marketing-tabs-menu li:nth-child(2) {
+    border-right: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+  }
+  
+  @media only screen and (max-width: 449px) {
+    .corpix-marketing-tabs-menu li:nth-child(2) {
+      border-right: 0;
+      border-left: 0;
+    }
+  }
+  
+  .corpix-marketing-tabs-menu li .corpix-marketing-title {
+    width: 190px;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    padding: 25px 0;
+    cursor: pointer;
+  }
+  
+  .corpix-marketing-tabs-menu li .corpix-marketing-title .title {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #0a0c1c;
+  }
+  
+  .corpix-marketing-tabs-menu li.active {
+    ;
+  }
+  
+  .corpix-marketing-tabs-menu li.active::before {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .corpix-marketing-tabs-menu li.active .corpix-marketing-title .title {
+    color: #ffffff;
+  }
+  
+  .corpix-marketing-tab-pane {
+    display: none;
+  }
+  
+  .corpix-marketing-tab-pane.active {
+    display: block;
+  }
+  
+  .corpix-marketing-tab-content {
+    margin-top: 40px;
+  }
+  
+  .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item {
+    padding-right: 130px;
+  }
+  
+  @media only screen and (max-width: 1399px) {
+    .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item {
+      padding-right: 55px;
+    }
+  }
+  
+  @media only screen and (max-width: 1199px) {
+    .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item {
+      padding-right: 110px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item {
+      padding-right: 0;
+    }
+  }
+  
+  .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item .title {
+    font-size: 22px;
+    line-height: 36px;
+    color: #0a0c1c;
+  }
+  
+  .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item p {
+    margin-top: 25px;
+  }
+  
+  @media only screen and (max-width: 1199px) {
+    .corpix-marketing-section .marketing-image {
+      margin-left: 0;
+      margin-top: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 991px) {
+    .corpix-marketing-section .marketing-image {
+      padding-top: 250px;
+      padding-bottom: 250px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .corpix-marketing-section .marketing-image {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+  }
+  
+  @media only screen and (max-width: 575px) {
+    .corpix-marketing-section .marketing-image .experience-wrap .experience {
+      padding: 30px 35px;
+    }
+    .corpix-marketing-section .marketing-image .experience-wrap .experience .experience-text {
+      padding-left: 30px;
+      margin-left: 30px;
+      margin-right: 0px;
+    }
+  }
+  
+  .corpix-marketing-section-02 {
+    background: #f4f5f8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 530px;
+    padding-bottom: 160px;
+  }
+  
+  .corpix-marketing-section-02 .marketing-content {
+    padding-right: 50px;
+  }
+  
+  .corpix-marketing-section-02 .marketing-content p {
+    padding-right: 80px;
+    margin-top: 50px;
+  }
+  
+  .corpix-marketing-section-02 .marketing-item-wrap {
+    position: relative;
+    padding-left: 100px;
+  }
+  
+  .corpix-marketing-section-02 .marketing-item-wrap::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    background: #e1e1e1;
+    width: 1px;
+    height: 340px;
+  }
+  
+  .corpix-marketing-section-02 .marketing-item-wrap .marketing-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .corpix-marketing-section-02 .marketing-item-wrap .marketing-item.marketing-item-2 {
+    margin-bottom: 0;
+  }
+  
+  .corpix-marketing-section-02 .marketing-item-wrap .marketing-item .marketing-icon {
+    height: 75px;
+    width: 75px;
+    line-height: 72px;
+    background: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+  }
+  
+  .corpix-marketing-section-02 .marketing-item-wrap .marketing-item .marketing-text {
+    flex: 1;
+    margin-left: 30px;
+  }
+  
+  .corpix-marketing-section-02 .marketing-item-wrap .marketing-item .marketing-text .title {
+    font-size: 18px;
+    line-height: 30px;
+    color: #0a0c1c;
+  }
+  
+  .corpix-marketing-section-02 .marketing-item-wrap .marketing-item .marketing-text p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  
+  @media only screen and (max-width: 1199px) {
+    .corpix-marketing-section-02 {
+      padding-top: 495px;
+      padding-bottom: 100px;
+    }
+    .corpix-marketing-section-02 .marketing-content p {
+      padding-right: 0px;
+    }
+    .corpix-marketing-section-02 .marketing-item-wrap {
+      padding-left: 40px;
+    }
+  }
+  
+  @media only screen and (max-width: 991px) {
+    .corpix-marketing-section-02 {
+      padding-top: 480px;
+      padding-bottom: 80px;
+    }
+    .corpix-marketing-section-02 .marketing-item-wrap {
+      padding-left: 0px;
+      margin-top: 40px;
+    }
+    .corpix-marketing-section-02 .marketing-item-wrap::before {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .corpix-marketing-section-02 {
+      padding-top: 470px;
+      padding-bottom: 80px;
+    }
+    .corpix-marketing-section-02 .marketing-content {
+      padding-right: 0;
+    }
+  }
+  
+  .corpix-marketing-section-03 .marketing-wrap {
+    background: #ffffff;
+    margin-top: -240px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .corpix-marketing-section-03 .marketing-wrap .marketing-content {
+    padding-left: 45px;
+    padding-top: 60px;
+  }
+  
+  .corpix-marketing-section-03 .marketing-wrap .marketing-content .corpix-marketing-tabs-menu li .corpix-marketing-title {
+    width: 180px;
+  }
+  
+  .corpix-marketing-section-03 .marketing-wrap .marketing-content .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item {
+    padding-right: 110px;
+  }
+  
+  .corpix-marketing-section-03 .marketing-wrap .marketing-image {
+    position: relative;
+  }
+  
+  .corpix-marketing-section-03 .marketing-wrap .marketing-image .image {
+    width: 100%;
+  }
+  
+  .corpix-marketing-section-03 .marketing-wrap .marketing-image .marketing-image-text {
+    display: flex;
+    align-items: center;
+    max-width: 450px;
+    background: #000;
+    border-left: 5px solid #ffa800;
+    padding: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .corpix-marketing-section-03 .marketing-wrap .marketing-image .marketing-image-text .text {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .corpix-marketing-section-03 .marketing-wrap .marketing-image .marketing-image-text .text .title {
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  
+  @media only screen and (max-width: 1399px) {
+    .corpix-marketing-section-03 .marketing-wrap .marketing-content {
+      padding-left: 35px;
+    }
+    .corpix-marketing-section-03 .marketing-wrap .marketing-content .corpix-marketing-tabs-menu li .corpix-marketing-title {
+      width: 165px;
+    }
+    .corpix-marketing-section-03 .marketing-wrap .marketing-content .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item {
+      padding-right: 80px;
+    }
+  }
+  
+  @media only screen and (max-width: 1199px) {
+    .corpix-marketing-section-03 .marketing-wrap .marketing-content .corpix-marketing-tabs-menu li .corpix-marketing-title {
+      width: 180px;
+    }
+    .corpix-marketing-section-03 .marketing-wrap .marketing-content .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item {
+      padding-right: 230px;
+    }
+    .corpix-marketing-section-03 .marketing-wrap .marketing-image {
+      margin-top: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 991px) {
+    .corpix-marketing-section-03 .marketing-wrap .marketing-content .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item {
+      padding-right: 110px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .corpix-marketing-section-03 .marketing-wrap .marketing-content .corpix-marketing-tab-content .corpix-marketing-tab-pane .corpix-marketing-item {
+      padding-right: 0px;
+    }
+  }
+  
+  @media only screen and (max-width: 575px) {
+    .corpix-marketing-section-03 .marketing-wrap .marketing-image .marketing-image-text {
+      padding: 25px;
+    }
+    .corpix-marketing-section-03 .marketing-wrap .marketing-image .marketing-image-text .text .title {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  
+  .corpix-marketing-section-04 .corpix-marketing-tabs-menu li::before {
+    border-top: 30px solid #f82c47;
+  }
+  
+  .corpix-marketing-section-04 .corpix-marketing-tabs-menu li.active {
+    background-color: #f82c47;
+  }
+  
+  .corpix-marketing-section-04 .marketing-wrap .marketing-image .marketing-image-text {
+    border-left: 5px solid #f82c47;
+  }
+  
+  .corpix-marketing-05::before {
+    width: 100%;
+  }

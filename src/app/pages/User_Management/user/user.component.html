@@ -1,0 +1,55 @@
+<section id="main-content">
+  <section class="wrapper">
+    <div class="col-sm-6 pagename">
+      <h4 class="adj">Define Users</h4>
+    </div>
+    <div>
+      <div class="container-fluid">
+        <mat-card>
+          <mat-card-content>
+            <form [formGroup]="userForm" (ngSubmit)="search()">
+              <div class="form-group row">
+                <!-- <label for="appInputID" class="col-sm-2 col-form-label text-right">User Name :</label> -->
+                <div id="appInputID" class="col-sm-2">
+                  <app-condition-dropdown [(value)]=userNameCondition></app-condition-dropdown>
+                  <p *ngIf="isUnameError" class="error text-sm-left" style="color: red;">{{ unameError }}</p>
+                </div>
+                <div>
+                  <mat-form-field appearance="outline">
+                    <input matInput formControlName="userName" placeholder="User name" [(ngModel)]="userName">
+                    <mat-error *ngIf="userForm.get('userName').hasError('required')">User name is required.</mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-sm-2">
+                  <button type="button" mat-raised-button class="btn" class="btn btn-light btn-outline-primary btn-sm"
+                    (click)="search()">Search
+                    User</button>
+                  <button type="button" mat-raised-button class="btn" (click)="addUserClick()">Add User</button>
+                </div>
+                <!-- <div class="col-sm-3 pull-left">
+                  <button type="button" class="btn btn-light btn-outline-primary btn-sm mr-6" (click)="search()">Search
+                    User</button>
+                  <button type="button" *ngIf="tmp" class="btn btn-light btn-outline-primary btn-sm mr-6"
+                    (click)="addUserClick()">Add User</button>
+                </div> -->
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+        <hr>
+        <ag-grid-angular class="grid-with-lines" [pagination]="true" class="ag-theme-alpine"
+          [frameworkComponents]="frameworkComponents" style="width: 100%;height:350px;" #agGrid
+          (gridReady)="onGridReady($event)" [columnDefs]="columnDefs" [rowData]="rowData" [paginationPageSize]="25"
+          [rowSelection]="true" (linkClicked)="onLnkClicked($event)" [suppressRowClickSelection]="true"
+          (rowSelected)="onRowSelected($event)" [gridOptions]="gridOptions"
+          (selectionChanged)="onSelectionChanged($event)">
+        </ag-grid-angular>
+        <select id="page-size" [(ngModel)]="pageSize" (ngModelChange)="onPageSizeChanged()"
+          [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+        </select>
+      </div>
+    </div>
+  </section>
+</section>

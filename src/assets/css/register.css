@@ -1,0 +1,116 @@
+/*form  css*/
+blockquote, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+  }
+  #bmfont {
+    font-family: Lato, sans-serif;
+  }
+ /* Form div class css*/
+  element {
+    position: relative;
+  }
+  .mob-wdth100 {
+    width: auto;
+  }
+  .fleft {
+    float: left;
+  }
+  blockquote, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    line-height: 15px;
+  }
+
+
+.desp-label {
+  font-size: 14px;
+  color: #000;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: .8px;
+  font-family: Lato;
+}
+
+blockquote, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    line-height: 15px;
+  } 
+
+  input, label, select, textarea {
+    font-size: 100%;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .desp-label {
+    color: #000;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: .8px;
+    font-family: Lato;
+  }
+
+  body{
+      line-height: 15px;
+  }
+
+
+  element {
+    color: #333333;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .desp-drpdwn {
+    cursor: pointer;
+    text-align: left;
+  }
+  #bmfont {
+    font-family: Lato, sans-serif;
+  }
+  body {
+    line-height: 15px;
+  }
+
+
+  .regisplacehold::placeholder {
+    color: #333;
+    font-size: 14px;
+    letter-spacing: .8px;
+  }
+  element {
+  }
+  .dh-nametxt {
+    width: 100%;
+    border: 0;
+    height: 24px;
+    outline: 0;
+    font-size: 14px;
+    padding-left: 0;
+    color: #333 !important;
+  }
+  .hp-regform-txtfield-new{
+      background: #fff;
+      font: 12px arial;
+  }
+
+  input, select {
+    vertical-align: middle;
+  }
+  blockquote, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+  }

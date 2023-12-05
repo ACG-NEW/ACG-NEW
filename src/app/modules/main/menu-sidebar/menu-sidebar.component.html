@@ -1,0 +1,113 @@
+<!-- Brand Logo -->
+
+<a routerLink='dashboard' class="brand-link">
+  <img src="assets/ebuslogo.jpeg" alt="ACG" class="brand-image" />
+  <span class="brand-text-1">ACG</span><span class="version">{{appversion}}</span>
+  <!-- <p style="margin-top: -7px;"><span class="version">{{appversion}}</span></p> -->
+</a>
+<mat-nav-list>
+  <mat-list-item routerLinkActive="active-list-item" routerLink="dashboard">
+    <mat-icon mat-list-icon>home</mat-icon>Dashboard
+  </mat-list-item>
+</mat-nav-list>
+<mat-accordion>
+  <mat-sidenav-container>
+    <mat-sidenav-content>
+      <mat-expansion-panel class="example-sidenav" [expanded]="isMenuExtended" (opened)="isMenuExtended = true"
+        (closed)="isMenuExtended = false" [routerLinkActiveOptions]="{exact: false}">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="parent">
+            ETL Management
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list class="submenuList">
+          <mat-list-item routerLink="etlManagment/accesspoints" routerLinkActive="active-list-item">Access
+            Points</mat-list-item>
+          <mat-list-item routerLink="etlManagment/accessGroups" routerLinkActive="active-list-item">Access
+            Groups</mat-list-item>
+          <mat-list-item routerLink="etlManagment/SourceAppUsers" routerLinkActive="active-list-item">SourceApp
+            Users</mat-list-item>
+          <mat-list-item routerLink="etlManagment/SourceAppRoles" routerLinkActive="active-list-item">SourceApp
+            Roles</mat-list-item>
+          <mat-list-item routerLink="etlManagment/BusinessEntity" routerLinkActive="active-list-item">Business
+            Entity</mat-list-item>
+          <mat-list-item routerLink="etlManagment/RoleAccessGroupMapping" routerLinkActive="active-list-item">RoleAccess
+            Group Mapping</mat-list-item>
+          <mat-list-item routerLink="etlManagment/RoleBusinessEntityMapping" routerLinkActive="active-list-item">Role
+            Business Entity
+            Mapping</mat-list-item>
+          <mat-list-item routerLink="etlManagment/UserRoleMapping" routerLinkActive="active-list-item">User Role
+            Mapping</mat-list-item>
+
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel class="example-sidenav" [routerLinkActiveOptions]="{exact: false}">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="parent">
+            Conflict Management
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list class="submenuList">
+          <mat-list-item [routerLink]="" routerLinkActive="active-list-item">
+            SOD Conflict Policy
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel class="example-sidenav" [routerLinkActiveOptions]="{exact: false}">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="parent">
+            Application Management
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list class="submenuList">
+          <!-- <mat-list-item [routerLink]="" routerLinkActive="active-list-item">
+            Register Application
+          </mat-list-item> -->
+          <mat-list-item routerLink="applicationManagment/functions" routerLinkActive="active-list-item">
+            Define Functions
+          </mat-list-item>
+          <mat-list-item routerLink="applicationManagment/menus" routerLinkActive="active-list-item">
+            Define Menus
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel class="example-sidenav" [routerLinkActiveOptions]="{exact: false}">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="parent">
+            User Management
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list class="submenuList">
+          <mat-list-item routerLink="userManagment/user" routerLinkActive="active-list-item">
+            Define Users
+          </mat-list-item>
+          <mat-list-item routerLink="userManagment/role" routerLinkActive="active-list-item">
+            Define Roles
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel class="example-sidenav" [routerLinkActiveOptions]="{exact: false}">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="parent">
+            Manage Jobs
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list class="submenuList">
+          <mat-list-item routerLink="manageJobs/defineJob" routerLinkActive="active-list-item">
+            Define Job
+          </mat-list-item>
+          <mat-list-item routerLink="manageJobs/submitJob" routerLinkActive="active-list-item">
+            Submit Job
+          </mat-list-item>
+          <mat-list-item routerLink="manageJobs/viewJobStatus" routerLinkActive="active-list-item">
+            View Job Status
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</mat-accordion>

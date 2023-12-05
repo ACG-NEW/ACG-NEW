@@ -1,0 +1,87 @@
+<section class="container-fluid">
+    <div class="col-sm-6 pagename">
+        <h4 class="adj">Summary Notice</h4>
+    </div>
+    <div>
+        <form [formGroup]="summaryNoticeForm" (ngSubmit)="saveDetails()" #summaryfrm="ngForm">
+
+            <div class="container-fluid">
+                <table class="table" mat-table #table [dataSource]="DataSource">
+                    <tr *matHeaderRowDef="displayedColumns; sticky: 'true'" mat-header-row></tr>
+                    <tr *matRowDef="let row; columns: displayedColumns;let i = index;" mat-row></tr>
+                    <ng-container matColumnDef="sno">
+                        <th mat-header-cell *matHeaderCellDef class="theader">S.No</th>
+                        <td mat-cell *matCellDef="let row">
+                            <mat-form-field class="tblsno">
+                                <input type="text" matInput [(ngModel)]="row.sno" [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="psp">
+                        <th mat-header-cell *matHeaderCellDef class="theader">Psp</th>
+                        <td mat-cell *matCellDef="let row">
+                            <mat-form-field class="tblFields">
+                                <input type="text" matInput [(ngModel)]="row.psp" [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="pspSubAcAccount">
+                        <th mat-header-cell *matHeaderCellDef class="theader">Psp Sub-Account</th>
+                        <td mat-cell *matCellDef="let row">
+                            <mat-form-field class="tblFields">
+                                <input type="text" matInput [(ngModel)]="row.pspSubAcAccount"
+                                    [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="source">
+                        <th mat-header-cell *matHeaderCellDef class="theader">Source</th>
+                        <td mat-cell *matCellDef="let row">
+                            <mat-form-field class="tblFields">
+                                <input type="text" matInput [(ngModel)]="row.source"
+                                    [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>
+                        </td>
+                    </ng-container>
+
+
+                    <ng-container matColumnDef="role">
+                        <th mat-header-cell *matHeaderCellDef class="theader">Role</th>
+                        <td mat-cell *matCellDef="let row">
+                            <mat-form-field  class="tblFields">
+                                <input type="text" matInput [(ngModel)]="row.role"
+                                    [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="numberOfTransactions">
+                        <th mat-header-cell *matHeaderCellDef class="theader">No.of Transactions</th>
+                        <td mat-cell *matCellDef="let row">
+                            <mat-form-field class="tblFields">
+                                <input type="text" matInput [(ngModel)]="row.txnType"
+                                    [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="show">
+                        <th mat-header-cell *matHeaderCellDef class="theader">Show</th>
+                        <td mat-cell *matCellDef="let row">
+                            <mat-form-field class="tblFields">
+                                <input type="text" matInput [(ngModel)]="row.show"
+                                    [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>
+                        </td>
+                    </ng-container>
+                </table>
+                <div class="input-row" style="text-align: center;" fxLayout="row" fxLayout.lt-md="column"
+                    fxLayoutGap="10px" fxLayoutGap.lt-md="0px">
+                    <button mat-stroked-button color="primary" class="primary" class="btn m-3" type="submit">
+                        <mat-icon>refresh</mat-icon>Refresh
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</section>
