@@ -20,4 +20,4 @@ jobs:
         with:
           args: >
             -Dsonar.organization=ACG-NEW
-            -Dsonar.projectKey=my-unique-project-key
+            -Dsonar.projectKey=ACG-NEW
